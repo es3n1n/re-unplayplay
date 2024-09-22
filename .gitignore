@@ -1,3 +1,4 @@
 cmake-build-*/
 .idea/**
 build/
+re_unplayplay.egg-info/

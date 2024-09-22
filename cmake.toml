@@ -3,12 +3,13 @@ version = "3.15"
 cmkr-include = "cmake/cmkr.cmake"
 
 [project]
-name = "chall"
+name = "re-unplayplay"
 languages = ["CXX"]
 msvc-runtime = "static"
 
 [options]
 RE_UNPP_BUILD_TESTS = false
+RE_UNPP_BUILD_PYTHON = false
 
 [target.re-unplayplay]
 alias = "unplayplay::lib"
@@ -35,3 +36,18 @@ condition = "re-unpp-build-tests"
 sources = ["src/tests/**.cpp"]
 include-directories = ["src/tests/"]
 link-libraries = ["unplayplay::lib", "GTest::gtest_main"]
+
+[fetch-content.pybind11]
+git = "https://github.com/pybind/pybind11.git"
+tag = "v2.13.6"
+condition = "re-unpp-build-python"
+
+[template.pyd]
+type = "shared"
+add-function = "pybind11_add_module"
+pass-sources = true
+
+[target.re_unplayplay_python]
+type = "pyd"
+sources = ["src/python/**.cpp"]
+condition = "re-unpp-build-python"
