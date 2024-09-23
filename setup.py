@@ -101,4 +101,9 @@ setup(
     extras_require={'test': ['pytest>=6.0']},
     cmdclass=dict(build_ext=CMakeBuild),
     zip_safe=False,
+    classifiers=[
+        'Programming Language :: Python :: 3',
+        'License :: OSI Approved :: MIT License',  # License type
+        'Operating System :: OS Independent',
+    ],
 )
