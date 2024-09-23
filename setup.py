@@ -93,10 +93,10 @@ class CMakeBuild(build_ext):
 
 setup(
     name='re-unplayplay',
-    version='1.1.3',
+    version='1.1.4',
     author='es3n1n',
     description='A rewritten version of unplayplay',
-    long_description='https://github.com/es3n1n/re-unplayplay\n' + open('./README.md', 'r').read(),
+    long_description='https://github.com/es3n1n/re-unplayplay',
     ext_modules=[CMakeExtension('re_unplayplay_python')],
     extras_require={'test': ['pytest>=6.0']},
     cmdclass=dict(build_ext=CMakeBuild),
