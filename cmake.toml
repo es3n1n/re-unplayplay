@@ -33,7 +33,7 @@ condition = "re-unpp-build-tests"
 [target.re-unplayplay-tests]
 type = "executable"
 condition = "re-unpp-build-tests"
-sources = ["src/tests/**.cpp"]
+sources = ["src/lib-tests/**.cpp"]
 include-directories = ["src/tests/"]
 link-libraries = ["unplayplay::lib", "GTest::gtest_main"]
 
@@ -51,3 +51,4 @@ pass-sources = true
 type = "pyd"
 sources = ["src/python/**.cpp"]
 condition = "re-unpp-build-python"
+link-libraries = ["unplayplay::lib"]

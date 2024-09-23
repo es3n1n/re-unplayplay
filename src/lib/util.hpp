@@ -29,6 +29,11 @@ namespace unplayplay::util {
         constexpr ByteBuffer() = default;
         ~ByteBuffer() = default;
 
+        constexpr explicit ByteBuffer(const std::uint8_t* pointer, const std::size_t size = ReservedSize) {
+            assert(size % 2 == 0);
+            std::copy_n(pointer, std::min(ReservedSize, size), buffer_.begin());
+        }
+
         constexpr explicit ByteBuffer(const std::string_view string_view) {
             assert(string_view.size() % 2 == 0);
 

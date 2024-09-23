@@ -84,7 +84,6 @@ class CMakeBuild(build_ext):
             new_path = os.path.join(extdir, new_filename)
 
             shutil.move(old_path, new_path)
-            print(f'Renamed {old_path} to {new_path}')
             break
 
     def get_ext_filename(self, ext_name):
@@ -99,6 +98,7 @@ setup(
     description='A rewritten version of unplayplay',
     long_description='https://github.com/es3n1n/re-unplayplay',
     ext_modules=[CMakeExtension('re_unplayplay_python')],
+    extras_require={'test': ['pytest>=6.0']},
     cmdclass=dict(build_ext=CMakeBuild),
     zip_safe=False,
 )

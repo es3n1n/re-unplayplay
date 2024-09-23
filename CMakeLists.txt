@@ -122,8 +122,9 @@ endif()
 if(RE_UNPP_BUILD_TESTS) # re-unpp-build-tests
 	set(re-unplayplay-tests_SOURCES
 		cmake.toml
-		"src/tests/test_bind_key.cpp"
-		"src/tests/test_decrypt_key.cpp"
+		"src/lib-tests/test_bind_and_decrypt_key.cpp"
+		"src/lib-tests/test_bind_key.cpp"
+		"src/lib-tests/test_decrypt_key.cpp"
 	)
 
 	add_executable(re-unplayplay-tests)
@@ -155,5 +156,9 @@ if(RE_UNPP_BUILD_PYTHON) # re-unpp-build-python
 
 	pybind11_add_module(re_unplayplay_python ${re_unplayplay_python_SOURCES})
 	source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${re_unplayplay_python_SOURCES})
+
+	target_link_libraries(re_unplayplay_python PUBLIC
+		unplayplay::lib
+	)
 
 endif()
