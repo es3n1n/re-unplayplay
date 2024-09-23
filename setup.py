@@ -93,7 +93,7 @@ class CMakeBuild(build_ext):
 
 setup(
     name='re-unplayplay',
-    version='1.0.0',
+    version='1.0.0a',
     author='es3n1n',
     description='A rewritten version of unplayplay',
     long_description='https://github.com/es3n1n/re-unplayplay',
@@ -106,4 +106,5 @@ setup(
         'License :: OSI Approved :: MIT License',  # License type
         'Operating System :: OS Independent',
     ],
+    include_package_data=True,
 )
