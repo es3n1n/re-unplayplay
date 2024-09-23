@@ -1,0 +1,22 @@
+name: C++ Tests
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  test_cxx:
+    if: '!cancelled()'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: sudo apt-get install build-essential
+      - name: Configure
+        run: cmake -B build -DRE_UNPP_BUILD_TESTS=1 -DCMAKE_BUILD_TYPE=Release
+      - name: Build
+        run: cmake --build build
+      - name: Test
+        run: ./build/re-unplayplay-tests
