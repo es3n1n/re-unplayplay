@@ -93,7 +93,7 @@ class CMakeBuild(build_ext):
 
 setup(
     name='re-unplayplay',
-    version='1.1.0',
+    version='1.1.1',
     author='es3n1n',
     description='A rewritten version of unplayplay',
     long_description='https://github.com/es3n1n/re-unplayplay\n' + open('./README.md', 'r').read(),
