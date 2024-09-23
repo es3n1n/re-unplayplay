@@ -1,0 +1,68 @@
+name: C++ Tests
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  test_cxx_gcc:
+    if: '!cancelled()'
+    name: gcc, ${{ matrix.buildtype }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        buildtype: [ Debug, Release ]
+    env:
+      BUILD_TYPE: ${{ matrix.buildtype }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: |
+          cmake -B build -DRE_UNPP_BUILD_TESTS=1 -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE }}
+          cmake --build build --config ${{ env.BUILD_TYPE }} --parallel
+      - name: Test
+        run: ./build/re-unplayplay-tests
+  test_cxx_clang:
+    if: '!cancelled()'
+    name: clang, ${{ matrix.buildtype }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        buildtype: [ Debug, Release ]
+    env:
+      BUILD_TYPE: ${{ matrix.buildtype }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up clang
+        uses: egor-tensin/setup-clang@v1
+        with:
+          version: 12
+          platform: x64
+      - name: Build
+        run: |
+          cmake -B build -DRE_UNPP_BUILD_TESTS=1 -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE }}
+          cmake --build build --config ${{ env.BUILD_TYPE }} --parallel
+      - name: Test
+        run: ./build/re-unplayplay-tests
+  test_cxx_msvc:
+    if: '!cancelled()'
+    name: msvc, ${{ matrix.buildtype }}
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        buildtype: [ Debug, Release ]
+    env:
+      BUILD_TYPE: ${{ matrix.buildtype }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: |
+          cmake -B build -DRE_UNPP_BUILD_TESTS=1 -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE }}
+          cmake --build build --config ${{ env.BUILD_TYPE }} --parallel
+      - name: Test
+        run: .\build\${{ env.BUILD_TYPE }}\re-unplayplay-tests.exe

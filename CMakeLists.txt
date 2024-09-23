@@ -3,10 +3,6 @@
 
 cmake_minimum_required(VERSION 3.15)
 
-# Enable support for MSVC_RUNTIME_LIBRARY
-cmake_policy(SET CMP0091 NEW)
-set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
-
 if(CMAKE_SOURCE_DIR STREQUAL CMAKE_BINARY_DIR)
 	message(FATAL_ERROR "In-tree builds are not supported. Run CMake from a separate directory: cmake -B build")
 endif()
@@ -28,10 +24,17 @@ if(CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR)
 	configure_file(cmake.toml cmake.toml COPYONLY)
 endif()
 
+# Enable support for MSVC_RUNTIME_LIBRARY
+cmake_policy(SET CMP0091 NEW)
+if(NOT DEFINED CMAKE_MSVC_RUNTIME_LIBRARY)
+	set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+endif()
+
 # Options
 option(RE_UNPP_BUILD_TESTS "" OFF)
+option(RE_UNPP_BUILD_PYTHON "" OFF)
 
-project(chall
+project(re-unplayplay
 	LANGUAGES
 		CXX
 )
@@ -53,11 +56,22 @@ if(RE_UNPP_BUILD_TESTS) # re-unpp-build-tests
 	FetchContent_MakeAvailable(GTest)
 
 endif()
+if(RE_UNPP_BUILD_PYTHON) # re-unpp-build-python
+	message(STATUS "Fetching pybind11 (v2.13.6)...")
+	FetchContent_Declare(pybind11
+		GIT_REPOSITORY
+			"https://github.com/pybind/pybind11.git"
+		GIT_TAG
+			v2.13.6
+	)
+	FetchContent_MakeAvailable(pybind11)
+
+endif()
 # Target: re-unplayplay
 set(re-unplayplay_SOURCES
+	cmake.toml
 	"src/lib/reversals/bind_key.cpp"
 	"src/lib/reversals/decrypt_key.cpp"
-	cmake.toml
 )
 
 add_library(re-unplayplay)
@@ -86,8 +100,8 @@ target_include_directories(re-unplayplay PUBLIC
 
 # Target: re-unplayplay-cli
 set(re-unplayplay-cli_SOURCES
-	"src/bin/main.cpp"
 	cmake.toml
+	"src/bin/main.cpp"
 )
 
 add_executable(re-unplayplay-cli)
@@ -107,9 +121,10 @@ endif()
 # Target: re-unplayplay-tests
 if(RE_UNPP_BUILD_TESTS) # re-unpp-build-tests
 	set(re-unplayplay-tests_SOURCES
-		"src/tests/test_bind_key.cpp"
-		"src/tests/test_decrypt_key.cpp"
 		cmake.toml
+		"src/lib-tests/test_bind_and_decrypt_key.cpp"
+		"src/lib-tests/test_bind_key.cpp"
+		"src/lib-tests/test_decrypt_key.cpp"
 	)
 
 	add_executable(re-unplayplay-tests)
@@ -130,5 +145,20 @@ if(RE_UNPP_BUILD_TESTS) # re-unpp-build-tests
 	if(NOT CMKR_VS_STARTUP_PROJECT)
 		set_property(DIRECTORY ${PROJECT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT re-unplayplay-tests)
 	endif()
+
+endif()
+# Target: re_unplayplay_python
+if(RE_UNPP_BUILD_PYTHON) # re-unpp-build-python
+	set(re_unplayplay_python_SOURCES
+		cmake.toml
+		"src/python/main.cpp"
+	)
+
+	pybind11_add_module(re_unplayplay_python ${re_unplayplay_python_SOURCES})
+	source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${re_unplayplay_python_SOURCES})
+
+	target_link_libraries(re_unplayplay_python PUBLIC
+		unplayplay::lib
+	)
 
 endif()

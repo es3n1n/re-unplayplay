@@ -47,7 +47,21 @@ int main(const int argc, const char* argv[]) {
 
 ### Python
 
-Coming soon
+```python
+from re_unplayplay import decrypt_key, bind_key, decrypt_and_bind_key
+
+# Decrypt the encrypted key
+decrypted = decrypt_key(bytes.fromhex('01'))
+assert decrypted.hex() == '5d528f92bfb6a6b9dadf75e9f2bdff20'
+
+# Bind decrypted key
+bind_result = bind_key(decrypted, '01')
+assert bind_result.hex() == 'f3a37e28d15bc5e8151d413eb36a59b5'
+
+# Decrypt and bind in one call
+result = decrypt_and_bind_key(bytes.fromhex('01'), '01')
+assert bind_result.hex() == 'f3a37e28d15bc5e8151d413eb36a59b5'
+```
 
 ### NodeJS
 
@@ -64,12 +78,13 @@ cmake --build build --config Release
 
 ### Python
 
-Coming soon
+You can install the python bindings via `python3 -m pip install -U re-unplayplay`
 
 ### NodeJS
 
 Coming soon
 
+___
 ## Contributing
 
 Any contributions you make are **greatly appreciated**.
@@ -79,8 +94,6 @@ Any contributions you make are **greatly appreciated**.
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-___
 
 ## License
 

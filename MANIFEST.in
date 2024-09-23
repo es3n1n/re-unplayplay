@@ -1,0 +1,6 @@
+include CMakeLists.txt
+include cmake.toml
+include README.md
+recursive-include src *
+recursive-include cmake *
+global-exclude *.py[cod]

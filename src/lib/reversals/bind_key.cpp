@@ -1,6 +1,7 @@
 #include "idadefs.hpp"
 #include "util.hpp"
 #include <cstdint>
+#include <cstring>
 
 namespace unplayplay {
     [[nodiscard]] util::Key bind_key(util::Key decrypted_key, util::FileId file_id) noexcept {
