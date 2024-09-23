@@ -96,7 +96,7 @@ setup(
     version='1.1.0',
     author='es3n1n',
     description='A rewritten version of unplayplay',
-    long_description='https://github.com/es3n1n/re-unplayplay',
+    long_description='https://github.com/es3n1n/re-unplayplay\n' + open('./README.md', 'r').read(),
     ext_modules=[CMakeExtension('re_unplayplay_python')],
     extras_require={'test': ['pytest>=6.0']},
     cmdclass=dict(build_ext=CMakeBuild),
