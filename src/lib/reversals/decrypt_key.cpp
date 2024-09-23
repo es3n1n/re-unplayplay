@@ -1,5 +1,6 @@
 #include "idadefs.hpp"
 #include "util.hpp"
+#include <cstring>
 
 constexpr static unsigned int u8_to_u32(const unsigned char* p) {
     return (((unsigned int)(p[0] & 0xff)) | ((unsigned int)(p[1] & 0xff) << 8) | ((unsigned int)(p[2] & 0xff) << 16) |
