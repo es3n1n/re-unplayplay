@@ -1,4 +1,4 @@
-name: Python Tests
+name: Python
 
 on:
   pull_request:
@@ -9,7 +9,7 @@ on:
 jobs:
   test_python:
     if: '!cancelled()'
-    name: ${{ matrix.python-version }}
+    name: Test ${{ matrix.python-version }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
