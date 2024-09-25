@@ -1,6 +1,9 @@
 name: Python
 
 on:
+  release:
+    types: [released]
+  workflow_dispatch:
   pull_request:
   push:
     branches:
@@ -15,38 +18,107 @@ jobs:
       fail-fast: false
       matrix:
         python-version: [3.7, 3.11]
-    env:
-      BUILD_TYPE: ${{ matrix.buildtype }}
+
     steps:
       - uses: actions/checkout@v4
+
       - name: Install python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
+
       - name: Install bindings
-        run: |
-          python3 -m pip install -U .[test]
+        run: python3 -m pip install -U .[test]
+
       - name: Test
         run: pytest src/python-tests/
-  publish:
+
+  build_wheels:
+    name: Build ${{ matrix.os }} wheels
     needs: test_python
-    name: Publish to PyPI
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master' && contains(github.event.head_commit.message, '[publish]')
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        # macos-13 is an intel runner, macos-14 is apple silicon
+        os: [ubuntu-latest, windows-latest, macos-13, macos-14]
+
     steps:
       - uses: actions/checkout@v4
+
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
-          python-version: 3.7
+          python-version: '3.x'
+
       - name: Install dependencies
-        run: |
-          python3 -m pip install --upgrade pip
-          python3 -m pip install setuptools wheel
-      - name: Build source distribution
-        run: |
-          python3 setup.py sdist
-      - name: Publish to PyPI
+        run: python -m pip install twine>=3.3
+
+      - name: Set up QEMU
+        if: runner.os == 'Linux'
+        uses: docker/setup-qemu-action@v2
+        with:
+          platforms: all
+
+      - name: Build wheels
+        uses: pypa/cibuildwheel@v2.21.1
+        env:
+          # build native archs ('auto'), and some emulated ones
+          CIBW_ARCHS_LINUX: auto aarch64 ppc64le s390x
+          CIBW_TEST_COMMAND: 'python -c "import re_unplayplay"'
+
+      - name: Check wheels
+        run: python -m twine check --strict wheelhouse/*
+
+      - uses: actions/upload-artifact@v3
+        with:
+          path: ./wheelhouse/*.whl
+          name: pybuild-wheels-${{ matrix.os }}
+
+  build_dist:
+    needs: build_wheels
+    name: Build dist
+    runs-on: ubuntu-latest
+    # if: ''
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: python -m pip install pip build "twine>=3.3" -U
+
+      - name: Build dist
+        run: python -m build --sdist .
+
+      - name: Check dist
+        run: python -m twine check --strict dist/*
+
+      - name: Upload dist
+        if: github.event_name == 'release'
+        uses: actions/upload-artifact@v4
+        with:
+          name: pybuild-dist
+          path: ./dist/*.tar.gz
+
+  publish:
+    needs: build_dist
+    name: Publish to PyPI
+    if: github.repository == 'es3n1n/re-unplayplay' && github.event_name == 'release'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download dist/wheels
+        uses: actions/download-artifact@v4
+        with:
+          path: dist
+          pattern: pybuild-*
+          merge-multiple: true
+
+      - name: List dist
+        run: ls -R dist/*
+
+      - name: Publish package to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           user: __token__
