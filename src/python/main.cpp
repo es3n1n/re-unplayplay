@@ -37,11 +37,11 @@ namespace impl {
         auto result = unpp::bind_key(decrypted, file_id);
         return key_to_bytes(result);
     }
-}; // namespace impl
+} // namespace impl
 
 /// Intentionally re_unplayplay and not re_unplayplay_python,
 /// because we're renaming it later on in setup.py
-PYBIND11_MODULE(re_unplayplay, m) {
+PYBIND11_MODULE(_re_unplayplay, m) {
     m.def("decrypt_key", &impl::decrypt_key);
     m.def("bind_key", &impl::bind_key);
     m.def("decrypt_and_bind_key", &impl::decrypt_and_bind_key);

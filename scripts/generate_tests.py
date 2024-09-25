@@ -8,11 +8,11 @@ N = 150
 def generate_key_decrypt_tests():
     for i in range(N):
         arg = urandom(16)
-        l = 'Param{"' + arg.hex() + '"sv, "' + decrypt_key(arg).hex() + '"sv}'
+        line = 'Param{"' + arg.hex() + '"sv, "' + decrypt_key(arg).hex() + '"sv}'
         if i < (N - 1):
-            l += ','
-        l += ' // auto-generated'
-        print(l, flush=True)
+            line += ','
+        line += ' // auto-generated'
+        print(line, flush=True)
 
 
 def main() -> None:
