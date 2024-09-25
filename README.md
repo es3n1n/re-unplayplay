@@ -1,6 +1,14 @@
 # re-unplayplay
 
-A rewritten version of [unplayplay](https://git.gay/uhwot/unplayplay), which is a slightly edited version of [pbdecrypt.cc](https://github.com/baltitenger/spsync/blob/master/ppdecrypt.cc).
+[![C++](https://github.com/es3n1n/re-unplayplay/actions/workflows/cxx.yml/badge.svg)](https://github.com/es3n1n/re-unplayplay/actions/workflows/cxx.yml)
+[![Python](https://github.com/es3n1n/re-unplayplay/actions/workflows/python.yml/badge.svg)](https://github.com/es3n1n/re-unplayplay/actions/workflows/python.yml)
+[![license](https://img.shields.io/github/license/es3n1n/re-unplayplay.svg)](https://github.com/es3n1n/re-unplayplay/blob/naster/LICENSE)
+[![pypi](https://img.shields.io/pypi/v/re-unplayplay.svg)](https://pypi.python.org/pypi/re-unplayplay)
+[![Downloads](https://static.pepy.tech/badge/re-unplayplay/month)](https://pepy.tech/project/re-unplayplay)
+
+A rewritten version of [unplayplay](https://git.gay/uhwot/unplayplay), which is a slightly edited version of [pbdecrypt.cc](https://github.com/baltitenger/spsync/blob/master/ppdecrypt.cc). \
+This library is implementing various cryptography algorithms used by the spotify's DRM called playplay, 
+you can refer to [votify](https://github.com/glomatico/votify) to see how it should be used.
 
 ___
 ## Usage
@@ -78,7 +86,9 @@ cmake --build build --config Release
 
 ### Python
 
-You can install the python bindings via `python3 -m pip install -U re-unplayplay`
+```commandline
+python3 -m pip install -U re-unplayplay
+```
 
 ### NodeJS
 
