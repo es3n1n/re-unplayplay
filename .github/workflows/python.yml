@@ -73,7 +73,7 @@ jobs:
       - name: Check wheels
         run: uvx twine check --strict wheelhouse/*
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           path: ./wheelhouse/*.whl
           name: pybuild-wheels-${{ matrix.os }}
@@ -117,9 +117,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           path: dist
-          pattern: |
-            pybuild-wheels-*
-            pybuild-sdist
+          pattern: pybuild-*
           merge-multiple: true
 
       - name: List dist
