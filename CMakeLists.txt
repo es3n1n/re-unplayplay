@@ -94,6 +94,12 @@ if(MSVC) # msvc
 	)
 endif()
 
+if(CMAKE_SYSTEM_NAME MATCHES "Linux") # linux
+	target_compile_options(re-unplayplay PUBLIC
+		-fPIC
+	)
+endif()
+
 target_include_directories(re-unplayplay PUBLIC
 	"src/lib/"
 )
@@ -147,18 +153,22 @@ if(RE_UNPP_BUILD_TESTS) # re-unpp-build-tests
 	endif()
 
 endif()
-# Target: re_unplayplay_python
+# Target: re-unplayplay-python
 if(RE_UNPP_BUILD_PYTHON) # re-unpp-build-python
-	set(re_unplayplay_python_SOURCES
+	set(re-unplayplay-python_SOURCES
 		cmake.toml
 		"src/python/main.cpp"
 	)
 
-	pybind11_add_module(re_unplayplay_python ${re_unplayplay_python_SOURCES})
-	source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${re_unplayplay_python_SOURCES})
+	pybind11_add_module(re-unplayplay-python ${re-unplayplay-python_SOURCES})
+	source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${re-unplayplay-python_SOURCES})
 
-	target_link_libraries(re_unplayplay_python PUBLIC
+	target_link_libraries(re-unplayplay-python PUBLIC
 		unplayplay::lib
 	)
+
+	set(CMKR_TARGET re-unplayplay-python)
+	set_property(TARGET re-unplayplay-python PROPERTY OUTPUT_NAME _re_unplayplay)
+	install(TARGETS re-unplayplay-python LIBRARY DESTINATION .)
 
 endif()

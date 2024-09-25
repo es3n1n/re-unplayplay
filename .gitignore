@@ -4,3 +4,5 @@ build/
 re_unplayplay.egg-info/
 **/__pycache__/**
 *.pyc
+dist/
+sdist/

@@ -19,6 +19,7 @@ compile-definitions = ["NOMINMAX"]
 sources = ["src/lib/**.cpp"]
 include-directories = ["src/lib/"]
 msvc.compile-options = ["/MP"]
+linux.compile-options = ["-fPIC"]
 
 [target.re-unplayplay-cli]
 type = "executable"
@@ -47,8 +48,15 @@ type = "shared"
 add-function = "pybind11_add_module"
 pass-sources = true
 
-[target.re_unplayplay_python]
+#[find-package.Python]
+#condition = "re-unpp-build-python"
+#required = true
+#components = ["Interpreter", "Development.Module"]
+
+[target.re-unplayplay-python]
 type = "pyd"
 sources = ["src/python/**.cpp"]
 condition = "re-unpp-build-python"
 link-libraries = ["unplayplay::lib"]
+cmake-after = """set_property(TARGET re-unplayplay-python PROPERTY OUTPUT_NAME _re_unplayplay)
+install(TARGETS re-unplayplay-python LIBRARY DESTINATION .)"""
