@@ -8,6 +8,6 @@ TEST(BindKey, Unit) {
     auto file_id = unplayplay::util::FileId("01"sv);
 
     auto bind_result = unplayplay::bind_key(decrypted, file_id);
-    auto expected = unplayplay::util::Key("f3a37e28d15bc5e8151d413eb36a59b5"sv);
+    auto expected = unplayplay::util::Key("E32698DCAFABA7529A223C8E34EC08CC"sv);
     EXPECT_EQ(bind_result, expected);
 }

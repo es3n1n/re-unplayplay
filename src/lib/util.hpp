@@ -82,6 +82,7 @@ namespace unplayplay::util {
 
     using Key = ByteBuffer<unplayplay::detail::kKeySize>;
     using FileId = ByteBuffer<unplayplay::detail::kFileIdSize>;
+    using Token = ByteBuffer<unplayplay::detail::kTokenSize>;
 } // namespace unplayplay::util
 
 static_assert(unplayplay::util::ByteBuffer<1>("f1").at(0) == 0xF1);
