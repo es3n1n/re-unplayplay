@@ -11,3 +11,7 @@ def bind_key(decrypted_key: bytes, file_id: str) -> bytes:
 
 def decrypt_and_bind_key(encrypted_key: bytes, file_id: str) -> bytes:
     return _impl.decrypt_and_bind_key(encrypted_key, file_id)
+
+
+def get_token() -> bytes:
+    return _impl.get_token()

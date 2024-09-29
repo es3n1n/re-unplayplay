@@ -56,19 +56,22 @@ int main(const int argc, const char* argv[]) {
 ### Python
 
 ```python
-from re_unplayplay import decrypt_key, bind_key, decrypt_and_bind_key
+from re_unplayplay import decrypt_key, bind_key, decrypt_and_bind_key, get_token
+
+# Get the associated token
+assert get_token().hex() == '01e132cae527bd21620e822f58514932'
 
 # Decrypt the encrypted key
 decrypted = decrypt_key(bytes.fromhex('01'))
-assert decrypted.hex() == '5d528f92bfb6a6b9dadf75e9f2bdff20'
+assert decrypted.hex() == '89ef56c1d52f28e4c01459c32953c42c'
 
 # Bind decrypted key
 bind_result = bind_key(decrypted, '01')
-assert bind_result.hex() == 'f3a37e28d15bc5e8151d413eb36a59b5'
+assert bind_result.hex() == 'E32698DCAFABA7529A223C8E34EC08CC'
 
 # Decrypt and bind in one call
 result = decrypt_and_bind_key(bytes.fromhex('01'), '01')
-assert bind_result.hex() == 'f3a37e28d15bc5e8151d413eb36a59b5'
+assert bind_result.hex() == 'E32698DCAFABA7529A223C8E34EC08CC'
 ```
 
 ### NodeJS
