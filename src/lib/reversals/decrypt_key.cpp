@@ -1,6 +1,7 @@
-#include "idadefs.hpp"
-#include "util.hpp"
 #include <cstring>
+
+#include "idadefs.hpp"
+#include "types.hpp"
 
 constexpr static unsigned int u8_to_u32(const unsigned char* p) {
     return (((unsigned int)(p[0] & 0xff)) | ((unsigned int)(p[1] & 0xff) << 8) | ((unsigned int)(p[2] & 0xff) << 16) |
@@ -7567,8 +7568,8 @@ LABEL_21:
         return (unsigned int)(v55 + v56);
     }
 
-    [[nodiscard]] util::Key decrypt_key(util::Key key_basis) noexcept {
-        util::Key dst = {};
+    [[nodiscard]] Key decrypt_key(Key key_basis) noexcept {
+        Key dst = {};
         int v3 = 0xe8fae7a0;
         int v4 = 0xe8fae7a0;
         int v5 = 0xe8fae7a0;
@@ -7698,7 +7699,7 @@ LABEL_21:
         unsigned int v129 = 0xe8fae7a0;
         int v130 = 0x0;
         unsigned int v131 = 0xe8fae7a0;
-        char v132 = 0xffffffa0;
+        char v132 = 0xa0;
         unsigned int v133 = 0xe8fae7a0;
         unsigned int v134 = 0xe8fae7a0;
         int v135 = 0xe8fae7a0;
@@ -7748,7 +7749,7 @@ LABEL_21:
         int v179 = 0xe8fae7a0;
         int v180 = 0xe8fae7a0;
         int v181 = 0xe8fae7a0;
-        char v182 = 0xffffffa0;
+        char v182 = 0xa0;
         unsigned int v183 = 0xe8fae7a0;
         int v184 = 0xe8fae7a0;
         int v185 = 0xe8fae7a0;
@@ -7762,7 +7763,7 @@ LABEL_21:
         unsigned int v193 = 0xe8fae7a0;
         int v194 = 0xe8fae7a0;
         unsigned int v195 = 0xe8fae7a0;
-        char v196 = 0xffffffa0;
+        char v196 = 0xa0;
         std::uint64_t v197 = 0xe0e8fae7a0;
         int v198 = 0xe8fae7a0;
         int v199 = 0xe8fae7a0;
@@ -7884,7 +7885,7 @@ LABEL_21:
         int v315 = 0xe8fae7a0;
         int v316 = 0xe8fae7a0;
         int v317 = 0xe8fae7a0;
-        char v318 = 0xffffffa0;
+        char v318 = 0xa0;
         unsigned int v319 = 0xe8fae7a0;
         int v320 = 0xe8fae7a0;
         unsigned int v321 = 0xe8fae7a0;
@@ -8036,7 +8037,7 @@ LABEL_21:
         unsigned int v467 = 0xe8fae7a0;
         int v468 = 0xe8fae7a0;
         unsigned int v469 = 0xe8fae7a0;
-        char v470 = 0xffffffa0;
+        char v470 = 0xa0;
         unsigned int v471 = 0xe8fae7a0;
         int v472 = 0xe8fae7a0;
         int v473 = 0xe8fae7a0;
@@ -8275,7 +8276,7 @@ LABEL_21:
         int v706 = 0xe8fae7a0;
         int v707 = 0xe8fae7a0;
         int v708 = 0xe8fae7a0;
-        char v709 = 0xffffffa0;
+        char v709 = 0xa0;
         unsigned int v710 = 0xe8fae7a0;
         int v711 = 0xe8fae7a0;
         int v712 = 0xe8fae7a0;
@@ -8432,7 +8433,7 @@ LABEL_21:
         int v863 = 0xe8fae7a0;
         unsigned int v864 = 0xe8fae7a0;
         unsigned int v865 = 0xe8fae7a0;
-        char v866 = 0xffffffa0;
+        char v866 = 0xa0;
         int v867 = 0xe8fae7a0;
         int v868 = 0xe8fae7a0;
         unsigned int v869 = 0xe8fae7a0;
@@ -8470,14 +8471,14 @@ LABEL_21:
         unsigned int v901 = 0xe8fae7a0;
         unsigned int v902 = 0xe8fae7a0;
         unsigned int v903 = 0xe8fae7a0;
-        char v904 = 0xffffffa0;
+        char v904 = 0xa0;
         unsigned int v905 = 0xe8fae7a0;
         int v906 = 0xe8fae7a0;
         int v907 = 0xe8fae7a0;
         int v908 = 0xe8fae7a0;
         int v909 = 0xe8fae7a0;
         unsigned int v910 = 0xe8fae7a0;
-        char v911 = 0xffffffa0;
+        char v911 = 0xa0;
         unsigned int v912 = 0xe8fae7a0;
         int v913 = 0xe8fae7a0;
         int v914 = 0xe8fae7a0;

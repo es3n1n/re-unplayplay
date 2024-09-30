@@ -46,7 +46,7 @@ filterwarnings = [
     "error",
     "ignore::pytest.PytestCacheWarning",
 ]
-testpaths = ["src/python-tests/"]
+testpaths = ["tests/python/"]
 
 [tool.ruff.format]
 quote-style = "single"
@@ -58,7 +58,7 @@ combine-as-imports = false
 
 [tool.cibuildwheel]
 build-frontend = "build[uv]"
-test-command = "pytest {project}/src/python-tests"
+test-command = "pytest {project}/tests/python"
 test-extras = ["test"]
 
 [tool.cibuildwheel.pyodide]

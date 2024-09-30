@@ -34,8 +34,8 @@ condition = "re-unpp-build-tests"
 [target.re-unplayplay-tests]
 type = "executable"
 condition = "re-unpp-build-tests"
-sources = ["src/lib-tests/**.cpp"]
-include-directories = ["src/tests/"]
+sources = ["tests/lib/**.cpp"]
+include-directories = ["tests/lib/"]
 link-libraries = ["unplayplay::lib", "GTest::gtest_main"]
 
 [fetch-content.pybind11]
@@ -47,11 +47,6 @@ condition = "re-unpp-build-python"
 type = "shared"
 add-function = "pybind11_add_module"
 pass-sources = true
-
-#[find-package.Python]
-#condition = "re-unpp-build-python"
-#required = true
-#components = ["Interpreter", "Development.Module"]
 
 [target.re-unplayplay-python]
 type = "pyd"

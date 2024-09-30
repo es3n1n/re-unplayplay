@@ -128,9 +128,9 @@ endif()
 if(RE_UNPP_BUILD_TESTS) # re-unpp-build-tests
 	set(re-unplayplay-tests_SOURCES
 		cmake.toml
-		"src/lib-tests/test_bind_and_decrypt_key.cpp"
-		"src/lib-tests/test_bind_key.cpp"
-		"src/lib-tests/test_decrypt_key.cpp"
+		"tests/lib/test_bind_and_decrypt_key.cpp"
+		"tests/lib/test_bind_key.cpp"
+		"tests/lib/test_decrypt_key.cpp"
 	)
 
 	add_executable(re-unplayplay-tests)
@@ -139,7 +139,7 @@ if(RE_UNPP_BUILD_TESTS) # re-unpp-build-tests
 	source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${re-unplayplay-tests_SOURCES})
 
 	target_include_directories(re-unplayplay-tests PRIVATE
-		"src/tests/"
+		"tests/lib/"
 	)
 
 	target_link_libraries(re-unplayplay-tests PRIVATE

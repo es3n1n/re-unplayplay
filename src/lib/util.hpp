@@ -5,8 +5,6 @@
 #include <cstddef>
 #include <string_view>
 
-#include "constants.hpp"
-
 namespace unplayplay::util {
     namespace detail {
         [[nodiscard]] constexpr std::uint8_t bit_from_hex(char bit) {
@@ -79,10 +77,6 @@ namespace unplayplay::util {
     private:
         std::array<std::uint8_t, ReservedSize> buffer_ = {};
     };
-
-    using Key = ByteBuffer<unplayplay::detail::kKeySize>;
-    using FileId = ByteBuffer<unplayplay::detail::kFileIdSize>;
-    using Token = ByteBuffer<unplayplay::detail::kTokenSize>;
 } // namespace unplayplay::util
 
 static_assert(unplayplay::util::ByteBuffer<1>("f1").at(0) == 0xF1);

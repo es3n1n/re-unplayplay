@@ -9,8 +9,8 @@ class DecryptKeyFixture : public testing::TestWithParam<Param> { };
 TEST_P(DecryptKeyFixture, Unit) {
     const auto [key_basis, expected_view] = GetParam();
 
-    auto decrypted = unplayplay::decrypt_key(unplayplay::util::Key(key_basis));
-    auto expected = unplayplay::util::Key(expected_view);
+    auto decrypted = unplayplay::decrypt_key(unplayplay::Key(key_basis));
+    auto expected = unplayplay::Key(expected_view);
 
     EXPECT_EQ(decrypted, expected);
 }

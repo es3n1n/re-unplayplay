@@ -7,9 +7,9 @@ namespace py = pybind11;
 namespace unpp = unplayplay;
 
 namespace impl {
-    static unpp::util::Key key_from_bytes(const py::bytes& key) {
+    static unpp::Key key_from_bytes(const py::bytes& key) {
         const auto view = static_cast<std::string_view>(key);
-        return unpp::util::Key(reinterpret_cast<const std::uint8_t*>(view.data()), view.size());
+        return unpp::Key(reinterpret_cast<const std::uint8_t*>(view.data()), view.size());
     }
 
     template <size_t N>
@@ -24,7 +24,7 @@ namespace impl {
 
     [[nodiscard]] py::bytes bind_key(const py::bytes& decrypted_key, const std::string& file_id_view) {
         const auto key = key_from_bytes(decrypted_key);
-        const auto file_id = unpp::util::FileId(file_id_view);
+        const auto file_id = unpp::FileId(file_id_view);
 
         auto result = unpp::bind_key(key, file_id);
         return to_bytes(result);
@@ -32,7 +32,7 @@ namespace impl {
 
     [[nodiscard]] py::bytes decrypt_and_bind_key(const py::bytes& encrypted_key, const std::string& file_id_view) {
         const auto key = key_from_bytes(encrypted_key);
-        const auto file_id = unpp::util::FileId(file_id_view);
+        const auto file_id = unpp::FileId(file_id_view);
 
         auto decrypted = unpp::decrypt_key(key);
         auto result = unpp::bind_key(decrypted, file_id);
