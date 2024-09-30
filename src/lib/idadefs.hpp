@@ -25,15 +25,15 @@ constexpr inline std::uint32_t __ROL4__(std::uint32_t value, int count) noexcept
     return __ROL__(value, count);
 }
 
-constexpr inline std::uint32_t __ROR4__(std::uint32_t value, int count) {
+constexpr inline std::uint32_t __ROR4__(std::uint32_t value, int count) noexcept {
     return __ROL__(value, -count);
 }
 
-constexpr inline std::uint64_t __ROL8__(std::uint64_t value, int count) {
+constexpr inline std::uint64_t __ROL8__(std::uint64_t value, int count) noexcept {
     return __ROL__(value, count);
 }
 
-constexpr inline std::uint64_t __ROR8__(std::uint64_t value, int count) {
+constexpr inline std::uint64_t __ROR8__(std::uint64_t value, int count) noexcept {
     return __ROL__(value, -count);
 }
 

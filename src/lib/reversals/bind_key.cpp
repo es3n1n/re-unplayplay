@@ -1,10 +1,11 @@
-#include "idadefs.hpp"
-#include "util.hpp"
 #include <cstdint>
 #include <cstring>
 
+#include "idadefs.hpp"
+#include "types.hpp"
+
 namespace unplayplay {
-    [[nodiscard]] util::Key bind_key(util::Key decrypted_key, util::FileId file_id) noexcept {
+    [[nodiscard]] Key bind_key(Key decrypted_key, FileId file_id) noexcept {
         std::uint64_t z1, z2, z3, z4;
         memcpy(&z1, decrypted_key.data() + 8, 8);
         memcpy(&z2, decrypted_key.data() + 0, 8);
@@ -18,7 +19,7 @@ namespace unplayplay {
             z4 = z3 ^ (__ROL8__(z4, 3));
         }
 
-        util::Key result = {};
+        Key result = {};
         memcpy(result.data() + 0, &z2, 8);
         memcpy(result.data() + 8, &z1, 8);
         return result;

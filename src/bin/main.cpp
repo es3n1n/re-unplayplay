@@ -9,9 +9,8 @@ int main(const int argc, const char* argv[]) {
         return 1;
     }
 
-    const auto file_id = unplayplay::util::FileId(argv[1]);
-    const auto encrypted_key = unplayplay::util::Key(argv[2]);
-
+    const auto file_id = unplayplay::FileId(argv[1]);
+    const auto encrypted_key = unplayplay::Key(argv[2]);
     const auto result = unplayplay::decrypt_and_bind_key(encrypted_key, file_id);
 
     for (std::size_t i = 0; i < result.size(); ++i) {
