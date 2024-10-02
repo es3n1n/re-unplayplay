@@ -65,3 +65,5 @@ constexpr unsigned char bit_test(A* a, int b) {
 
 #define WORDn(x, n) (*((uint16_t*)&(x) + n))
 #define HIWORD(x) WORDn(x, HIGH_IND(x, uint16_t))
+
+#define __PAIR64__(high, low) (((uint64_t)(high) << 32) | (uint32_t)(low))
