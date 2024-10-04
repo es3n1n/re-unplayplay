@@ -38,7 +38,7 @@ jobs:
         run: npm run test
 
   build_js:
-#    if: github.repository == 'es3n1n/re-unplayplay' && github.event_name == 'release'
+    if: github.repository == 'es3n1n/re-unplayplay' && github.event_name == 'release'
     name: Build ${{ matrix.docker-arch || matrix.arch }} on ${{ matrix.docker-image || matrix.container || matrix.os }} ${{ matrix.libc }}
     runs-on: ${{ matrix.os }}
     strategy:
@@ -163,7 +163,7 @@ jobs:
           retention-days: 1
 
   bundle:
-#    if: github.repository == 'es3n1n/re-unplayplay' && github.event_name == 'release'
+    if: github.repository == 'es3n1n/re-unplayplay' && github.event_name == 'release'
     name: Bundle prebuilds
     needs: build_js
     runs-on: ubuntu-latest
@@ -185,7 +185,7 @@ jobs:
           retention-days: 7
 
   publish:
-#    if: github.repository == 'es3n1n/re-unplayplay' && github.event_name == 'release'
+    if: github.repository == 'es3n1n/re-unplayplay' && github.event_name == 'release'
     name: Publish to npm
     needs: bundle
     runs-on: ubuntu-latest
