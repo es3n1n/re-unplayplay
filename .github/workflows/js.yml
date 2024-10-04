@@ -219,7 +219,7 @@ jobs:
       - name: Publish to NPM
         run: |
           npm set "//registry.npmjs.org/:_authToken" "$NPM_AUTH_TOKEN"
-          npm publish --access=public --tag release --provenance
+          npm publish --access=public --tag latest --provenance
 
           NEW_VERSION=$(node -p "require('./package.json').version")
           echo "**Published:** $NEW_VERSION" >> $GITHUB_STEP_SUMMARY
