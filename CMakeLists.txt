@@ -33,6 +33,7 @@ endif()
 # Options
 option(RE_UNPP_BUILD_TESTS "" OFF)
 option(RE_UNPP_BUILD_PYTHON "" OFF)
+option(RE_UNPP_BUILD_JS "" OFF)
 
 project(re-unplayplay
 	LANGUAGES
@@ -170,5 +171,54 @@ if(RE_UNPP_BUILD_PYTHON) # re-unpp-build-python
 	set(CMKR_TARGET re-unplayplay-python)
 	set_property(TARGET re-unplayplay-python PROPERTY OUTPUT_NAME _re_unplayplay)
 	install(TARGETS re-unplayplay-python LIBRARY DESTINATION .)
+
+endif()
+# Target: node-api
+if(RE_UNPP_BUILD_JS) # re-unpp-build-js
+	set(CMKR_TARGET node-api)
+	include("cmake/cmakejs.cmake")
+
+	add_library(node-api INTERFACE)
+
+	target_compile_definitions(node-api INTERFACE
+		NAPI_VERSION=7
+	)
+
+	target_include_directories(node-api INTERFACE
+		${CMAKE_JS_INC}
+		${NODE_ADDON_API_INCLUDE}
+	)
+
+	target_link_libraries(node-api INTERFACE
+		${CMAKE_JS_LIB}
+	)
+
+	target_sources(node-api INTERFACE ${CMAKE_JS_SRC})
+
+endif()
+# Target: re-unplayplay-js
+if(RE_UNPP_BUILD_JS) # re-unpp-build-js
+	set(re-unplayplay-js_SOURCES
+		cmake.toml
+		"src/js/main.cpp"
+	)
+
+	add_library(re-unplayplay-js SHARED)
+
+	target_sources(re-unplayplay-js PRIVATE ${re-unplayplay-js_SOURCES})
+	source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${re-unplayplay-js_SOURCES})
+
+	target_link_libraries(re-unplayplay-js PUBLIC
+		node-api
+		unplayplay::lib
+	)
+
+	set(CMKR_TARGET re-unplayplay-js)
+	set_target_properties(re-unplayplay-js PROPERTIES
+	    PREFIX ""
+	    SUFFIX ".node"
+	    LINKER_LANGUAGE CXX
+	)
+	install(TARGETS re-unplayplay-js LIBRARY DESTINATION .)
 
 endif()

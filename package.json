@@ -1,0 +1,52 @@
+{
+  "name": "re-unplayplay",
+  "version": "1.2.4",
+  "author": "es3n1n",
+  "license": "MIT",
+  "description": "A rewritten version of unplayplay",
+  "bugs": "https://github.com/es3n1n/re-unplayplay/issues",
+  "homepage": "https://github.com/es3n1n/re-unplayplay#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/es3n1n/re-unplayplay.git"
+  },
+  "main": "dist/src/js/re-unplayplay/index.js",
+  "dependencies": {
+    "node-addon-api": "^8.1.0",
+    "pkg-prebuilds": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.13",
+    "@types/node": "^22.7.4",
+    "cmake-js": "^7.3.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.6.2"
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "install": "pkg-prebuilds-verify ./binding-options.js || cmake-js compile --target re-unplayplay-js --CDRE_UNPP_BUILD_JS=ON --CDCMKR_SKIP_GENERATION=ON",
+    "build": "tsc && cmake-js build --target re-unplayplay-js --CDRE_UNPP_BUILD_JS=ON --CDCMKR_SKIP_GENERATION=ON",
+    "rebuild": "cmake-js rebuild --target re-unplayplay-js --CDRE_UNPP_BUILD_JS=ON --CDCMKR_SKIP_GENERATION=ON",
+    "test": "jest",
+    "clean": "cmake-js clean",
+    "pkg-prebuilds-copy": "pkg-prebuilds-copy --baseDir build/Release --strip"
+  },
+  "files": [
+    "/dist",
+    "/src",
+    "/CMakeLists.txt",
+    "/cmake.toml",
+    "/prebuilds",
+    "binding-options.js"
+  ],
+  "binary": {
+    "napi_versions": [
+      7
+    ]
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

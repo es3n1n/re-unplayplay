@@ -1,6 +1,6 @@
-#include <pybind11/iostream.h>
-#include <pybind11/pybind11.h>
 #include <string>
+
+#include <pybind11/pybind11.h>
 #include <unplayplay.hpp>
 
 namespace py = pybind11;
@@ -24,18 +24,23 @@ namespace impl {
 
     [[nodiscard]] py::bytes bind_key(const py::bytes& decrypted_key, const std::string& file_id_view) {
         const auto key = key_from_bytes(decrypted_key);
-        const auto file_id = unpp::FileId(file_id_view);
+        if (!unpp::util::detail::validate_bytes_view_size(file_id_view.size())) {
+            throw py::value_error("Invalid size of file_id");
+        }
 
+        const auto file_id = unpp::FileId(file_id_view);
         auto result = unpp::bind_key(key, file_id);
         return to_bytes(result);
     }
 
     [[nodiscard]] py::bytes decrypt_and_bind_key(const py::bytes& encrypted_key, const std::string& file_id_view) {
         const auto key = key_from_bytes(encrypted_key);
-        const auto file_id = unpp::FileId(file_id_view);
+        if (!unpp::util::detail::validate_bytes_view_size(file_id_view.size())) {
+            throw py::value_error("Invalid size of file_id");
+        }
 
-        auto decrypted = unpp::decrypt_key(key);
-        auto result = unpp::bind_key(decrypted, file_id);
+        const auto file_id = unpp::FileId(file_id_view);
+        auto result = unpp::decrypt_and_bind_key(key, file_id);
         return to_bytes(result);
     }
 

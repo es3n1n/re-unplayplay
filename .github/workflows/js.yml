@@ -1,0 +1,228 @@
+# Most of the code here is based on https://github.com/Julusian/node-jpeg-turbo/blob/main/.github/workflows/node.yaml
+name: JS
+
+on:
+  release:
+    types: [ released ]
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - master
+
+env:
+  NAPI_VERSION: 7
+  BINDING_NAME: re-unplayplay-js
+
+jobs:
+  test_js:
+    if: '!cancelled()'
+    name: Test 20.x
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Test
+        run: npm run test
+
+  build_js:
+    if: github.repository == 'es3n1n/re-unplayplay' && github.event_name == 'release'
+    name: Build ${{ matrix.docker-arch || matrix.arch }} on ${{ matrix.docker-image || matrix.container || matrix.os }} ${{ matrix.libc }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          # windows
+          - os: windows-2022
+            arch: x64
+            is-native: true
+          - os: windows-2022
+            arch: ia32
+            is-native: false
+          - os: windows-2022
+            arch: arm64
+            is-native: false
+          # macos
+          - os: macos-latest
+            arch: arm64
+            is-native: false
+          - os: macos-latest
+            arch: x64
+            is-native: true
+          # linux
+          - os: ubuntu-latest
+            arch: x64
+            is-native: true
+            docker-arch: linux/amd64
+            docker-image: node:18-buster
+          # linux-libc
+          - os: ubuntu-latest
+            arch: arm64
+            is-native: false
+            docker-arch: linux/arm64
+            docker-image: node:18-buster
+          - os: ubuntu-latest
+            arch: arm
+            is-native: false
+            docker-arch: linux/arm/v7
+            docker-image: node:18-buster
+          # linux-musl
+          - os: ubuntu-latest
+            arch: x64
+            is-native: false
+            docker-arch: linux/amd64
+            docker-image: node:18-alpine
+            libc: musl
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js 18.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18.x
+
+      - name: Build
+        if: ${{ !matrix.docker-arch }}
+        shell: bash
+        run: |
+          npm install
+
+          if [ -n "${{ matrix.is-native }}" ]; then
+            npm run test
+          fi
+
+          npm run rebuild -- --arch=${{ matrix.arch }}
+          npm run pkg-prebuilds-copy -- \
+            ${{ matrix.extra-copy-args }} \
+            --source $BINDING_NAME.node \
+            --name=$BINDING_NAME \
+            --napi_version=$NAPI_VERSION \
+            --arch=${{ matrix.arch }}
+        env:
+          CI: true
+          npm_config_build_from_source: true
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+        if: matrix.docker-arch
+
+      - name: Pre-fetch image
+        if: matrix.docker-arch
+        run: docker pull ${{ matrix.docker-image }} --platform=${{ matrix.docker-arch }}
+
+      - name: Build (docker)
+        uses: addnab/docker-run-action@v3
+        if: matrix.docker-arch
+        with:
+          image: ${{ matrix.docker-image }}
+          # shell: bash
+          options: --platform=${{ matrix.docker-arch }} -v ${{ github.workspace }}:/work -e CI=1 -e npm_config_build_from_source=1 -e NAPI_VERSION -e BINDING_NAME
+          run: |
+            if command -v apt-get &> /dev/null
+            then
+              echo "deb http://archive.debian.org/debian buster-backports main contrib non-free" | tee -a /etc/apt/sources.list.d/backports.list
+              apt update
+              apt install -yq --no-install-recommends cmake/buster-backports g++ gcc
+            elif command -v apk &> /dev/null
+            then
+              apk update
+              apk add cmake make g++ gcc
+            fi
+
+            cd /work
+
+            npm install
+            npm run test
+            npm run pkg-prebuilds-copy -- \
+                ${{ matrix.extra-copy-args }} \
+                --source $BINDING_NAME.node \
+                --name=$BINDING_NAME \
+                --napi_version=$NAPI_VERSION \
+                --arch=${{ matrix.arch }} \
+                --libc=${{ matrix.libc }}
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ runner.os }}-${{ matrix.arch }}-${{ matrix.libc }}-prebuilds
+          path: prebuilds
+          retention-days: 1
+
+  bundle:
+    if: github.repository == 'es3n1n/re-unplayplay' && github.event_name == 'release'
+    name: Bundle prebuilds
+    needs: build_js
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: tmp
+
+      - name: Display structure of downloaded files
+        run: |
+          mkdir prebuilds
+          mv tmp/*/* prebuilds/
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: all-prebuilds
+          path: prebuilds
+          retention-days: 7
+
+  publish:
+    if: github.repository == 'es3n1n/re-unplayplay' && github.event_name == 'release'
+    name: Publish to npm
+    needs: bundle
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Use Node.js 20.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+
+      - name: Install
+        run: npm install
+        env:
+          CI: true
+
+      - name: Build typescript
+        run: npm run tsc
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: all-prebuilds
+          path: prebuilds
+
+      - name: Publish to NPM
+        run: |
+          npm set "//registry.npmjs.org/:_authToken" "$NPM_AUTH_TOKEN"
+          npm publish --access=public --tag release --provenance
+
+          NEW_VERSION=$(node -p "require('./package.json').version")
+          echo "**Published:** $NEW_VERSION" >> $GITHUB_STEP_SUMMARY
+        env:
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          CI: true
