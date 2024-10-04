@@ -74,7 +74,7 @@ bind_result = bind_key(decrypted, '01')  # returns bytes
 result = decrypt_and_bind_key(bytes.fromhex('01'), '01')  # returns bytes
 ```
 
-### Typescript
+### TypeScript
 
 ```typescript
 import { decryptKey, bindKey, decryptAndBindKey, getToken } from 're-unplayplay';
@@ -92,7 +92,7 @@ const bind_result = bindKey(decrypted, '01'); // returns Buffer
 const result = decryptAndBindKey(Buffer.from('01', 'hex'), '01'); // returns Buffer
 ```
 
-### Javascript
+### JavaScript
 
 ```javascript
 const re_unplayplay = require('re-unplayplay');
@@ -115,7 +115,7 @@ cmake --build build --config Release
 python3 -m pip install -U re-unplayplay
 ```
 
-### Javascript/Typescript
+### (Java|Type)Script
 
 ```commandline
 npm install re-unplayplay
