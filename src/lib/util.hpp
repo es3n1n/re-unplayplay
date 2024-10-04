@@ -20,6 +20,10 @@ namespace unplayplay::util {
             assert(false);
             return 0;
         }
+
+        [[nodiscard]] constexpr bool validate_bytes_view_size(const std::size_t size) {
+            return size % 2 == 0;
+        }
     } // namespace detail
 
     template <std::size_t ReservedSize>
@@ -29,12 +33,11 @@ namespace unplayplay::util {
         ~ByteBuffer() = default;
 
         constexpr explicit ByteBuffer(const std::uint8_t* pointer, const std::size_t size = ReservedSize) {
-            assert(size % 2 == 0);
             std::copy_n(pointer, std::min(ReservedSize, size), buffer_.begin());
         }
 
         constexpr explicit ByteBuffer(const std::string_view string_view) {
-            assert(string_view.size() % 2 == 0);
+            assert(detail::validate_bytes_view_size(string_view.size()));
 
             for (std::size_t i = 0; i < string_view.size(); i += 2) {
                 if (i / 2 >= ReservedSize) {

@@ -10,6 +10,7 @@ msvc-runtime = "static"
 [options]
 RE_UNPP_BUILD_TESTS = false
 RE_UNPP_BUILD_PYTHON = false
+RE_UNPP_BUILD_JS = false
 
 [target.re-unplayplay]
 alias = "unplayplay::lib"
@@ -55,3 +56,25 @@ condition = "re-unpp-build-python"
 link-libraries = ["unplayplay::lib"]
 cmake-after = """set_property(TARGET re-unplayplay-python PROPERTY OUTPUT_NAME _re_unplayplay)
 install(TARGETS re-unplayplay-python LIBRARY DESTINATION .)"""
+
+[target.node-api]
+type = "interface"
+include-directories = ["${CMAKE_JS_INC}", "${NODE_ADDON_API_INCLUDE}"]
+condition = "re-unpp-build-js"
+compile-definitions = ["NAPI_VERSION=3"]
+link-libraries = ["${CMAKE_JS_LIB}"]
+cmake-before = 'include("cmake/cmakejs.cmake")'
+# We can't use `sources` since cmkr will always create a source_group for the current dir
+cmake-after = "target_sources(node-api INTERFACE ${CMAKE_JS_SRC})"
+
+[target.re-unplayplay-js]
+type = "shared"
+sources = ["src/js/**.cpp"]
+condition = "re-unpp-build-js"
+link-libraries = ["node-api", "unplayplay::lib"]
+cmake-after = """set_target_properties(re-unplayplay-js PROPERTIES
+    PREFIX ""
+    SUFFIX ".node"
+    LINKER_LANGUAGE CXX
+)
+install(TARGETS re-unplayplay-js LIBRARY DESTINATION .)"""

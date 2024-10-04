@@ -6,3 +6,4 @@ re_unplayplay.egg-info/
 *.pyc
 dist/
 sdist/
+node_modules/
