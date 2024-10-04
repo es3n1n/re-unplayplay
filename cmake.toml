@@ -61,10 +61,10 @@ install(TARGETS re-unplayplay-python LIBRARY DESTINATION .)"""
 type = "interface"
 include-directories = ["${CMAKE_JS_INC}", "${NODE_ADDON_API_INCLUDE}"]
 condition = "re-unpp-build-js"
-compile-definitions = ["NAPI_VERSION=3"]
+compile-definitions = ["NAPI_VERSION=7"]
 link-libraries = ["${CMAKE_JS_LIB}"]
 cmake-before = 'include("cmake/cmakejs.cmake")'
-# We can't use `sources` since cmkr will always create a source_group for the current dir
+# CMKR ISSUE: We can't use `sources` since cmkr will always create a source_group for the current dir
 cmake-after = "target_sources(node-api INTERFACE ${CMAKE_JS_SRC})"
 
 [target.re-unplayplay-js]

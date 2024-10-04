@@ -1,4 +1,7 @@
-const _re_unplayplay = require('bindings')('re-unplayplay-js');
+const _re_unplayplay = require("pkg-prebuilds")(
+    __dirname + '../../../../',
+    require("../../../binding-options.js")
+);
 
 export function decryptKey(encryptedKey: Buffer): Buffer {
     return _re_unplayplay.decryptKey(encryptedKey);

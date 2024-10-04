@@ -1,10 +1,13 @@
 # re-unplayplay
 
+[![license](https://img.shields.io/github/license/es3n1n/re-unplayplay.svg)](https://github.com/es3n1n/re-unplayplay/blob/naster/LICENSE)
 [![C++](https://github.com/es3n1n/re-unplayplay/actions/workflows/cxx.yml/badge.svg)](https://github.com/es3n1n/re-unplayplay/actions/workflows/cxx.yml)
 [![Python](https://github.com/es3n1n/re-unplayplay/actions/workflows/python.yml/badge.svg)](https://github.com/es3n1n/re-unplayplay/actions/workflows/python.yml)
-[![license](https://img.shields.io/github/license/es3n1n/re-unplayplay.svg)](https://github.com/es3n1n/re-unplayplay/blob/naster/LICENSE)
+[![JS](https://github.com/es3n1n/re-unplayplay/actions/workflows/js.yml/badge.svg)](https://github.com/es3n1n/re-unplayplay/actions/workflows/js.yml)
 [![pypi](https://img.shields.io/pypi/v/re-unplayplay.svg)](https://pypi.python.org/pypi/re-unplayplay)
-[![Downloads](https://static.pepy.tech/badge/re-unplayplay/month)](https://pepy.tech/project/re-unplayplay)
+[![npm](https://img.shields.io/npm/v/re-unplayplay)](https://www.npmjs.com/package/re-unplayplay)
+[![pypi Downloads](https://static.pepy.tech/badge/re-unplayplay/month)](https://pepy.tech/project/re-unplayplay)
+[![npm Downloads](https://img.shields.io/npm/dw/re-unplayplay)](https://www.npmjs.com/package/re-unplayplay)
 
 A rewritten version of [unplayplay](https://git.gay/uhwot/unplayplay), which is a slightly edited version of [pbdecrypt.cc](https://github.com/baltitenger/spsync/blob/master/ppdecrypt.cc). \
 This library is implementing various cryptography algorithms used by the spotify's DRM called playplay, 
@@ -59,21 +62,43 @@ int main(const int argc, const char* argv[]) {
 from re_unplayplay import decrypt_key, bind_key, decrypt_and_bind_key, get_token
 
 # Get the associated token
-get_token().hex()
+get_token()  # returns bytes
 
 # Decrypt the encrypted key
-decrypted = decrypt_key(bytes.fromhex('01'))
+decrypted = decrypt_key(bytes.fromhex('01'))  # returns bytes
 
 # Bind decrypted key
-bind_result = bind_key(decrypted, '01')
+bind_result = bind_key(decrypted, '01')  # returns bytes
 
 # Decrypt and bind in one call
-result = decrypt_and_bind_key(bytes.fromhex('01'), '01')
+result = decrypt_and_bind_key(bytes.fromhex('01'), '01')  # returns bytes
 ```
 
-### NodeJS
+### Typescript
 
-Coming soon
+```typescript
+import { decryptKey, bindKey, decryptAndBindKey, getToken } from 're-unplayplay';
+
+// Get the associated token
+getToken(); // returns Buffer
+
+// Decrypt the encrypted key
+const decrypted = decryptKey(Buffer.from('01', 'hex')); // returns Buffer
+
+// Bind decrypted key
+const bind_result = bindKey(decrypted, '01'); // returns Buffer
+
+// Decrypt and bind in one call
+const result = decryptAndBindKey(Buffer.from('01', 'hex'), '01'); // returns Buffer
+```
+
+### Javascript
+
+```javascript
+const re_unplayplay = require('re-unplayplay');
+
+// same as typescript
+```
 
 ## Installing/building
 
@@ -90,9 +115,11 @@ cmake --build build --config Release
 python3 -m pip install -U re-unplayplay
 ```
 
-### NodeJS
+### Javascript/Typescript
 
-Coming soon
+```commandline
+npm install re-unplayplay
+```
 
 ___
 ## Contributing

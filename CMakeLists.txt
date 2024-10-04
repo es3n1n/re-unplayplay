@@ -181,7 +181,7 @@ if(RE_UNPP_BUILD_JS) # re-unpp-build-js
 	add_library(node-api INTERFACE)
 
 	target_compile_definitions(node-api INTERFACE
-		NAPI_VERSION=3
+		NAPI_VERSION=7
 	)
 
 	target_include_directories(node-api INTERFACE

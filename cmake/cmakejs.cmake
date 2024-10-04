@@ -1,5 +1,3 @@
-# Authored by Graham Dianaty for Bitlogix Technologies. Based on code from Rene Hollander.
-# Rewritten by @es3n1n in 2024
 cmake_minimum_required(VERSION 3.12)
 
 if(CMAKE_VERSION VERSION_GREATER_EQUAL 3.28)
@@ -75,6 +73,8 @@ function(parse_cmakejs_output CMAKE_JS_OUTPUT)
     string(REGEX MATCH "-DCMAKE_JS_LIB=[^']*" CMAKE_JS_LIB_MATCH "${CMAKE_JS_OUTPUT}")
     string(REGEX MATCH "-DCMAKE_RUNTIME_OUTPUT_DIRECTORY=[^']*" CMAKE_RUNTIME_OUTPUT_DIRECTORY_MATCH "${CMAKE_JS_OUTPUT}")
     string(REGEX MATCH "-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=[^']*" CMAKE_LIBRARY_OUTPUT_DIRECTORY_MATCH "${CMAKE_JS_OUTPUT}")
+    string(REGEX MATCH "-DCMAKE_JS_NODELIB_DEF=[^']*" CMAKE_JS_NODELIB_DEF_MATCH "${CMAKE_JS_OUTPUT}")
+    string(REGEX MATCH "-DCMAKE_JS_NODELIB_TARGET=[^']*" CMAKE_JS_NODELIB_TARGET_MATCH "${CMAKE_JS_OUTPUT}")
 
     if(CMAKE_JS_INCLUDE_MATCH)
         string(REPLACE "-DCMAKE_JS_INC=" "" CMAKE_JS_INCLUDE "${CMAKE_JS_INCLUDE_MATCH}")
@@ -99,9 +99,40 @@ function(parse_cmakejs_output CMAKE_JS_OUTPUT)
             set(CMAKE_OUTPUT_DIRECTORY "" PARENT_SCOPE)
         endif()
 
+        # Set CMAKE_RUNTIME_OUTPUT_DIRECTORY/CMAKE_LIBRARY_OUTPUT_DIRECTORY
         if(DEFINED CMAKE_OUTPUT_DIRECTORY)
             set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_OUTPUT_DIRECTORY}" PARENT_SCOPE)
             set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_OUTPUT_DIRECTORY}" PARENT_SCOPE)
+        endif()
+
+        # Set CMAKE_JS_NODELIB_DEF
+        if(CMAKE_JS_NODELIB_DEF_MATCH)
+            string(REPLACE "-DCMAKE_JS_NODELIB_DEF=" "" CMAKE_JS_NODELIB_DEF "${CMAKE_JS_NODELIB_DEF_MATCH}")
+            string(REGEX REPLACE "[\r\n\"]" "" CMAKE_JS_NODELIB_DEF ${CMAKE_JS_NODELIB_DEF})
+        else()
+            set(CMAKE_JS_NODELIB_DEF "")
+        endif()
+
+        # Set CMAKE_JS_NODELIB_TARGET
+        if(CMAKE_JS_NODELIB_TARGET_MATCH)
+            string(REPLACE "-DCMAKE_JS_NODELIB_TARGET=" "" CMAKE_JS_NODELIB_TARGET "${CMAKE_JS_NODELIB_TARGET_MATCH}")
+            string(REGEX REPLACE "[\r\n\"]" "" CMAKE_JS_NODELIB_TARGET ${CMAKE_JS_NODELIB_TARGET})
+        else()
+            set(CMAKE_JS_NODELIB_TARGET "")
+        endif()
+
+        # On msvc we have to build node.lib
+        if(MSVC AND CMAKE_JS_NODELIB_TARGET AND CMAKE_JS_NODELIB_DEF AND NOT EXISTS "${CMAKE_JS_NODELIB_TARGET}")
+            execute_process(
+                    COMMAND ${CMAKE_AR} /def:${CMAKE_JS_NODELIB_DEF} /out:${CMAKE_JS_NODELIB_TARGET} ${CMAKE_STATIC_LINKER_FLAGS}
+                    RESULT_VARIABLE CMAKE_AR_RESULT
+            )
+
+            if(NOT CMAKE_AR_RESULT EQUAL 0)
+                message(FATAL_ERROR "[CMakeJS] Failed to generate node.lib at ${CMAKE_JS_NODELIB_TARGET}")
+            endif()
+
+            message(VERBOSE "[CMakeJS] Generated node.lib")
         endif()
     else()
         message(FATAL_ERROR "[CMakeJS] Failed to parse CMake.js output: CMAKE_JS_INC not found")
