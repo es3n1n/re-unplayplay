@@ -22,6 +22,16 @@ include-directories = ["src/lib/"]
 msvc.compile-options = ["/MP"]
 linux.compile-options = ["-fPIC"]
 
+[target.re-unplayplay-csharp]
+type = "shared"  # Building as a shared library for P/Invoke
+compile-features = ["cxx_std_17"]
+compile-definitions = ["NOMINMAX"]
+sources = ["src/csharp/**.cpp"]  # Only include export source files
+include-directories = ["src/csharp/", "src/lib/"]  # Include necessary headers
+msvc.compile-options = ["/MP", "/LD"]  # /LD ensures DLL creation
+linux.compile-options = ["-fPIC"]       # Position-independent code for shared libraries
+link-libraries = ["unplayplay::lib"] 
+
 [target.re-unplayplay-cli]
 type = "executable"
 link-libraries = ["unplayplay::lib"]

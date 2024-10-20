@@ -7,3 +7,22 @@ re_unplayplay.egg-info/
 dist/
 sdist/
 node_modules/
+
+# ===============================
+# C# and .NET Ignore Rules
+# ===============================
+
+# Build Folders
+**/bin/
+**/obj/
+
+# Rider Files
+.idea/
+*.sln.iml
+
+# Visual Studio Files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates

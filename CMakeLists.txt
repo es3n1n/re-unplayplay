@@ -105,6 +105,47 @@ target_include_directories(re-unplayplay PUBLIC
 	"src/lib/"
 )
 
+# Target: re-unplayplay-csharp
+set(re-unplayplay-csharp_SOURCES
+	cmake.toml
+	"src/csharp/re_unplayplay_export.cpp"
+)
+
+add_library(re-unplayplay-csharp SHARED)
+
+target_sources(re-unplayplay-csharp PRIVATE ${re-unplayplay-csharp_SOURCES})
+source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${re-unplayplay-csharp_SOURCES})
+
+target_compile_definitions(re-unplayplay-csharp PUBLIC
+	NOMINMAX
+)
+
+target_compile_features(re-unplayplay-csharp PUBLIC
+	cxx_std_17
+)
+
+if(MSVC) # msvc
+	target_compile_options(re-unplayplay-csharp PUBLIC
+		"/MP"
+		"/LD"
+	)
+endif()
+
+if(CMAKE_SYSTEM_NAME MATCHES "Linux") # linux
+	target_compile_options(re-unplayplay-csharp PUBLIC
+		-fPIC
+	)
+endif()
+
+target_include_directories(re-unplayplay-csharp PUBLIC
+	"src/csharp/"
+	"src/lib/"
+)
+
+target_link_libraries(re-unplayplay-csharp PUBLIC
+	unplayplay::lib
+)
+
 # Target: re-unplayplay-cli
 set(re-unplayplay-cli_SOURCES
 	cmake.toml
