@@ -56,6 +56,7 @@ constexpr unsigned char bit_test(A* a, int b) {
 
 #define DWORDn(x, n) (*((uint32_t*)&(x) + n))
 #define LODWORD(x) DWORDn(x, LOW_IND(x, uint32_t))
+#define HIDWORD(x) DWORDn(x, HIGH_IND(x, uint32_t))
 
 #define BYTEn(x, n) (*((uint8_t*)&(x) + n))
 #define BYTE1(x) BYTEn(x, 1)
