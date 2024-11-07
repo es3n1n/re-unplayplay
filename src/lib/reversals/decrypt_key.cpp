@@ -131,7 +131,7 @@ namespace unplayplay {
         int v123;
         unsigned int v124;
         int v125;
-        __int64 v126;
+        std::uint64_t v126;
         int v127;
         int v128;
         int v129;
@@ -225,7 +225,7 @@ namespace unplayplay {
         int v217;
         int v218;
         int v219;
-        __int64 v220;
+        std::uint64_t v220;
         int v221;
         int v222;
         int v223;
@@ -635,7 +635,7 @@ namespace unplayplay {
         int v627;
         unsigned int v629;
         int v630;
-        unsigned __int8 v631;
+        std::uint8_t v631;
         int v632;
         int v633;
         int v634;
@@ -877,7 +877,7 @@ namespace unplayplay {
         int v870;
         int v871;
         int v872;
-        unsigned __int8 v873;
+        std::uint8_t v873;
         int v874;
         int v875;
         unsigned int v876;
@@ -978,7 +978,7 @@ namespace unplayplay {
         int v971;
         int v972;
         int v973;
-        unsigned __int8 v974;
+        std::uint8_t v974;
         int v975;
         int v976;
         int v977;
@@ -1606,7 +1606,7 @@ namespace unplayplay {
         int v1601;
         int v1602;
         int v1603;
-        unsigned __int8 v1604;
+        std::uint8_t v1604;
         int v1605;
         int v1606;
         int v1607;
@@ -3253,7 +3253,7 @@ namespace unplayplay {
         case 0:
             if ((a3 & 0x40000000) != 0) {
                 v5 = a3 ^ a5;
-                v6 = detail::kPlayIntentKey[(unsigned __int8)a4 + 9] + a2;
+                v6 = detail::kPlayIntentKey[(std::uint8_t)a4 + 9] + a2;
                 v7 = a4 + v5 + 1677318749;
                 v8 = v6 + v5;
                 v9 = v7 ^ v6;
@@ -3269,17 +3269,17 @@ namespace unplayplay {
             v15 = a5 + __ROL4__(v12, 23);
             v16 = v13 ^ v12;
             v17 = v15 ^ __ROL4__(v16, 5);
-            v18 = v13 - detail::kPlayIntentKey[(unsigned __int8)v14 + 400];
+            v18 = v13 - detail::kPlayIntentKey[(std::uint8_t)v14 + 400];
             v19 = (v14 ^ v15) + v18;
-            v20 = detail::kPlayIntentKey[(unsigned __int8)v18 + 365] ^ v16;
+            v20 = detail::kPlayIntentKey[(std::uint8_t)v18 + 365] ^ v16;
             v21 = v17 + (v14 ^ v15);
-            v22 = detail::kPlayIntentKey[(unsigned __int8)v20 + 196] ^ v17;
+            v22 = detail::kPlayIntentKey[(std::uint8_t)v20 + 196] ^ v17;
             v23 = v20 - __ROL4__(v19, 10);
             v24 = v22 + v21 + v19;
             v25 = v21 ^ __ROL4__(v22, 14);
             v26 = __ROL4__(v23, 18);
             v27 = v24 + v23;
-            v28 = detail::kPlayIntentKey[(unsigned __int8)v25 + 406] ^ v24;
+            v28 = detail::kPlayIntentKey[(std::uint8_t)v25 + 406] ^ v24;
             v29 = v27 + v22 - v26;
             v30 = v25 - v29;
             v31 = v28 + v30 + v27;
@@ -3292,14 +3292,14 @@ namespace unplayplay {
             v38 = v34 ^ (__ROL4__(v35, 9) + __ROL4__(v36, 6));
             v39 = v36 + v35;
             v40 = v38 + v37;
-            v41 = detail::kPlayIntentKey[(unsigned __int8)v37 + 455] ^ v36;
+            v41 = detail::kPlayIntentKey[(std::uint8_t)v37 + 455] ^ v36;
             v42 = v41 ^ (v38 + v37);
             v43 = v38 + __ROL4__(v39, 28);
             v44 = v39 - (__ROL4__(v41, 22) + __ROL4__(v40, 29));
             v45 = v43 ^ v44;
             v46 = v40 - (__ROL4__(v43, 21) + __ROR4__(v44, 1));
             v47 = v42 + v44;
-            v48 = detail::kPlayIntentKey[(unsigned __int8)v46 + 264] + v42;
+            v48 = detail::kPlayIntentKey[(std::uint8_t)v46 + 264] + v42;
             v49 = v45 + v46 + 2046880605;
             v50 = v47 + v45;
             v51 = v47 - v48 - v49;
@@ -3329,9 +3329,9 @@ namespace unplayplay {
                 v84 = __ROL4__(v83, 19) + v81 + __ROL4__(v82, 24);
                 v85 = v82 + v83 + 1344452081;
                 v86 = v84 + v83;
-                v87 = detail::kPlayIntentKey[(unsigned __int8)v85 + 241] ^ v84;
+                v87 = detail::kPlayIntentKey[(std::uint8_t)v85 + 241] ^ v84;
                 v88 = v87 + v86 + 1067132218;
-                v89 = v85 - detail::kPlayIntentKey[(unsigned __int8)v86 + 186];
+                v89 = v85 - detail::kPlayIntentKey[(std::uint8_t)v86 + 186];
                 v90 = v87 + v86;
                 v91 = v89 + v87 + v86 + 305994320;
                 v92 = v88 ^ (v87 + v90 + 305994320);
@@ -3345,16 +3345,16 @@ namespace unplayplay {
                 ++v79;
             } while (v79);
             if ((v76 & 0x40000000) != 0) {
-                v97 = detail::kPlayIntentKey[(unsigned __int8)v80 + 501] ^ v74;
+                v97 = detail::kPlayIntentKey[(std::uint8_t)v80 + 501] ^ v74;
                 v98 = v80 - (__ROL4__(v96, 23) + __ROL4__(v97, 25));
                 v99 = v97 + v96;
                 v100 = v97 - v98 - 143410728;
                 v101 = __ROL4__(v99, 29);
-                v102 = detail::kPlayIntentKey[(unsigned __int8)v100 + 297] + v99;
+                v102 = detail::kPlayIntentKey[(std::uint8_t)v100 + 297] + v99;
                 v103 = v102 + v98 + v101;
                 v104 = v100 - v103;
                 v105 = __ROL4__(v104, 23);
-                v106 = detail::kPlayIntentKey[(unsigned __int8)v103 + 191] + v104;
+                v106 = detail::kPlayIntentKey[(std::uint8_t)v103 + 191] + v104;
                 v107 = v102 ^ v105;
                 v108 = v103 ^ __ROL4__(v107, 19);
                 v109 = v106 + v107;
@@ -3362,9 +3362,9 @@ namespace unplayplay {
                 v80 = v109 ^ v108;
                 v78 = v74 + v80 + v109;
             }
-            v110 = detail::kPlayIntentKey[(unsigned __int8)v74 + 44] ^ v76;
+            v110 = detail::kPlayIntentKey[(std::uint8_t)v74 + 44] ^ v76;
             v111 = v74 ^ (v78 + v80);
-            v112 = detail::kPlayIntentKey[(unsigned __int8)v78 + 9] ^ (v110 + v111);
+            v112 = detail::kPlayIntentKey[(std::uint8_t)v78 + 9] ^ (v110 + v111);
             v113 = v110 ^ v111;
             v114 = v112 ^ v78 ^ v80;
             return (unsigned int)(v113 + v114);
@@ -3386,7 +3386,7 @@ namespace unplayplay {
             v123 = a5 + a4;
             v124 = (a5 - 28095) ^ a2 ^ (__ROR4__(a4, 1) - 17800);
             v125 = a5 - v122;
-            v126 = (unsigned __int8)v124;
+            v126 = (std::uint8_t)v124;
             v127 = v124 - v123;
             v128 = v125 + v123;
             v129 = detail::kPlayIntentKey[v126 + 254] + v127 + v122 + 180318894;
@@ -3429,16 +3429,16 @@ namespace unplayplay {
             v160 = v156;
             v161 = v158 + __ROL4__(v159, 17);
             v162 = v156 - v158;
-            v163 = detail::kPlayIntentKey[(unsigned __int8)v161 + 69] ^ (v156 - v158);
+            v163 = detail::kPlayIntentKey[(std::uint8_t)v161 + 69] ^ (v156 - v158);
             v164 = v157 + __ROL4__(v160, 14);
             v165 = v164 ^ __ROL4__(v162, 26);
             v166 = v165 + v159 - v164;
             v167 = v166 + v161;
-            v168 = detail::kPlayIntentKey[(unsigned __int8)v163 + 292] + v165;
+            v168 = detail::kPlayIntentKey[(std::uint8_t)v163 + 292] + v165;
             v169 = v163 - 1490426744 * v167;
             v170 = v166 ^ v168;
-            v171 = detail::kPlayIntentKey[(unsigned __int8)v166 + 418] + v167;
-            v172 = detail::kPlayIntentKey[(unsigned __int8)v169 + 495] ^ v168;
+            v171 = detail::kPlayIntentKey[(std::uint8_t)v166 + 418] + v167;
+            v172 = detail::kPlayIntentKey[(std::uint8_t)v169 + 495] ^ v168;
             v173 = v171 + v169;
             v174 = v171 - v170;
             v175 = ((v172 >> 7) & 7) + 1;
@@ -3446,18 +3446,18 @@ namespace unplayplay {
                 v176 = v172 ^ v174;
                 v177 = v170 - v173;
                 v178 = v173 + __ROL4__(v176, 21);
-                v179 = detail::kPlayIntentKey[(unsigned __int8)v177 + 384] + v176;
-                v170 = detail::kPlayIntentKey[(unsigned __int8)v178 + 75] ^ v177;
+                v179 = detail::kPlayIntentKey[(std::uint8_t)v177 + 384] + v176;
+                v170 = detail::kPlayIntentKey[(std::uint8_t)v178 + 75] ^ v177;
                 v173 = v178 ^ (v170 + v179);
                 v174 = v179 - v170 + 1899926390;
                 --v175;
             } while (v175);
             v180 = v173 + v170 + v172;
-            v181 = detail::kPlayIntentKey[(unsigned __int8)v174 + 185];
+            v181 = detail::kPlayIntentKey[(std::uint8_t)v174 + 185];
             v182 = v174 ^ (-1077795570 * v180);
-            v183 = detail::kPlayIntentKey[(unsigned __int8)(v170 - v173) + 130] ^ v180;
+            v183 = detail::kPlayIntentKey[(std::uint8_t)(v170 - v173) + 130] ^ v180;
             v184 = v170 - v181;
-            v185 = detail::kPlayIntentKey[(unsigned __int8)v182 + 389] + v173 - v181;
+            v185 = detail::kPlayIntentKey[(std::uint8_t)v182 + 389] + v173 - v181;
             v186 = v183 + v182;
             v187 = v183 - v184;
             v188 = v184 + ((__ROL4__(v185, 14) - 28568) ^ (v182 + v183 + 1653906007));
@@ -3470,16 +3470,16 @@ namespace unplayplay {
             v195 = v191 ^ (-1578604723 * v192);
             v196 = v193 + v194;
             v197 = v196 ^ v192;
-            v198 = detail::kPlayIntentKey[(unsigned __int8)v195 + 271] ^ v193;
+            v198 = detail::kPlayIntentKey[(std::uint8_t)v195 + 271] ^ v193;
             v199 = v197 + v196 - 1345466146;
-            v200 = detail::kPlayIntentKey[(unsigned __int8)v197 + 137] ^ v195;
+            v200 = detail::kPlayIntentKey[(std::uint8_t)v197 + 137] ^ v195;
             v201 = v200 ^ v199;
             v202 = v198 ^ v200;
             v203 = __ROL4__(v200, 23) + v196 + __ROL4__(v198, 11);
             goto LABEL_325;
         case 4:
             v204 = a2 - a3;
-            v205 = detail::kPlayIntentKey[(unsigned __int8)a4 + 423] + a3;
+            v205 = detail::kPlayIntentKey[(std::uint8_t)a4 + 423] + a3;
             v206 = a4 - a5 + 1152864258;
             v207 = a5 - v204;
             v208 = __ROL4__(v205, 22);
@@ -3488,22 +3488,22 @@ namespace unplayplay {
             v211 = v206 - __ROL4__(v207, 22);
             v212 = v210 + v209 + v207;
             v213 = 1470088830 * v209;
-            v214 = detail::kPlayIntentKey[(unsigned __int8)v211 + 428] + v209;
+            v214 = detail::kPlayIntentKey[(std::uint8_t)v211 + 428] + v209;
             v215 = v210 + v213;
             v216 = v215 + v212 + v211;
             v217 = v215 ^ v212;
-            v218 = v215 - detail::kPlayIntentKey[(unsigned __int8)v214 + 392];
+            v218 = v215 - detail::kPlayIntentKey[(std::uint8_t)v214 + 392];
             v219 = v214 - 1261296093 * v216;
-            v220 = (unsigned __int8)v217;
+            v220 = (std::uint8_t)v217;
             v221 = v217 - v218;
             v222 = detail::kPlayIntentKey[v220 + 99] + v216;
             if ((v219 & 0x100) != 0) {
                 v223 = v219 ^ v221;
-                v224 = detail::kPlayIntentKey[(unsigned __int8)v222 + 392] + v218;
+                v224 = detail::kPlayIntentKey[(std::uint8_t)v222 + 392] + v218;
                 v225 = v223 + v222 - 842728995;
                 v226 = v224 ^ v223;
                 v227 = v225 ^ (-1951453722 * v226);
-                v228 = detail::kPlayIntentKey[(unsigned __int8)v225 + 358] + v224;
+                v228 = detail::kPlayIntentKey[(std::uint8_t)v225 + 358] + v224;
                 v229 = v226 - v228;
                 v230 = v228 - (__ROL4__(v227, 7) + __ROL4__(v229, 6));
                 v231 = v229 ^ v227;
@@ -3538,9 +3538,9 @@ namespace unplayplay {
                 v255 = v254 + v252;
                 v256 = v248 + v254;
                 v257 = v256 ^ v253;
-                v258 = detail::kPlayIntentKey[(unsigned __int8)v257 + 370] ^ v255;
+                v258 = detail::kPlayIntentKey[(std::uint8_t)v257 + 370] ^ v255;
                 v259 = v257 - v256;
-                v260 = detail::kPlayIntentKey[(unsigned __int8)v258 + 334] + v256;
+                v260 = detail::kPlayIntentKey[(std::uint8_t)v258 + 334] + v256;
                 v261 = v258 - v259 - 120018341;
                 v262 = v260 + v259;
                 v247 = v260 + v259 + 511044502;
@@ -3554,7 +3554,7 @@ namespace unplayplay {
         case 5:
             v263 = a2 ^ (a3 - 2009354744);
             v264 = a3 - a4;
-            v265 = a4 - detail::kPlayIntentKey[(unsigned __int8)a5 + 266];
+            v265 = a4 - detail::kPlayIntentKey[(std::uint8_t)a5 + 266];
             v266 = a5 ^ (v263 + 1617332063);
             v267 = v263 + __ROL4__(v264, 4);
             v268 = v264 - v266 - v265;
@@ -3571,9 +3571,9 @@ namespace unplayplay {
             v279 = v275 - 1927467326 * v276;
             v280 = v277 ^ v278;
             v281 = v276 + __ROL4__(v277, 8);
-            v282 = detail::kPlayIntentKey[(unsigned __int8)v279 + 199] + v278;
+            v282 = detail::kPlayIntentKey[(std::uint8_t)v279 + 199] + v278;
             v283 = v281 ^ v280;
-            v284 = v279 - detail::kPlayIntentKey[(unsigned __int8)v281 + 117];
+            v284 = v279 - detail::kPlayIntentKey[(std::uint8_t)v281 + 117];
             v285 = v282 ^ ((v281 ^ v280) + v284);
             v286 = (__ROL4__(v282, 29) + 4888) ^ v280 ^ (v284 - 1206);
             v287 = v283 ^ (v286 + v285);
@@ -3584,7 +3584,7 @@ namespace unplayplay {
             v292 = v286 - ((__ROL4__(v285, 24) + 12349) ^ v289);
             v293 = __ROL4__(v287, 7) + v285 + __ROL4__(v290, 27);
             v294 = v293 + v292;
-            v295 = detail::kPlayIntentKey[(unsigned __int8)v292 + 208];
+            v295 = detail::kPlayIntentKey[(std::uint8_t)v292 + 208];
             v296 = (v295 + v287) ^ v294;
             v297 = v287 + v295 + 24543;
             v298 = v291 ^ (__ROL4__(v295 + v287, 3) + __ROL4__(v294, 5));
@@ -3592,7 +3592,7 @@ namespace unplayplay {
             v300 = v294 - v299;
             v301 = v298 + v299;
             v302 = v296 + 203711281 * v300;
-            v303 = detail::kPlayIntentKey[(unsigned __int8)v296 + 122] + v298;
+            v303 = detail::kPlayIntentKey[(std::uint8_t)v296 + 122] + v298;
             if ((v301 & 0x80000) != 0) {
                 v304 = v301 ^ v302;
                 v305 = v303 ^ v304;
@@ -3619,7 +3619,7 @@ namespace unplayplay {
             if ((a2 & 8) != 0) {
                 v314 = a2 ^ a5;
                 v315 = a4 - 439862767;
-                v316 = a4 - detail::kPlayIntentKey[(unsigned __int8)v314 + 58];
+                v316 = a4 - detail::kPlayIntentKey[(std::uint8_t)v314 + 58];
                 v317 = a3 ^ v315;
                 v318 = v314 ^ (v317 - 175175025);
                 v319 = v316 ^ v317;
@@ -3645,17 +3645,17 @@ namespace unplayplay {
                 v328 = v326 + v325 + v326 - 380436175;
                 v329 = v328 + (a4 ^ __ROL4__(v325, 7));
                 a3 = v327 + v328;
-                v330 = detail::kPlayIntentKey[(unsigned __int8)v329 + 505] + v327;
+                v330 = detail::kPlayIntentKey[(std::uint8_t)v329 + 505] + v327;
                 v331 = v330 + v329;
                 a5 = v330 - a3;
                 a4 = v331;
             }
             v332 = a2 - __ROL4__(a3, 19);
             v333 = __ROL4__(a5, 30) + a3 + __ROL4__(a4, 8);
-            v334 = detail::kPlayIntentKey[(unsigned __int8)a5] + a4;
-            v335 = a5 - detail::kPlayIntentKey[(unsigned __int8)v332 + 237];
+            v334 = detail::kPlayIntentKey[(std::uint8_t)a5] + a4;
+            v335 = a5 - detail::kPlayIntentKey[(std::uint8_t)v332 + 237];
             v336 = v332 ^ (-697595211 * v333);
-            v337 = v333 - detail::kPlayIntentKey[(unsigned __int8)v334 + 223];
+            v337 = v333 - detail::kPlayIntentKey[(std::uint8_t)v334 + 223];
             v338 = v336 + v335 + v334;
             v339 = v335 - v336;
             v340 = v338 + v337;
@@ -3690,16 +3690,16 @@ namespace unplayplay {
             v364 = v351 ^ v350;
             return (unsigned int)(v363 + v364);
         case 7:
-            v365 = a2 - detail::kPlayIntentKey[(unsigned __int8)a3 + 97];
+            v365 = a2 - detail::kPlayIntentKey[(std::uint8_t)a3 + 97];
             v366 = a3 + a5 + a4;
             v367 = a4 - a5;
-            v368 = detail::kPlayIntentKey[(unsigned __int8)v365 + 335] ^ a5;
+            v368 = detail::kPlayIntentKey[(std::uint8_t)v365 + 335] ^ a5;
             v369 = ((v366 >> 2) & 7) + 1;
             do {
                 v370 = v366 ^ v368;
                 v371 = v365 - v367 - v370;
                 v372 = v370 ^ v367;
-                v373 = detail::kPlayIntentKey[(unsigned __int8)v371 + 411] ^ v370;
+                v373 = detail::kPlayIntentKey[(std::uint8_t)v371 + 411] ^ v370;
                 v374 = v372 + v371;
                 v375 = v373 ^ (__ROL4__(v374, 28) - 31637);
                 v376 = __ROL4__(v373, 26);
@@ -3733,10 +3733,10 @@ namespace unplayplay {
             v394 = v365 - v366;
             v395 = v366 + __ROL4__(v367, 20);
             v396 = v394 + v368 - 1905141614;
-            v397 = v367 - detail::kPlayIntentKey[(unsigned __int8)v368 + 18];
+            v397 = v367 - detail::kPlayIntentKey[(std::uint8_t)v368 + 18];
             v398 = __ROL4__(v395, 16);
             v399 = v394 - v398 + v397 + v394 + v368 - 1905141614;
-            v400 = detail::kPlayIntentKey[(unsigned __int8)(v395 ^ (v397 + 90)) + 209] + v394 - v398;
+            v400 = detail::kPlayIntentKey[(std::uint8_t)(v395 ^ (v397 + 90)) + 209] + v394 - v398;
             v401 = v396 ^ (v394 - v398 + 826514782);
             v402 = v395 ^ (v397 - 1709017510) ^ (v401 + v399);
             v403 = v399 - v401;
@@ -3757,7 +3757,7 @@ namespace unplayplay {
                 v417 = v414 - v416;
                 v418 = v416 + 197906430 * v415;
                 v419 = v417 ^ v415;
-                v413 = v417 - detail::kPlayIntentKey[(unsigned __int8)v418 + 23];
+                v413 = v417 - detail::kPlayIntentKey[(std::uint8_t)v418 + 23];
                 v410 = v418;
                 v412 = v419;
             }
@@ -3791,7 +3791,7 @@ namespace unplayplay {
                 v439 = -306046843 * v435 + v433;
                 v440 = v438 + __ROL4__(v439, 25);
                 v441 = v435 - v438;
-                v435 = v441 - detail::kPlayIntentKey[(unsigned __int8)v440 + 303];
+                v435 = v441 - detail::kPlayIntentKey[(std::uint8_t)v440 + 303];
                 v433 = v439 - __ROL4__(v441, 2);
                 v436 = v440 ^ (v433 - 2032747132);
                 ++v437;
@@ -3801,7 +3801,7 @@ namespace unplayplay {
             v444 = v435 - v436;
             v445 = v436 ^ (v442 - 1405452833);
             v446 = v443 ^ v442;
-            v447 = detail::kPlayIntentKey[(unsigned __int8)v444 + 365] ^ v443;
+            v447 = detail::kPlayIntentKey[(std::uint8_t)v444 + 365] ^ v443;
             v448 = v444 - __ROL4__(v445, 29);
             v449 = v446 ^ v445;
             v450 = v446 - __ROL4__(v447, 14);
@@ -3818,7 +3818,7 @@ namespace unplayplay {
             v461 = v460 ^ v455;
             v462 = v459 ^ v458;
             v463 = v459 - v461;
-            v464 = v461 - detail::kPlayIntentKey[(unsigned __int8)v460 + 245];
+            v464 = v461 - detail::kPlayIntentKey[(std::uint8_t)v460 + 245];
             v465 = v463 + v462 + v460;
             v466 = v463 ^ (v465 + v464);
             v467 = v462 + __ROL4__(v463, 20);
@@ -3834,7 +3834,7 @@ namespace unplayplay {
             goto LABEL_97;
         case 9:
             v476 = -1793547137 * a3;
-            v477 = detail::kPlayIntentKey[(unsigned __int8)a4 + 169] ^ a3;
+            v477 = detail::kPlayIntentKey[(std::uint8_t)a4 + 169] ^ a3;
             v478 = v476 + a2 + a5;
             v479 = (v476 + a2 - 17773) ^ a4 ^ (__ROL4__(a5, 20) + 32301);
             v480 = v476 + a2 - v479 - v477;
@@ -3842,7 +3842,7 @@ namespace unplayplay {
             v482 = v478 + __ROL4__(v480, 28);
             v483 = v477 - v478;
             v484 = v479 - v478 + v482 - 1400684717;
-            v485 = detail::kPlayIntentKey[(unsigned __int8)v481 + 381] ^ v482;
+            v485 = detail::kPlayIntentKey[(std::uint8_t)v481 + 381] ^ v482;
             v486 = v481 - v483;
             v487 = v483 - v484;
             v488 = v485 + v486 + v484;
@@ -3865,7 +3865,7 @@ namespace unplayplay {
                 v504 = v500 - (__ROR4__(v501, 1) + __ROL4__(v502, 19));
                 v505 = v502 - v503 - v504;
                 v506 = v503 ^ v504;
-                v507 = v503 - detail::kPlayIntentKey[(unsigned __int8)v505 + 341];
+                v507 = v503 - detail::kPlayIntentKey[(std::uint8_t)v505 + 341];
                 v508 = v505 - v506 - 289111329;
                 v509 = v506 - v507;
                 v510 = v508 ^ v507;
@@ -3877,17 +3877,17 @@ namespace unplayplay {
             v511 = v492 - __ROL4__(v490, 8);
             v512 = v493 ^ __ROL4__(v511, 17);
             v513 = v511 - ((v491 ^ v493) + (v490 ^ v491));
-            v514 = detail::kPlayIntentKey[(unsigned __int8)v512 + 144] ^ v491 ^ v493;
+            v514 = detail::kPlayIntentKey[(std::uint8_t)v512 + 144] ^ v491 ^ v493;
             v515 = v490 ^ v493;
             v516 = v512 - v513 - v515;
-            v517 = v513 - detail::kPlayIntentKey[(unsigned __int8)v515 + 89];
+            v517 = v513 - detail::kPlayIntentKey[(std::uint8_t)v515 + 89];
             v518 = v516 + v514;
-            v519 = v514 - detail::kPlayIntentKey[(unsigned __int8)v516 + 348];
+            v519 = v514 - detail::kPlayIntentKey[(std::uint8_t)v516 + 348];
             v520 = v515 - v518;
             v521 = v520 + v517 + v516;
             v522 = v520 ^ v517;
-            v523 = detail::kPlayIntentKey[(unsigned __int8)v519 + 313] ^ v520;
-            v524 = v519 - detail::kPlayIntentKey[(unsigned __int8)v521 + 189];
+            v523 = detail::kPlayIntentKey[(std::uint8_t)v519 + 313] ^ v520;
+            v524 = v519 - detail::kPlayIntentKey[(std::uint8_t)v521 + 189];
             v525 = v522 ^ v521;
             v526 = v522 - ((__ROL4__(v523, 15) + 8354) ^ (v524 + 26029));
             v527 = v523 - v524;
@@ -3910,8 +3910,8 @@ namespace unplayplay {
                 v541 = v540 + v536;
                 v542 = v539 ^ (v541 + v540);
                 v543 = v540 ^ (v542 + 1565701245);
-                v544 = v541 - detail::kPlayIntentKey[(unsigned __int8)v540 + 40];
-                v545 = v542 - detail::kPlayIntentKey[(unsigned __int8)v544 + 167];
+                v544 = v541 - detail::kPlayIntentKey[(std::uint8_t)v540 + 40];
+                v545 = v542 - detail::kPlayIntentKey[(std::uint8_t)v544 + 167];
                 a2 = v544 - v543;
                 a4 = v545 ^ v543;
                 a5 = (a4 + 8183) ^ v545 ^ (__ROL4__(a2, 17) - 21800);
@@ -3935,7 +3935,7 @@ namespace unplayplay {
                 v560 = v557 - 136208963 * v558;
                 v561 = v559 ^ v558;
                 v562 = v560 ^ v559;
-                v563 = detail::kPlayIntentKey[(unsigned __int8)v561 + 134] + v560;
+                v563 = detail::kPlayIntentKey[(std::uint8_t)v561 + 134] + v560;
                 v564 = v561 ^ __ROL4__(v562, 19);
                 v565 = v562 ^ __ROL4__(v563, 4);
                 v550 = v564 ^ v565;
@@ -3968,9 +3968,9 @@ namespace unplayplay {
                 v583 = (__ROL4__(v581, 30) + 13151) ^ v580 ^ (v582 + 19435);
                 v584 = v581 - v582 - v583;
                 v585 = v582 - v583;
-                v586 = v583 - detail::kPlayIntentKey[(unsigned __int8)v584 + 429];
+                v586 = v583 - detail::kPlayIntentKey[(std::uint8_t)v584 + 429];
                 v587 = v585 ^ v584;
-                v588 = detail::kPlayIntentKey[(unsigned __int8)v586 + 393] ^ v585;
+                v588 = detail::kPlayIntentKey[(std::uint8_t)v586 + 393] ^ v585;
                 v589 = __ROR4__(v588, 1);
                 v590 = v587 + v586;
                 a4 = (v587 + v586) ^ v588;
@@ -3984,8 +3984,8 @@ namespace unplayplay {
                 v594 = v593 + v592;
                 v595 = (v593 + v592) ^ a4;
                 LOBYTE(v592) = v593 + v592 + 18;
-                v596 = v593 - detail::kPlayIntentKey[(unsigned __int8)v595 + 176];
-                v597 = detail::kPlayIntentKey[(unsigned __int8)v592 + 155] + v595;
+                v596 = v593 - detail::kPlayIntentKey[(std::uint8_t)v595 + 176];
+                v597 = detail::kPlayIntentKey[(std::uint8_t)v592 + 155] + v595;
                 v598 = v594 + v596 + 445760514;
                 v599 = v598 ^ (v596 + v597 + 1336505057);
                 v600 = v597 ^ __ROL4__(v598, 24);
@@ -3998,7 +3998,7 @@ namespace unplayplay {
             do {
                 v602 = a3 ^ a5;
                 v603 = v602 + a4;
-                v604 = detail::kPlayIntentKey[(unsigned __int8)(a2 ^ v603) + 287] + v602;
+                v604 = detail::kPlayIntentKey[(std::uint8_t)(a2 ^ v603) + 287] + v602;
                 v605 = v604 ^ v603;
                 v606 = a2 + v604;
                 v607 = v605 + a2;
@@ -4025,10 +4025,10 @@ namespace unplayplay {
                 v622 = v618 - __ROL4__(v620, 30);
                 v623 = v620 - v621;
                 v624 = v622 ^ v621;
-                v625 = detail::kPlayIntentKey[(unsigned __int8)v623 + 136] ^ v622;
-                v626 = v623 - detail::kPlayIntentKey[(unsigned __int8)v624 + 81];
+                v625 = detail::kPlayIntentKey[(std::uint8_t)v623 + 136] ^ v622;
+                v626 = v623 - detail::kPlayIntentKey[(std::uint8_t)v624 + 81];
                 v609 = v624 - v625;
-                v627 = v625 - detail::kPlayIntentKey[(unsigned __int8)v626 + 340];
+                v627 = v625 - detail::kPlayIntentKey[(std::uint8_t)v626 + 340];
                 v611 = v609 - v626 + ((__ROL4__(v627, 10) + 5507) ^ (v609 + 32531));
                 v612 = v627 - (__ROL4__(v609, 8) + __ROL4__(v611, 18));
                 --v613;
@@ -4050,7 +4050,7 @@ namespace unplayplay {
             v636 = v633 ^ v632;
             v637 = v633 - v635 - v634;
             v638 = v634 - v635;
-            v639 = detail::kPlayIntentKey[(unsigned __int8)v636 + 452] ^ v635;
+            v639 = detail::kPlayIntentKey[(std::uint8_t)v636 + 452] ^ v635;
             v640 = (__ROL4__(v637, 18) - 10547) ^ v636 ^ (v638 + 9115);
             v641 = v638 + v637;
             v642 = v639 ^ v640;
@@ -4079,11 +4079,11 @@ namespace unplayplay {
             v665 = v662 ^ (v661 + v664);
             v666 = v664 + v661 + 335357900;
             v667 = v663 ^ (v665 + 726384062);
-            v668 = v665 - detail::kPlayIntentKey[(unsigned __int8)v666 + 67];
+            v668 = v665 - detail::kPlayIntentKey[(std::uint8_t)v666 + 67];
             v669 = v667 + v663 + v664;
             v670 = v669 ^ v666;
             v671 = v670 + v668;
-            v672 = detail::kPlayIntentKey[(unsigned __int8)v668 + 252] ^ v667;
+            v672 = detail::kPlayIntentKey[(std::uint8_t)v668 + 252] ^ v667;
             v673 = v669 + v672;
             v674 = v672 + v669 + 27150;
             v675 = (v672 + 19394) ^ v670 ^ (__ROL4__(v669, 20) - 12793);
@@ -4094,10 +4094,10 @@ namespace unplayplay {
             v680 = v673 + __ROL4__(v677, 28);
             v681 = v678 ^ v676;
             v682 = v679 + v680 + 1157554256;
-            v683 = v678 - detail::kPlayIntentKey[(unsigned __int8)v680 + 464];
+            v683 = v678 - detail::kPlayIntentKey[(std::uint8_t)v680 + 464];
             v684 = v683 + v681 + v679;
             v685 = v681 - v683;
-            v686 = detail::kPlayIntentKey[(unsigned __int8)v682 + 474] + v683;
+            v686 = detail::kPlayIntentKey[(std::uint8_t)v682 + 474] + v683;
             v687 = v685 + v684 + 1956837968;
             v685 += 1956837968;
             v688 = v682 - v687;
@@ -4112,7 +4112,7 @@ namespace unplayplay {
             do {
                 v694 = a3 ^ a5;
                 v695 = a2 + __ROL4__(a4, 26) + __ROL4__(v694, 18);
-                v696 = detail::kPlayIntentKey[(unsigned __int8)v695 + 367];
+                v696 = detail::kPlayIntentKey[(std::uint8_t)v695 + 367];
                 a2 = v695 ^ __ROL4__(a4 - v694, 3);
                 a4 -= v696;
                 a5 = a2 ^ (v694 - v696);
@@ -4127,8 +4127,8 @@ namespace unplayplay {
                 v702 = v701 ^ v699;
                 v703 = v702 + v700;
                 v704 = v701 + __ROL4__(v703, 8);
-                v705 = detail::kPlayIntentKey[(unsigned __int8)(LOBYTE(detail::kPlayIntentKey[(unsigned __int8)v701 + 315]) ^ v702) + 211] + v703;
-                a3 = v704 + (detail::kPlayIntentKey[(unsigned __int8)v701 + 315] ^ v702);
+                v705 = detail::kPlayIntentKey[(std::uint8_t)(LOBYTE(detail::kPlayIntentKey[(std::uint8_t)v701 + 315]) ^ v702) + 211] + v703;
+                a3 = v704 + (detail::kPlayIntentKey[(std::uint8_t)v701 + 315] ^ v702);
                 a4 = v704 ^ __ROL4__(v705, 20);
                 a5 = (a4 + 187) ^ v705 ^ (__ROR4__(a3, 1) - 27330);
                 --v697;
@@ -4146,12 +4146,12 @@ namespace unplayplay {
             v716 = v709 ^ v711;
             v717 = (__ROL4__(v715, 29) + 3035) ^ v713;
             v718 = v714 ^ (v716 - 89962391);
-            v719 = v715 - detail::kPlayIntentKey[(unsigned __int8)v714 + 20];
+            v719 = v715 - detail::kPlayIntentKey[(std::uint8_t)v714 + 20];
             v720 = v709 - v717;
             v721 = v720 + v719 + 106227249;
-            v722 = detail::kPlayIntentKey[(unsigned __int8)v720 + 476] + v716;
+            v722 = detail::kPlayIntentKey[(std::uint8_t)v720 + 476] + v716;
             v723 = v718 ^ (v721 + v722);
-            v724 = v722 - detail::kPlayIntentKey[(unsigned __int8)v721 + 168];
+            v724 = v722 - detail::kPlayIntentKey[(std::uint8_t)v721 + 168];
             v725 = v721 ^ (v719 + v718 - 1457083651);
             v726 = v718 + v719 - v723;
             v727 = v723 - v724;
@@ -4175,7 +4175,7 @@ namespace unplayplay {
             v742 = (HIWORD(a3) & 7) + 1;
             do {
                 v743 = a3 ^ a5;
-                v744 = a2 - detail::kPlayIntentKey[(unsigned __int8)a4 + 336];
+                v744 = a2 - detail::kPlayIntentKey[(std::uint8_t)a4 + 336];
                 v745 = a4 - v743 - v744;
                 v746 = v744 ^ v743;
                 v747 = v744 - v745;
@@ -4216,7 +4216,7 @@ namespace unplayplay {
                 v771 = v769 + v768 + 1683231469;
                 v772 = v769 - v770 - 1683231469;
                 v773 = v770 + v771 + 1683231469;
-                v774 = detail::kPlayIntentKey[(unsigned __int8)v772 + 9] ^ v771;
+                v774 = detail::kPlayIntentKey[(std::uint8_t)v772 + 9] ^ v771;
                 v775 = v773 + v772;
                 v776 = __ROL4__(v772 + v773 + 1313112670, 29);
                 v777 = v773 - ((__ROR4__(v774, 1) + 517) ^ (v772 + v773 + 1313080253));
@@ -4233,7 +4233,7 @@ namespace unplayplay {
                 v783 = v779 ^ v781;
                 v784 = v778 ^ (v783 + v780);
                 v785 = v780 - v783;
-                v786 = detail::kPlayIntentKey[(unsigned __int8)v784 + 415] + v783;
+                v786 = detail::kPlayIntentKey[(std::uint8_t)v784 + 415] + v783;
                 v787 = v784 + v785 + 1519797387;
                 v788 = v785 + 1519797387 - v786;
                 v789 = v786 + ((v784 + v785 + 1519769503) ^ (v788 + 8425));
@@ -4272,8 +4272,8 @@ namespace unplayplay {
                 v813 = v808 - __ROL4__(v810, 23);
                 v814 = v812 + v813;
                 v815 = v811 + __ROL4__(v813, 24);
-                v816 = detail::kPlayIntentKey[(unsigned __int8)v815 + 304] + v812;
-                v817 = detail::kPlayIntentKey[(unsigned __int8)v814 + 248] ^ v815;
+                v816 = detail::kPlayIntentKey[(std::uint8_t)v815 + 304] + v812;
+                v817 = detail::kPlayIntentKey[(std::uint8_t)v814 + 248] ^ v815;
                 v818 = v817 + v816 + v814;
                 v819 = v816 ^ (v817 - 786481311);
                 v820 = v818 + v817;
@@ -4304,18 +4304,18 @@ namespace unplayplay {
             v840 = v833 - (v836 + __ROL4__(v835, 25));
             v841 = v838 - v840;
             v842 = v840 + 1379666792 * v837;
-            v843 = detail::kPlayIntentKey[(unsigned __int8)v839 + 194] + v837;
+            v843 = detail::kPlayIntentKey[(std::uint8_t)v839 + 194] + v837;
             v844 = v841 ^ v839;
             v845 = v841 - v842 - v843;
             v846 = v842 ^ (1611739257 * v843);
             v847 = v844 ^ v843;
             v848 = v844 - 2002765418 * v845;
             v849 = v846 + v845;
-            v850 = detail::kPlayIntentKey[(unsigned __int8)v847 + 362] + v846;
-            v851 = detail::kPlayIntentKey[(unsigned __int8)v848 + 239] ^ v847;
+            v850 = detail::kPlayIntentKey[(std::uint8_t)v847 + 362] + v846;
+            v851 = detail::kPlayIntentKey[(std::uint8_t)v848 + 239] ^ v847;
             v852 = v848 ^ __ROL4__(v849, 21);
-            v363 = v852 ^ detail::kPlayIntentKey[(unsigned __int8)v850 + 224] ^ v849;
-            v364 = (detail::kPlayIntentKey[(unsigned __int8)v851 + 203] + v850) ^ (v851 + __ROL4__(v852, 3));
+            v363 = v852 ^ detail::kPlayIntentKey[(std::uint8_t)v850 + 224] ^ v849;
+            v364 = (detail::kPlayIntentKey[(std::uint8_t)v851 + 203] + v850) ^ (v851 + __ROL4__(v852, 3));
             return (unsigned int)(v363 + v364);
         case 0x10:
             if ((a3 & 0x4000) != 0) {
@@ -4327,9 +4327,9 @@ namespace unplayplay {
                 v858 = v855 - v856;
                 v859 = v856 - (__ROL4__(v857, 8) + __ROL4__(v858, 3));
                 v860 = v858;
-                v861 = detail::kPlayIntentKey[(unsigned __int8)v859 + 13] + v858;
+                v861 = detail::kPlayIntentKey[(std::uint8_t)v859 + 13] + v858;
                 v862 = v857 - __ROL4__(v860, 11);
-                v863 = detail::kPlayIntentKey[(unsigned __int8)v862 + 511] + v859;
+                v863 = detail::kPlayIntentKey[(std::uint8_t)v862 + 511] + v859;
                 a4 = v862 - v861;
                 a5 = v863 + v861;
                 a2 = v863;
@@ -4358,15 +4358,15 @@ namespace unplayplay {
             v879 = ((v876 >> 8) & 7) + 1;
             do {
                 v880 = v876 ^ v878;
-                v881 = v875 - detail::kPlayIntentKey[(unsigned __int8)v877 + 168];
+                v881 = v875 - detail::kPlayIntentKey[(std::uint8_t)v877 + 168];
                 v882 = v877 - v880;
-                v883 = v880 - detail::kPlayIntentKey[(unsigned __int8)v881 + 386];
-                v884 = detail::kPlayIntentKey[(unsigned __int8)(v882 + 44) + 331] ^ v881;
+                v883 = v880 - detail::kPlayIntentKey[(std::uint8_t)v881 + 386];
+                v884 = detail::kPlayIntentKey[(std::uint8_t)(v882 + 44) + 331] ^ v881;
                 v885 = v882 + 1626030645 * v883 + 1803699500;
                 v886 = v884 ^ v883;
                 v887 = v884 ^ (__ROL4__(v885, 30) + __ROL4__(v886, 9));
                 v875 = v887 + v885 - v886;
-                v888 = detail::kPlayIntentKey[(unsigned __int8)v887 + 340];
+                v888 = detail::kPlayIntentKey[(std::uint8_t)v887 + 340];
                 v877 = v885 + v888;
                 v878 = (__ROR4__(v875, 1) - 6888) ^ (v888 + v885 - 28182) ^ (v888 + v886);
                 --v879;
@@ -4384,7 +4384,7 @@ namespace unplayplay {
             v899 = v894 + ((__ROL4__(v895, 14) - 22116) ^ (v896 + 26894));
             v900 = v896 - __ROL4__(v898, 3);
             v901 = v899 + v897 + v898;
-            v902 = detail::kPlayIntentKey[(unsigned __int8)v900 + 345];
+            v902 = detail::kPlayIntentKey[(std::uint8_t)v900 + 345];
             v903 = v902 - (v900 + v899 + v898 + 82834862);
             v904 = v897 + v902 - 1745163781;
             v905 = v903 ^ ((v904 ^ (v899 - v897 + 181918417)) + ((v899 - v897 + 181918417) ^ v901) + v901 + v900 + 82834862);
@@ -4408,10 +4408,10 @@ namespace unplayplay {
                 v920 = v917 - v918;
                 v921 = v918 - v919;
                 v922 = v920 ^ (-892714569 * (v918 - v919));
-                v923 = detail::kPlayIntentKey[(unsigned __int8)v920 + 311] + v919;
+                v923 = detail::kPlayIntentKey[(std::uint8_t)v920 + 311] + v919;
                 a2 = v921 + 501688407 * v923;
                 a4 = v922 + v923;
-                a5 = detail::kPlayIntentKey[(unsigned __int8)a2 + 128] ^ v922;
+                a5 = detail::kPlayIntentKey[(std::uint8_t)a2 + 128] ^ v922;
                 --v907;
             } while (v907);
             v924 = a3 - a2;
@@ -4424,15 +4424,15 @@ namespace unplayplay {
             v931 = v928 ^ v927;
             v932 = v928 - (v930 + v929 - 656698567);
             v933 = (v930 - 656698567) ^ v929;
-            v934 = v930 - 656698567 - detail::kPlayIntentKey[(unsigned __int8)v931 + 205];
+            v934 = v930 - 656698567 - detail::kPlayIntentKey[(std::uint8_t)v931 + 205];
             v935 = v933 + v932;
-            v936 = detail::kPlayIntentKey[(unsigned __int8)v933 + 190] + v932;
+            v936 = detail::kPlayIntentKey[(std::uint8_t)v933 + 190] + v932;
             v937 = v931 - v935;
             v938 = v933 ^ (v934 + v937);
             v939 = v936 ^ __ROL4__(v938, 7);
             v940 = v938 - (v934 + v936);
             v941 = v934 - (v936 + v937 + v937);
-            v942 = v936 + v937 - detail::kPlayIntentKey[(unsigned __int8)v939 + 337];
+            v942 = v936 + v937 - detail::kPlayIntentKey[(std::uint8_t)v939 + 337];
             v943 = v940 ^ v939;
             v944 = 1421420003 * v941;
             v945 = 1421420003 * v941 + v940;
@@ -4444,7 +4444,7 @@ namespace unplayplay {
             v951 = v947 - v948;
             v952 = v948 - 1340289780 * v949;
             v953 = v949 ^ (v950 - 721184332);
-            v474 = v951 - detail::kPlayIntentKey[(unsigned __int8)v952 + 181];
+            v474 = v951 - detail::kPlayIntentKey[(std::uint8_t)v952 + 181];
             v363 = v952 ^ v953;
             v475 = v950 ^ v951;
 LABEL_97:
@@ -4452,16 +4452,16 @@ LABEL_97:
             return (unsigned int)(v363 + v364);
         case 0x12:
             if ((a3 & 4) != 0) {
-                v954 = detail::kPlayIntentKey[(unsigned __int8)a4 + 364] ^ a2;
+                v954 = detail::kPlayIntentKey[(std::uint8_t)a4 + 364] ^ a2;
                 v955 = a3 ^ a5;
                 v956 = a4 - v955;
                 v957 = v955 ^ __ROL4__(v954, 15);
                 v958 = v956 ^ v954;
-                v959 = v956 - detail::kPlayIntentKey[(unsigned __int8)v957 + 485];
+                v959 = v956 - detail::kPlayIntentKey[(std::uint8_t)v957 + 485];
                 v960 = v958 ^ v957;
-                v961 = detail::kPlayIntentKey[(unsigned __int8)v959 + 449] ^ v958;
+                v961 = detail::kPlayIntentKey[(std::uint8_t)v959 + 449] ^ v958;
                 v962 = v960 ^ __ROL4__(v961, 13);
-                v963 = v961 - detail::kPlayIntentKey[(unsigned __int8)(v960 + v959) + 141];
+                v963 = v961 - detail::kPlayIntentKey[(std::uint8_t)(v960 + v959) + 141];
                 v964 = v962 ^ (v960 + v959);
                 v965 = v962 - v963;
                 v966 = v965 - ((v965 ^ v964) + v963 + v964);
@@ -4478,7 +4478,7 @@ LABEL_97:
                 v972 = v967 ^ v970;
                 v973 = v968 ^ v969;
                 v974 = v968 - v972;
-                v975 = detail::kPlayIntentKey[(unsigned __int8)v973 + 467];
+                v975 = detail::kPlayIntentKey[(std::uint8_t)v973 + 467];
                 v976 = v972 - v975;
                 v977 = v973 - detail::kPlayIntentKey[v974 + 452];
                 v978 = v968 - v975;
@@ -4492,7 +4492,7 @@ LABEL_97:
                 v986 = v982 + ((__ROL4__(v984, 12) - 29215) ^ (v985 + 15033));
                 v987 = v984 - v985;
                 v988 = v986 + v987;
-                v968 = detail::kPlayIntentKey[(unsigned __int8)v987 + 26] ^ v986;
+                v968 = detail::kPlayIntentKey[(std::uint8_t)v987 + 26] ^ v986;
                 v969 = v985 ^ v988;
                 v970 = v968 + v969 + v987;
                 --v971;
@@ -4503,7 +4503,7 @@ LABEL_97:
             return (v991 ^ v990 ^ (v991 + v990 + v989)) + (v989 ^ v970 ^ (v991 + ((__ROL4__(v989 ^ v970, 11) - 26682) ^ (v991 + v990 + v989 + 32115))) ^
                                                            (__ROL4__(v991 + v990 + v989, 13) + __ROL4__(v991 ^ v990, 16)));
         case 0x13:
-            v993 = a2 - detail::kPlayIntentKey[(unsigned __int8)a3 + 318];
+            v993 = a2 - detail::kPlayIntentKey[(std::uint8_t)a3 + 318];
             v994 = a3 ^ (26841491 * a4);
             v995 = a5 + a4;
             v996 = a5 + __ROL4__(v993, 10);
@@ -4513,7 +4513,7 @@ LABEL_97:
                 v999 = v995 - v998 - v997;
                 v1000 = v998 ^ v997;
                 v1001 = v998 - v999;
-                v1002 = detail::kPlayIntentKey[(unsigned __int8)v1000 | 0x100] ^ v999;
+                v1002 = detail::kPlayIntentKey[(std::uint8_t)v1000 | 0x100] ^ v999;
                 v1003 = v1000 + v1001;
                 v1004 = v1002 + v1000;
                 v1005 = v1003 ^ -v1004;
@@ -4532,7 +4532,7 @@ LABEL_97:
                 v1011 = v1009 ^ v531;
                 v1012 = v1011 + v530 + v1008;
                 v1013 = v530 - v1011;
-                v1014 = detail::kPlayIntentKey[(unsigned __int8)v1012 + 147] ^ v1011;
+                v1014 = detail::kPlayIntentKey[(std::uint8_t)v1012 + 147] ^ v1011;
                 v1008 = v1012 ^ __ROL4__(v1013, 2);
                 v530 = v1014 + v1013;
                 v531 = v1014 - v1008;
@@ -4552,8 +4552,8 @@ LABEL_97:
                 v1025 = v1023 - v1022;
                 v1026 = v1022 - v1024;
                 v1027 = v1025 ^ v1024;
-                v1028 = detail::kPlayIntentKey[(unsigned __int8)(v1026 + 80) + 238] ^ v1025;
-                v1029 = detail::kPlayIntentKey[(unsigned __int8)v1027 + 182];
+                v1028 = detail::kPlayIntentKey[(std::uint8_t)(v1026 + 80) + 238] ^ v1025;
+                v1029 = detail::kPlayIntentKey[(std::uint8_t)v1027 + 182];
                 v1030 = v1029 + v1026 - 720702128;
                 v1031 = v1027 - ((__ROL4__(v1028, 4) + 13361) ^ (v1029 + v1026 - 720694146));
                 v1032 = v1028 - v1030;
@@ -4583,7 +4583,7 @@ LABEL_97:
                 v1041 = a4 ^ a2;
                 v1042 = __ROR4__(v1040, 1) ^ a4;
                 v1043 = v1041 + v1040;
-                a2 = detail::kPlayIntentKey[(unsigned __int8)v1042 + 295] ^ v1041;
+                a2 = detail::kPlayIntentKey[(std::uint8_t)v1042 + 295] ^ v1041;
                 a5 = a2 + v1043;
                 a4 = a5 ^ v1042;
                 --v1039;
@@ -4597,7 +4597,7 @@ LABEL_97:
             v1050 = v1047 + __ROL4__(v1046, 4);
             v1051 = v1046 ^ (__ROL4__(v1048, 6) + 1591) ^ (v1049 - 7707);
             v1052 = v1050 ^ v1051;
-            v1053 = detail::kPlayIntentKey[(unsigned __int8)v1049 + 300] ^ v1048;
+            v1053 = detail::kPlayIntentKey[(std::uint8_t)v1049 + 300] ^ v1048;
             v1054 = (v1051 + 9794) ^ v1049 ^ (__ROL4__(v1050, 24) + 15503);
             v1055 = v1051 - ((__ROL4__(v1053, 22) + 23505) ^ (v1054 + 20097));
             v1056 = v1053 ^ (1883352139 * v1054);
@@ -4605,7 +4605,7 @@ LABEL_97:
             v1058 = v1054 - __ROL4__(v1052, 21);
             v1059 = v1056 + v1055;
             v1060 = v1056 + v1055 - 2132459034;
-            v1061 = detail::kPlayIntentKey[(unsigned __int8)v1058 + 386] ^ v1056;
+            v1061 = detail::kPlayIntentKey[(std::uint8_t)v1058 + 386] ^ v1056;
             v1062 = v1058 ^ (v1057 - 1741432873);
             v1063 = v1057 - __ROL4__(v1060, 14);
             v1064 = v1062 + v1061 + v1059 - 2132459034;
@@ -4616,7 +4616,7 @@ LABEL_97:
             v1069 = v1064 + __ROR4__(v1068, 1);
             if ((v1065 & 0x4000) != 0) {
                 v1070 = v1065 ^ v1069;
-                v1071 = v1068 - detail::kPlayIntentKey[(unsigned __int8)v1067 + 353];
+                v1071 = v1068 - detail::kPlayIntentKey[(std::uint8_t)v1067 + 353];
                 v1072 = v1067 - 684870175 * v1070;
                 v1073 = v1071 ^ v1070;
                 v1068 = v1072 ^ v1071;
@@ -4660,17 +4660,17 @@ LABEL_121:
             v1092 = a2 ^ (a3 + __ROL4__(a4, 20));
             v1093 = a4 + a3;
             v1094 = (v1092 - 14513) ^ a4 ^ (__ROL4__(a5, 12) - 3474);
-            v1095 = detail::kPlayIntentKey[(unsigned __int8)v1092 + 389] ^ a5;
+            v1095 = detail::kPlayIntentKey[(std::uint8_t)v1092 + 389] ^ a5;
             v1096 = v1093 ^ v1092;
             v1097 = v1093 - v1094 - v1095;
             v1098 = v1097 + v1096;
-            v1099 = v1097 ^ detail::kPlayIntentKey[(unsigned __int8)(v1094 - v1095 + 33) + 342];
+            v1099 = v1097 ^ detail::kPlayIntentKey[(std::uint8_t)(v1094 - v1095 + 33) + 342];
             v1100 = v1094 - v1096 - 1563310900;
             v1101 = v1095 + v1097;
             v1102 = ((v1099 >> 20) & 7) + 1;
             do {
-                v1103 = detail::kPlayIntentKey[(unsigned __int8)v1100 + 100] + v1098;
-                v1104 = detail::kPlayIntentKey[(unsigned __int8)v1103 + 227];
+                v1103 = detail::kPlayIntentKey[(std::uint8_t)v1100 + 100] + v1098;
+                v1104 = detail::kPlayIntentKey[(std::uint8_t)v1103 + 227];
                 v1105 = v1104 + (v1099 ^ v1101);
                 v1106 = v1100 + v1104;
                 v1107 = v1106 ^ v1103;
@@ -4698,8 +4698,8 @@ LABEL_121:
                 v1118 = v1117 ^ v1100;
                 v1119 = v1118 ^ v1116;
                 v1120 = v1118 - __ROL4__(v1117, 16);
-                v1121 = detail::kPlayIntentKey[(unsigned __int8)v1119 + 80] ^ v1117;
-                v1122 = detail::kPlayIntentKey[(unsigned __int8)v1120 + 66] ^ v1119;
+                v1121 = detail::kPlayIntentKey[(std::uint8_t)v1119 + 80] ^ v1117;
+                v1122 = detail::kPlayIntentKey[(std::uint8_t)v1120 + 66] ^ v1119;
                 v1123 = v1121 ^ v1122;
                 v1124 = v1120 + v1121;
                 v1100 = v1123 + v1122;
@@ -4719,10 +4719,10 @@ LABEL_121:
             v1128 = v1101 + v1100;
             v1129 = v1101 - 858761702 * v1126;
             v1130 = v1129 + v1128;
-            v1131 = detail::kPlayIntentKey[(unsigned __int8)v1128 + 47];
+            v1131 = detail::kPlayIntentKey[(std::uint8_t)v1128 + 47];
             v1132 = v1129 + (v1127 ^ v1126);
             v1133 = v1131 ^ v1126;
-            v905 = (v1133 + v1132 + v1130) ^ (detail::kPlayIntentKey[(unsigned __int8)v1133 + 56] + v1132);
+            v905 = (v1133 + v1132 + v1130) ^ (detail::kPlayIntentKey[(std::uint8_t)v1133 + 56] + v1132);
             v906 = v1133 ^ ((v1131 ^ v1127) - v1130);
             return (unsigned int)(v905 + v906);
         case 0x16:
@@ -4735,16 +4735,16 @@ LABEL_121:
             v1140 = v1139 ^ v1136;
             v1141 = v1137 - v1138;
             v1142 = v1140 + v1138;
-            v1143 = detail::kPlayIntentKey[(unsigned __int8)v1139 + 183] + v1140;
+            v1143 = detail::kPlayIntentKey[(std::uint8_t)v1139 + 183] + v1140;
             v1144 = v1141 + 1466741323;
             v1145 = v1139 + 2135021812 * v1144;
             v1146 = ((unsigned int)~v1142 >> 7) | 0xFFFFFFF8;
             do {
                 v1147 = v1142 ^ v1145;
                 v1148 = v1143 - 2010191922 * v1147;
-                v1149 = detail::kPlayIntentKey[(unsigned __int8)v1143 + 433] ^ v1144;
-                v1150 = v1147 - detail::kPlayIntentKey[(unsigned __int8)v1149 + 499];
-                v1151 = detail::kPlayIntentKey[(unsigned __int8)v1148 + 443] + v1149;
+                v1149 = detail::kPlayIntentKey[(std::uint8_t)v1143 + 433] ^ v1144;
+                v1150 = v1147 - detail::kPlayIntentKey[(std::uint8_t)v1149 + 499];
+                v1151 = detail::kPlayIntentKey[(std::uint8_t)v1148 + 443] + v1149;
                 v1152 = v1148 + __ROL4__(v1150, 20);
                 v1153 = v1150 - v1151;
                 v1154 = v1151 - ((__ROL4__(v1152, 7) - 16576) ^ (v1153 + 28942));
@@ -4776,7 +4776,7 @@ LABEL_121:
                 v1174 = v1171 + v1172 - 1304457827;
                 v1175 = v1171 ^ -v1173;
                 v1176 = __ROL4__(v1174, 23) - v1173;
-                v1177 = detail::kPlayIntentKey[(unsigned __int8)v1175 + 378] ^ v1174;
+                v1177 = detail::kPlayIntentKey[(std::uint8_t)v1175 + 378] ^ v1174;
                 v1178 = v1175 ^ (v1177 + v1176);
                 v1166 = v1176 - 438145721 * v1177;
                 v1168 = v1178 ^ v1177;
@@ -4803,7 +4803,7 @@ LABEL_121:
                 v1186 = a2 ^ a5;
                 v1187 = a3 - a4;
                 v1188 = 800570090 * v1186 + a4;
-                v1189 = detail::kPlayIntentKey[(unsigned __int8)v1187 + 320] + v1186;
+                v1189 = detail::kPlayIntentKey[(std::uint8_t)v1187 + 320] + v1186;
                 a3 = v1188 ^ v1187;
                 a4 = v1188 - v1189;
                 a5 = __ROL4__(a4, 1) + __ROL4__(a3, 19) + v1189;
@@ -4819,7 +4819,7 @@ LABEL_121:
             v1197 = v1194 + ((__ROL4__(v1193, 3) - 21516) ^ (v1196 + 9137));
             v1198 = v1195 + v1196;
             v1199 = v1197 + 1645692124 * (v1193 ^ v1198);
-            v1200 = v1199 + (detail::kPlayIntentKey[(unsigned __int8)v1197 + 164] ^ v1195);
+            v1200 = v1199 + (detail::kPlayIntentKey[(std::uint8_t)v1197 + 164] ^ v1195);
             v1201 = v1198 - v1200;
             v1202 = v1201 + v1193;
             v1203 = v1201 ^ (v1200 + v1199 - v1193);
@@ -4834,8 +4834,8 @@ LABEL_121:
             v1212 = v1211 ^ v1207;
             v1213 = v1209 + v1210;
             v1214 = v1212 + v1209 + 1661862598;
-            v1215 = v1212 - detail::kPlayIntentKey[(unsigned __int8)v1211 + 240];
-            v1216 = detail::kPlayIntentKey[(unsigned __int8)v1213 + 219] + v1211;
+            v1215 = v1212 - detail::kPlayIntentKey[(std::uint8_t)v1211 + 240];
+            v1216 = detail::kPlayIntentKey[(std::uint8_t)v1213 + 219] + v1211;
             v1217 = v1215;
             v1218 = 2137214079 * v1216 + v1215 - 17860;
             v1219 = v1213 - v1214;
@@ -4895,15 +4895,15 @@ LABEL_121:
                 v1252 = v1250 + v1249;
                 v1253 = v1248 + 2 * v1250;
                 v1254 = v1252 - v1253;
-                a3 = detail::kPlayIntentKey[(unsigned __int8)v1252 + 466] + v1252 - v1253 + v1251;
+                a3 = detail::kPlayIntentKey[(std::uint8_t)v1252 + 466] + v1252 - v1253 + v1251;
                 v1255 = a3 ^ v1253;
                 a4 = v1254 + __ROL4__(v1255, 12);
                 a5 = v1255 - a3;
                 --v1246;
             } while (v1246);
-            v1256 = detail::kPlayIntentKey[(unsigned __int8)a3 + 228] + a2;
+            v1256 = detail::kPlayIntentKey[(std::uint8_t)a3 + 228] + a2;
             v1257 = v1256 + a5 + a3 - a4;
-            v1258 = detail::kPlayIntentKey[(unsigned __int8)(a3 - a4) + 432] ^ v1256;
+            v1258 = detail::kPlayIntentKey[(std::uint8_t)(a3 - a4) + 432] ^ v1256;
             v1259 = a3 - a5;
             v1260 = a4 - a5 - v1257;
             v1261 = v1257 - v1258;
@@ -4914,7 +4914,7 @@ LABEL_121:
             v1266 = v1264 ^ __ROL4__(v1263, 24);
             v1267 = v1261 - (__ROL4__(v1264, 27) + __ROL4__(v1263, 16));
             v529 = v1266 ^ (v1263 - (__ROL4__(v1265, 13) + __ROL4__(v1267, 8)));
-            v1091 = (detail::kPlayIntentKey[(unsigned __int8)v1266 + 370] + v1267) ^ v1265 ^ (v1267 + v1266);
+            v1091 = (detail::kPlayIntentKey[(std::uint8_t)v1266 + 370] + v1267) ^ v1265 ^ (v1267 + v1266);
             return (unsigned int)(v529 + v1091);
         case 0x19:
             v1268 = ((a3 >> 28) & 7) + 1;
@@ -4929,7 +4929,7 @@ LABEL_121:
                 v1276 = v1275 + v1273;
                 v1277 = __ROL4__(v1275, 29) + v1274 + __ROL4__(v1273, 8);
                 v1278 = v1275 ^ (__ROL4__(v1277, 7) + __ROR4__(v1276, 1));
-                v1279 = detail::kPlayIntentKey[(unsigned __int8)v1276 + 230] ^ v1277;
+                v1279 = detail::kPlayIntentKey[(std::uint8_t)v1276 + 230] ^ v1277;
                 v1280 = v1276 - v1278;
                 v1281 = (v1280 - v1279) ^ (v1280 - v1279 + v1278);
                 v1282 = v1280 + v1279;
@@ -4957,7 +4957,7 @@ LABEL_121:
             v1293 = __ROL4__(v1289, 29);
             v1294 = __ROL4__(v1291, 9);
             v1295 = v1289 - v1291;
-            v1296 = detail::kPlayIntentKey[(unsigned __int8)v1292 + 306] + v1291;
+            v1296 = detail::kPlayIntentKey[(std::uint8_t)v1292 + 306] + v1291;
             v1297 = v1295 + (v1290 ^ (v1293 + v1294));
             v1298 = v1295 ^ (v1296 + v1297 + v1292);
             v1299 = v1296 - 1359505236 * (v1297 + v1292);
@@ -4979,7 +4979,7 @@ LABEL_121:
             v1315 = v1311 ^ (700471489 * v1312);
             v1316 = v1313 + v1312;
             v741 = v1316 ^ (v1313 + 1127527154 * v1314);
-            v201 = (detail::kPlayIntentKey[(unsigned __int8)v1315 + 312] + v1314) ^ (v1315 + __ROL4__(v1316, 16));
+            v201 = (detail::kPlayIntentKey[(std::uint8_t)v1315 + 312] + v1314) ^ (v1315 + __ROL4__(v1316, 16));
             return (unsigned int)(v201 + v741);
         case 0x1A:
             if ((a3 & 0x4000000) != 0) {
@@ -5014,11 +5014,11 @@ LABEL_121:
             }
             if ((a3 & 0x10000000) != 0) {
                 v1337 = a3 ^ a5;
-                v1338 = detail::kPlayIntentKey[(unsigned __int8)a4 + 309] + a2;
+                v1338 = detail::kPlayIntentKey[(std::uint8_t)a4 + 309] + a2;
                 v1339 = a4 - v1337;
                 v1340 = v1337 - v1338;
                 v1341 = v1339 ^ (v1340 - 1666793069);
-                v1342 = detail::kPlayIntentKey[(unsigned __int8)v1339 + 1] ^ v1338;
+                v1342 = detail::kPlayIntentKey[(std::uint8_t)v1339 + 1] ^ v1338;
                 v1343 = v1342 ^ v1340;
                 v1344 = v1342 - 308178228 * v1341;
                 v1345 = v1341 - v1343;
@@ -5027,7 +5027,7 @@ LABEL_121:
                 v1348 = v1344 + __ROL4__(v1345, 8);
                 v1349 = v1346 - __ROL4__(v1348, 30);
                 v1350 = v1348 - v1347 - 436352906;
-                v1351 = detail::kPlayIntentKey[(unsigned __int8)v1349 + 436] + v1347;
+                v1351 = detail::kPlayIntentKey[(std::uint8_t)v1349 + 436] + v1347;
                 v1352 = v1349 - v1350;
                 a2 = v1350 - (v1352 + v1351 - 701040649);
                 a5 = __ROL4__(a2, 28) + v1352 - 701040649;
@@ -5061,14 +5061,14 @@ LABEL_121:
                 v1369 = v1366 ^ v1367;
                 v1370 = v1369 + v1366;
                 v1371 = v1369 - v1368;
-                v1372 = detail::kPlayIntentKey[(unsigned __int8)v1370 + 392] + v1368;
+                v1372 = detail::kPlayIntentKey[(std::uint8_t)v1370 + 392] + v1368;
                 v1358 = v1371 + v1370;
                 v1360 = v1371 - v1372;
                 v1361 = __ROL4__(v1371 - v1372, 10) + v1372 + __ROL4__(v1371 + v1370, 28);
                 --v1362;
             } while (v1362);
             v1373 = v1358 ^ v1359;
-            v1374 = detail::kPlayIntentKey[(unsigned __int8)(v1371 - v1372) + 150];
+            v1374 = detail::kPlayIntentKey[(std::uint8_t)(v1371 - v1372) + 150];
             v1375 = v1360 - v1361;
             v1376 = v1361 ^ (v1373 - 1363228392);
             v1377 = v1358 - v1374;
@@ -5082,7 +5082,7 @@ LABEL_121:
             v1385 = v1381 + ((__ROL4__(v1382, 8) + 261) ^ (v1384 + 21120));
             v1386 = v1382 - v1384;
             v1387 = v1383 ^ v1384;
-            v1388 = v1383 - detail::kPlayIntentKey[(unsigned __int8)v1385 + 39];
+            v1388 = v1383 - detail::kPlayIntentKey[(std::uint8_t)v1385 + 39];
             v1389 = v1385 - v1386 - v1387;
             v1390 = v1386 - v1388 - v1387;
             v1391 = v1388 ^ (-1053158665 * v1389);
@@ -5091,15 +5091,15 @@ LABEL_121:
             v1394 = v1390 ^ __ROL4__(v1392, 1);
             v1395 = v1392 - v1391 - v1393;
             v1396 = v1393 ^ v1391;
-            v1397 = v1393 - detail::kPlayIntentKey[(unsigned __int8)v1394 + 130];
+            v1397 = v1393 - detail::kPlayIntentKey[(std::uint8_t)v1394 + 130];
             v1398 = ((unsigned int)~v1395 >> 10) | 0xFFFFFFF8;
             do {
                 v1399 = v1396 ^ v1394;
                 v1400 = v1399 + v1396;
                 v1401 = v1396 - (v1395 ^ v1397);
-                v1402 = detail::kPlayIntentKey[(unsigned __int8)v1401 + 79] + v1399;
+                v1402 = detail::kPlayIntentKey[(std::uint8_t)v1401 + 79] + v1399;
                 v1403 = v1402 + v1400 - v1401;
-                v1404 = v1400 - detail::kPlayIntentKey[(unsigned __int8)v1402 + 101];
+                v1404 = v1400 - detail::kPlayIntentKey[(std::uint8_t)v1402 + 101];
                 v1405 = v1404 + v1402;
                 v1406 = v1404 - v1403;
                 v1394 = v1403 + 1966844337 * v1405;
@@ -5118,7 +5118,7 @@ LABEL_121:
                 v1411 = a4 - __ROL4__(v1409, 30);
                 v1412 = v1410 + __ROL4__(v1409, 21);
                 v1413 = v1412 ^ __ROL4__(v1411, 26);
-                v1414 = v1409 - detail::kPlayIntentKey[(unsigned __int8)v1412 + 137];
+                v1414 = v1409 - detail::kPlayIntentKey[(std::uint8_t)v1412 + 137];
                 v1415 = v1414 + v1411;
                 v1416 = v1413 + v1414;
                 v1417 = __ROL4__(v1416, 3);
@@ -5126,11 +5126,11 @@ LABEL_121:
                 v1419 = v1418 + v1416;
                 v1420 = v1419 + v1418;
                 v1421 = v1419 ^ (v1415 - v1417);
-                v1422 = v1419 - detail::kPlayIntentKey[(unsigned __int8)v1420 + 142];
-                v1423 = detail::kPlayIntentKey[(unsigned __int8)v1421 + 87] + v1420;
+                v1422 = v1419 - detail::kPlayIntentKey[(std::uint8_t)v1420 + 142];
+                v1423 = detail::kPlayIntentKey[(std::uint8_t)v1421 + 87] + v1420;
                 v1424 = v1423 + v1422 + v1421;
                 v1425 = v1422 - v1423;
-                a2 = v1423 - detail::kPlayIntentKey[(unsigned __int8)v1424 + 481];
+                a2 = v1423 - detail::kPlayIntentKey[(std::uint8_t)v1424 + 481];
                 a4 = v1425 ^ v1424;
                 a5 = __ROL4__(a2, 14) + __ROL4__(a4, 26) + v1425;
                 --v1408;
@@ -5139,16 +5139,16 @@ LABEL_121:
             v1427 = a2 - ((__ROL4__(a4, 7) + 5927) ^ (a5 + 28874));
             v1428 = v1426 + a5;
             v1429 = v1426 ^ a5;
-            v1430 = detail::kPlayIntentKey[(unsigned __int8)v1427 + 392] + v1426;
+            v1430 = detail::kPlayIntentKey[(std::uint8_t)v1427 + 392] + v1426;
             v1431 = a4 - v1428;
             v1432 = v1427 ^ (-469530615 * v1431);
-            v1433 = detail::kPlayIntentKey[(unsigned __int8)v1429 + 416] ^ v1431;
+            v1433 = detail::kPlayIntentKey[(std::uint8_t)v1429 + 416] ^ v1431;
             v1434 = v1432 + v1430;
-            v1435 = v1430 - detail::kPlayIntentKey[(unsigned __int8)v1432 + 402];
+            v1435 = v1430 - detail::kPlayIntentKey[(std::uint8_t)v1432 + 402];
             v1436 = v1429 - v1434;
             v1437 = v1436 + v1433 + v1432;
             v1438 = 42829503 * v1436;
-            v1439 = v1436 - detail::kPlayIntentKey[(unsigned __int8)v1435 + 233];
+            v1439 = v1436 - detail::kPlayIntentKey[(std::uint8_t)v1435 + 233];
             v1440 = v1433 ^ v1438;
             v1441 = v1435 ^ (433790129 * v1437);
             v1442 = v1437 - v1440;
@@ -5179,10 +5179,10 @@ LABEL_121:
                 v1466 = v1464 - v1462;
                 v1467 = v1462 - ((__ROL4__(v1465, 2) - 16175) ^ (v1466 + 24140));
                 v1468 = v1467 - 134077578 * (v1465 ^ v1466);
-                v1469 = detail::kPlayIntentKey[(unsigned __int8)v1467 + 484] ^ v1465;
-                v1447 = (v1466 ^ detail::kPlayIntentKey[(unsigned __int8)v1467 + 484]) - v1468;
+                v1469 = detail::kPlayIntentKey[(std::uint8_t)v1467 + 484] ^ v1465;
+                v1447 = (v1466 ^ detail::kPlayIntentKey[(std::uint8_t)v1467 + 484]) - v1468;
                 v1452 = v1447 + v1469;
-                v1451 = detail::kPlayIntentKey[(unsigned __int8)v1469 + 63] + v1468;
+                v1451 = detail::kPlayIntentKey[(std::uint8_t)v1469 + 63] + v1468;
                 --v1453;
             } while (v1453);
             v529 = v1450 ^ v1447;
@@ -5204,7 +5204,7 @@ LABEL_121:
             v1483 = v1476 - __ROL4__(v1479, 16);
             if ((v1481 & 0x10) != 0) {
                 v1484 = v1481 ^ v1482;
-                v1485 = detail::kPlayIntentKey[(unsigned __int8)v1483 + 202] ^ v1480;
+                v1485 = detail::kPlayIntentKey[(std::uint8_t)v1483 + 202] ^ v1480;
                 v1486 = v1484 ^ __ROL4__(v1485, 22);
                 v1487 = (v1484 + v1483) ^ v1485;
                 v1488 = (v1484 + v1483) ^ (1014674669 * v1486);
@@ -5212,11 +5212,11 @@ LABEL_121:
                 v1490 = v1488 + v1487;
                 v1491 = v1489 ^ v1488;
                 v1492 = v1489 - v1491 - v1490;
-                v1493 = v1490 - detail::kPlayIntentKey[(unsigned __int8)v1491 + 105];
+                v1493 = v1490 - detail::kPlayIntentKey[(std::uint8_t)v1491 + 105];
                 v1494 = __ROL4__(v1493, 27) + v1491 + __ROL4__(v1492, 11);
                 v1495 = v1492 - v1493;
-                v1496 = detail::kPlayIntentKey[(unsigned __int8)v1494 + 309] + v1493;
-                v1497 = v1494 - detail::kPlayIntentKey[(unsigned __int8)v1495 + 288];
+                v1496 = detail::kPlayIntentKey[(std::uint8_t)v1494 + 309] + v1493;
+                v1497 = v1494 - detail::kPlayIntentKey[(std::uint8_t)v1495 + 288];
                 v1498 = v1496 ^ v1495;
                 v1483 = v1497 + __ROL4__(v1498, 29);
                 v1480 = v1496 ^ (__ROL4__(v1497, 19) + __ROL4__(v1498, 14));
@@ -5226,11 +5226,11 @@ LABEL_121:
             do {
                 v1500 = v1480 ^ v1482;
                 v1501 = v1481 - v1483;
-                v1502 = detail::kPlayIntentKey[(unsigned __int8)v1500 + 243];
+                v1502 = detail::kPlayIntentKey[(std::uint8_t)v1500 + 243];
                 v1503 = v1483 - v1502;
                 v1504 = v1500 ^ (v1481 - v1502);
                 v1505 = v1503 - 186366684 * v1504;
-                v1506 = detail::kPlayIntentKey[(unsigned __int8)v1503 + 207] ^ v1501;
+                v1506 = detail::kPlayIntentKey[(std::uint8_t)v1503 + 207] ^ v1501;
                 v1507 = v1506 ^ v1504;
                 v1508 = v1505 ^ v1506;
                 v1509 = v1505 + __ROL4__(v1507, 15);
@@ -5242,7 +5242,7 @@ LABEL_121:
                 v1515 = v1512 - 365676739 * v1513;
                 v1516 = v1513 - v1514;
                 v1481 = v1515 ^ v1514;
-                v1483 = detail::kPlayIntentKey[(unsigned __int8)v1516 + 293] + v1515;
+                v1483 = detail::kPlayIntentKey[(std::uint8_t)v1516 + 293] + v1515;
                 v1482 = v1516 - v1481 - 878036858;
                 --v1499;
             } while (v1499);
@@ -5266,27 +5266,27 @@ LABEL_121:
                 a4 = v1526 - ((__ROL4__(v1527, 19) + 21082) ^ (v1525 - v1526 - 5937));
                 --v1517;
             } while (v1517);
-            v1528 = a3 - detail::kPlayIntentKey[(unsigned __int8)a2 + 23];
+            v1528 = a3 - detail::kPlayIntentKey[(std::uint8_t)a2 + 23];
             v1529 = a4 + a2 + 560695447;
             v1530 = a5 + a4;
             v1531 = v1528 + a5;
             v1532 = v1529 ^ v1528;
-            v1533 = v1529 - detail::kPlayIntentKey[(unsigned __int8)v1530 + 464];
+            v1533 = v1529 - detail::kPlayIntentKey[(std::uint8_t)v1530 + 464];
             v1534 = v1530 - (__ROL4__(v1531, 16) + __ROL4__(v1532, 9));
             v1535 = v1532 ^ v1531;
             v1536 = v1533 ^ v1532;
             v1537 = v1534 ^ v1533;
             v1538 = v1535 + v1534;
             v1539 = v1537 + v1536;
-            v1540 = detail::kPlayIntentKey[(unsigned __int8)v1536 + 473] ^ v1535;
+            v1540 = detail::kPlayIntentKey[(std::uint8_t)v1536 + 473] ^ v1535;
             v1541 = v1537 ^ __ROL4__(v1538, 24);
             v1542 = v1538 - v1540 - v1539;
-            v1543 = v1540 - detail::kPlayIntentKey[(unsigned __int8)v1539 + 165];
+            v1543 = v1540 - detail::kPlayIntentKey[(std::uint8_t)v1539 + 165];
             v1544 = v1539 - v1541;
             v1545 = v1541 - __ROL4__(v1542, 3);
             v1546 = v1544 + v1543;
             v1547 = v1546 ^ v1542;
-            v1548 = detail::kPlayIntentKey[(unsigned __int8)v1545 + 73] + v1544;
+            v1548 = detail::kPlayIntentKey[(std::uint8_t)v1545 + 73] + v1544;
             v1549 = v1547 + v1546 + v1545;
             v1550 = v1547 - v1546;
             v1551 = v1546 - __ROL4__(v1548, 12);
@@ -5294,8 +5294,8 @@ LABEL_121:
             v1553 = v1550 ^ v1549;
             v1554 = v1550 ^ __ROL4__(v1551, 20);
             v1555 = v1551 + 117197993 * v1552;
-            v1556 = v1552 - detail::kPlayIntentKey[(unsigned __int8)v1553 + 28];
-            v1557 = detail::kPlayIntentKey[(unsigned __int8)v1554 + 220] ^ v1553;
+            v1556 = v1552 - detail::kPlayIntentKey[(std::uint8_t)v1553 + 28];
+            v1557 = detail::kPlayIntentKey[(std::uint8_t)v1554 + 220] ^ v1553;
             v1558 = v1555 + v1556;
             v1559 = (v1555 + v1556) ^ v1554;
             v1560 = v1556 + v1555 + 1613847050;
@@ -5316,12 +5316,12 @@ LABEL_121:
             v1573 = a3 - a4;
             v1574 = v1572 + a5;
             v1575 = v1574 + a4;
-            v1576 = detail::kPlayIntentKey[(unsigned __int8)v1573 + 288] ^ v1572;
+            v1576 = detail::kPlayIntentKey[(std::uint8_t)v1573 + 288] ^ v1572;
             v1577 = v1575 + v1573;
             v1578 = v1573 + v1575 - 1786206348;
-            v1579 = detail::kPlayIntentKey[(unsigned __int8)v1574 + 414] ^ v1575;
+            v1579 = detail::kPlayIntentKey[(std::uint8_t)v1574 + 414] ^ v1575;
             v1580 = v1574 ^ (v1576 + v1577 - 1786206348);
-            v1581 = v1576 - detail::kPlayIntentKey[(unsigned __int8)v1578 + 491];
+            v1581 = v1576 - detail::kPlayIntentKey[(std::uint8_t)v1578 + 491];
             v1582 = v1580 + v1579;
             v1583 = (__ROL4__(v1579, 11) - 6150) ^ v1578 ^ (v1580 - 18523);
             v1584 = v1581 + v1580;
@@ -5334,13 +5334,13 @@ LABEL_121:
                 v1582 = v1587 + v1586 - 1158912049;
             }
             if ((v1581 & 0x400) != 0) {
-                v1588 = detail::kPlayIntentKey[(unsigned __int8)v1582 + 53] ^ v1583;
+                v1588 = detail::kPlayIntentKey[(std::uint8_t)v1582 + 53] ^ v1583;
                 v1589 = v1581 ^ v1584;
                 v1590 = v1582 ^ (__ROL4__(v1589, 21) + __ROL4__(v1588, 2));
                 v1591 = v1588 + v1589;
                 v1592 = v1590 + v1588;
                 v1593 = __ROL4__(v1591, 29);
-                v1594 = detail::kPlayIntentKey[(unsigned __int8)v1592 + 61] + v1591;
+                v1594 = detail::kPlayIntentKey[(std::uint8_t)v1592 + 61] + v1591;
                 v1595 = v1594 + v1590 - v1593;
                 v1596 = v1595 ^ v1592;
                 v1597 = v1594 ^ __ROL4__(v1596, 22);
@@ -5351,8 +5351,8 @@ LABEL_121:
                 v1582 = v1600 ^ v1599;
                 v1584 = v1600 - __ROL4__(v1583, 8);
             }
-            v1451 = detail::kPlayIntentKey[(unsigned __int8)v1583 + 47] ^ v1581;
-            v1452 = detail::kPlayIntentKey[(unsigned __int8)v1582 + 25] + v1583;
+            v1451 = detail::kPlayIntentKey[(std::uint8_t)v1583 + 47] ^ v1581;
+            v1452 = detail::kPlayIntentKey[(std::uint8_t)v1582 + 25] + v1583;
             v1601 = v1582 - v1584 - 1384650862;
             v1602 = v1584 ^ (v1452 + v1451);
             v1603 = ((v1452 >> 2) & 7) + 1;
@@ -5364,7 +5364,7 @@ LABEL_121:
                 v1607 = v1605 - detail::kPlayIntentKey[v1604 + 320];
                 v1608 = v1606;
                 v1602 = v1607 - 1416644492 * v1451;
-                v1601 = detail::kPlayIntentKey[(unsigned __int8)v1607 + 31] ^ v1608;
+                v1601 = detail::kPlayIntentKey[(std::uint8_t)v1607 + 31] ^ v1608;
                 --v1603;
             } while (v1603);
             if ((v1451 & 0x1000) != 0) {
@@ -5383,7 +5383,7 @@ LABEL_121:
                 v1621 = v1619 + 1138104822 * (v1617 ^ v1618);
                 v1622 = v1617 ^ v1619;
                 v1452 = v1620 - v1621;
-                v1623 = detail::kPlayIntentKey[(unsigned __int8)v1622 + 191];
+                v1623 = detail::kPlayIntentKey[(std::uint8_t)v1622 + 191];
                 v1601 = v1623 + v1621;
                 v1602 = v1622 ^ (v1623 + v1620);
             }
@@ -5394,23 +5394,23 @@ LABEL_192:
         case 0x20:
             v1624 = a3 ^ a4;
             v1625 = a4 + a3;
-            v1626 = detail::kPlayIntentKey[(unsigned __int8)a5 + 164] ^ a4;
+            v1626 = detail::kPlayIntentKey[(std::uint8_t)a5 + 164] ^ a4;
             v1627 = v1624 + a2 - v1625;
             v1628 = v1627 + a5;
             v1629 = v1624 ^ (v1626 + v1628);
             v1630 = v1626 - v1628;
             v1631 = v1629 ^ __ROL4__(v1630, 15);
             v1632 = v1627 ^ v1629;
-            v1633 = detail::kPlayIntentKey[(unsigned __int8)v1627 + 255] + v1628;
+            v1633 = detail::kPlayIntentKey[(std::uint8_t)v1627 + 255] + v1628;
             v1634 = v1630 - (__ROL4__(v1633, 4) + __ROL4__(v1627 ^ v1629, 26));
             v1635 = v1633 - (v1627 ^ v1629);
             v1636 = 2015402535 - v1631;
-            v1637 = detail::kPlayIntentKey[(unsigned __int8)v1634 + 3] + v1631;
+            v1637 = detail::kPlayIntentKey[(std::uint8_t)v1634 + 3] + v1631;
             v1638 = v1636 + v1632;
             v1639 = v1634 - (__ROL4__(v1635, 22) + __ROL4__(v1638, 30));
             v1640 = v1633 + v1636;
             v1641 = v1638 - (__ROL4__(v1637, 7) + __ROL4__(v1639, 22));
-            v1642 = v1640 + detail::kPlayIntentKey[(unsigned __int8)v1641 + 103];
+            v1642 = v1640 + detail::kPlayIntentKey[(std::uint8_t)v1641 + 103];
             v1643 = v1639 + __ROL4__(v1640, 28);
             v1644 = v1641 - (v1639 + v1637);
             v1645 = v1643 + __ROL4__(v1642, 22);
@@ -5420,11 +5420,11 @@ LABEL_192:
             v1649 = v1644 ^ (v1647 + __ROL4__(v1644 + v1645, 23));
             v1650 = v1642 + v1645;
             v1651 = v1649 + v1648 + v1644 + 1296942196;
-            v1652 = detail::kPlayIntentKey[(unsigned __int8)(v1648 + 116) + 472] + v1649;
+            v1652 = detail::kPlayIntentKey[(std::uint8_t)(v1648 + 116) + 472] + v1649;
             v1653 = v1642 - v1651;
             v1654 = v1648 + 1296942196 - v1650 - 148386154;
             v1655 = v1653 + v1650;
-            v1656 = detail::kPlayIntentKey[(unsigned __int8)v1652 + 109] + v1653;
+            v1656 = detail::kPlayIntentKey[(std::uint8_t)v1652 + 109] + v1653;
             v1657 = v1654 ^ v1652;
             v1658 = v1655 ^ v1654;
             v1659 = v1655 - v1656 - v1657;
@@ -5434,7 +5434,7 @@ LABEL_192:
                 v1662 = v1658 ^ v1660;
                 v1663 = v1657 ^ __ROL4__(v1659, 4);
                 v1664 = v1662 ^ __ROR4__(v1663, 1);
-                v1665 = v1659 - detail::kPlayIntentKey[(unsigned __int8)v1662 + 359];
+                v1665 = v1659 - detail::kPlayIntentKey[(std::uint8_t)v1662 + 359];
                 v1666 = v1663 - v1665;
                 v1667 = v1665 ^ __ROL4__(v1664, 27);
                 v1668 = v1666 + v1667 + v1664 - 510992710;
@@ -5447,22 +5447,22 @@ LABEL_192:
                 v1675 = v1674 ^ v1672;
                 v1676 = v1673 ^ v1674;
                 v1657 = v1675 ^ __ROL4__(v1673 ^ v1674, 23);
-                v1677 = v1673 - detail::kPlayIntentKey[(unsigned __int8)v1675 + 486];
+                v1677 = v1673 - detail::kPlayIntentKey[(std::uint8_t)v1675 + 486];
                 v1660 = v1677 + v1657 + 1315244055;
-                v1659 = detail::kPlayIntentKey[(unsigned __int8)v1677 + 450] ^ v1676;
+                v1659 = detail::kPlayIntentKey[(std::uint8_t)v1677 + 450] ^ v1676;
                 --v1661;
             } while (v1661);
             v1678 = v1658 ^ v1657;
             v1679 = v1659 ^ v1660;
             return (unsigned int)(v1678 + v1679);
         case 0x21:
-            v1680 = detail::kPlayIntentKey[(unsigned __int8)a3 + 133] ^ a2;
+            v1680 = detail::kPlayIntentKey[(std::uint8_t)a3 + 133] ^ a2;
             v1681 = a3 + 792988923 * a4;
             v1682 = a5 + a4;
             v1683 = a5 ^ (v1680 + v1681);
             v1684 = ((unsigned int)~v1681 >> 19) | 0xFFFFFFF8;
             do {
-                v1685 = v1680 - detail::kPlayIntentKey[(unsigned __int8)v1682 + 229];
+                v1685 = v1680 - detail::kPlayIntentKey[(std::uint8_t)v1682 + 229];
                 v1686 = v1681 ^ v1683;
                 v1687 = v1686 ^ v1682;
                 v1688 = __ROL4__(v1687, 20);
@@ -5476,7 +5476,7 @@ LABEL_192:
             v1691 = v1680 + v1681;
             v1692 = v1680 + __ROL4__(v1682, 14);
             v1693 = __ROL4__(v1692, 29) + v1683 + __ROL4__(v1691, 14);
-            v1694 = v1693 + v1682 - detail::kPlayIntentKey[(unsigned __int8)v1683 + 204];
+            v1694 = v1693 + v1682 - detail::kPlayIntentKey[(std::uint8_t)v1683 + 204];
             v1695 = (v1691 - v1692) ^ (v1694 + v1692);
             v1696 = v1693 ^ (v1694 + v1691);
             v1697 = v1695 + v1696 + v1694;
@@ -5489,11 +5489,11 @@ LABEL_192:
             v1704 = (~v1700 >> 21) | 0xFFFFFFF8;
             do {
                 v1705 = v1700 ^ v1703;
-                v1706 = detail::kPlayIntentKey[(unsigned __int8)v1705 + 118];
+                v1706 = detail::kPlayIntentKey[(std::uint8_t)v1705 + 118];
                 v1707 = v1705 - (v1702 + v1701) - 814557387;
                 v1701 = (v1702 + v1701) ^ (v1706 + v1702 + 1010747027);
                 v1702 = v1706 + v1702 - v1707 + 1013712729;
-                v1703 = detail::kPlayIntentKey[(unsigned __int8)v1701 + 209] + v1707;
+                v1703 = detail::kPlayIntentKey[(std::uint8_t)v1701 + 209] + v1707;
                 ++v1704;
             } while (v1704);
             v1708 = v1701 + v1700;
@@ -5506,19 +5506,19 @@ LABEL_192:
             v1715 = (v1710 - 23975) ^ v1713;
             v1716 = __ROL4__(v1715, 3);
             v1717 = v1711 - v1715;
-            v1718 = detail::kPlayIntentKey[(unsigned __int8)v1712 + 44] ^ v1715;
+            v1718 = detail::kPlayIntentKey[(std::uint8_t)v1712 + 44] ^ v1715;
             v1719 = v1710 - (v1714 + v1716);
             v1720 = v1712 ^ (__ROL4__(v1719, 13) + __ROL4__(v1717, 2));
             v1721 = v1717 + v1719;
             v1722 = v1720 + v1718;
             v1723 = v1720 + v1718 - 1645271519;
-            v1724 = detail::kPlayIntentKey[(unsigned __int8)v1718 + 89] ^ v1717;
+            v1724 = detail::kPlayIntentKey[(std::uint8_t)v1718 + 89] ^ v1717;
             v1725 = v1720 + v1718 + 336209305;
             v1726 = __ROL4__(v1721, 24);
             v1727 = v1721 - (v1724 + v1722 - 1645271519);
             v1728 = v1724 ^ v1725;
             v1729 = v1727 + (v1720 ^ v1726);
-            v1730 = detail::kPlayIntentKey[(unsigned __int8)v1728 + 257] ^ v1727;
+            v1730 = detail::kPlayIntentKey[(std::uint8_t)v1728 + 257] ^ v1727;
             v1731 = v1728 - (v1723 ^ v1729) - 872756097;
             v1732 = v1723 ^ (v1730 + v1731 + v1729);
             v1733 = (__ROL4__(v1731, 2) + v1730 + __ROL4__(v1723, 28)) ^ (v1731 - __ROL4__(v1723, 12));
@@ -5527,7 +5527,7 @@ LABEL_192:
             if ((a3 & 0x40000) != 0) {
                 v1734 = a3 ^ a5;
                 v1735 = a2 - a4;
-                v1736 = detail::kPlayIntentKey[(unsigned __int8)v1734 + 486] + a4;
+                v1736 = detail::kPlayIntentKey[(std::uint8_t)v1734 + 486] + a4;
                 v1737 = v1735 + 2121635793 * v1736;
                 v1738 = __ROL4__(v1736, 9) + v1734 + __ROL4__(v1735, 6);
                 a4 = v1738 + v1736;
@@ -5541,7 +5541,7 @@ LABEL_192:
                 v1742 = v1739 - v1740;
                 v1743 = v1740 - v1741;
                 v1744 = v1741 + __ROL4__(v1742, 12);
-                a5 = detail::kPlayIntentKey[(unsigned __int8)v1743 + 151] + v1742;
+                a5 = detail::kPlayIntentKey[(std::uint8_t)v1743 + 151] + v1742;
                 a3 = v1743;
                 a4 = v1744;
             }
@@ -5559,7 +5559,7 @@ LABEL_192:
                 v1749 = v1748 + a4 + a3;
                 v1750 = v1749 + a4;
                 v1751 = a4 - v1748;
-                a3 = detail::kPlayIntentKey[(unsigned __int8)v1751 + 416] ^ v1749;
+                a3 = detail::kPlayIntentKey[(std::uint8_t)v1751 + 416] ^ v1749;
                 a4 = v1750 + v1751 - 514023947;
                 a5 = a3 + v1750;
             }
@@ -5576,8 +5576,8 @@ LABEL_192:
                 v1761 = v1759 ^ __ROL4__(v1758, 3);
                 v1762 = __ROL4__(v1760, 3);
                 v1763 = v1758 + ((v1762 - 8683) ^ (v1761 - 13386));
-                v1764 = detail::kPlayIntentKey[(unsigned __int8)v1761 + 315] + v1760;
-                v1765 = detail::kPlayIntentKey[(unsigned __int8)(v1758 + ((v1762 + 21) ^ (v1761 - 74))) + 260] ^ v1761;
+                v1764 = detail::kPlayIntentKey[(std::uint8_t)v1761 + 315] + v1760;
+                v1765 = detail::kPlayIntentKey[(std::uint8_t)(v1758 + ((v1762 + 21) ^ (v1761 - 74))) + 260] ^ v1761;
                 v1766 = v1765 + v1763 + 2 * v1764;
                 v1767 = v1766 + v1764;
                 a2 = v1765 + 1107757136;
@@ -5590,12 +5590,12 @@ LABEL_192:
                 v1769 = a2 ^ a5;
                 v1770 = (v1769 - 26243) ^ a4 ^ (a4 + a3 + 14416);
                 v1771 = v1769 - (a4 + a3);
-                v1772 = detail::kPlayIntentKey[(unsigned __int8)v1770 + 63] + a4 + a3;
+                v1772 = detail::kPlayIntentKey[(std::uint8_t)v1770 + 63] + a4 + a3;
                 v1773 = v1770 - v1771 - 2029538964;
                 v1774 = v1772 ^ __ROL4__(v1773, 28);
                 v1775 = v1771 + __ROL4__(v1772, 11);
                 v1776 = v1775 ^ __ROL4__(v1774, 23);
-                v1777 = detail::kPlayIntentKey[(unsigned __int8)v1775 + 392] ^ v1773;
+                v1777 = detail::kPlayIntentKey[(std::uint8_t)v1775 + 392] ^ v1773;
                 a3 = v1774 - v1777;
                 a4 = v1776 + v1777;
                 a5 = v1776 + __ROL4__(a3, 1);
@@ -5623,11 +5623,11 @@ LABEL_192:
             v1795 = v1790 + v1791;
             v1796 = v1790 + __ROL4__(v1793, 6);
             v1797 = v1793 - __ROL4__(v1794, 16);
-            v1798 = v1794 - detail::kPlayIntentKey[(unsigned __int8)v1795 + 251];
+            v1798 = v1794 - detail::kPlayIntentKey[(std::uint8_t)v1795 + 251];
             v1799 = v1795 - v1796;
             v1800 = v1796 + __ROL4__(v1797, 7);
             v1801 = v1797 - v1798;
-            v1802 = detail::kPlayIntentKey[(unsigned __int8)v1799 + 202] + v1798;
+            v1802 = detail::kPlayIntentKey[(std::uint8_t)v1799 + 202] + v1798;
             v1803 = v1800 ^ v1801;
             v1804 = v1799 - __ROL4__(v1800, 21);
             v1805 = v1801 - v1802 - v1804;
@@ -5636,11 +5636,11 @@ LABEL_192:
             v1808 = v1806 + v1805;
             v1809 = v1808 + v1803;
             v1810 = v1807 + 2038794922 * v1809;
-            v1811 = detail::kPlayIntentKey[(unsigned __int8)v1807 + 257] + v1806;
-            v1812 = detail::kPlayIntentKey[(unsigned __int8)v1808 + 383] + v1809;
-            v691 = detail::kPlayIntentKey[(unsigned __int8)v1811 + 119] ^ v1808;
+            v1811 = detail::kPlayIntentKey[(std::uint8_t)v1807 + 257] + v1806;
+            v1812 = detail::kPlayIntentKey[(std::uint8_t)v1808 + 383] + v1809;
+            v691 = detail::kPlayIntentKey[(std::uint8_t)v1811 + 119] ^ v1808;
             v692 = v1811 - v1810;
-            v1813 = detail::kPlayIntentKey[(unsigned __int8)v1812 + 141] + v1810;
+            v1813 = detail::kPlayIntentKey[(std::uint8_t)v1812 + 141] + v1810;
             v1814 = v1812 ^ (__ROL4__(v691, 15) + __ROL4__(v692, 28));
             if (v692 < 0) {
                 v1815 = v692 ^ v1814;
@@ -5655,7 +5655,7 @@ LABEL_192:
                 v1824 = v1822 - v1823;
                 v1825 = v1821 ^ (__ROL4__(v1822, 27) + __ROL4__(v1823, 21));
                 v1826 = v1825 + v1822;
-                v1827 = detail::kPlayIntentKey[(unsigned __int8)v1824 + 146] + v1825;
+                v1827 = detail::kPlayIntentKey[(std::uint8_t)v1824 + 146] + v1825;
                 v1828 = v1826 ^ v1824;
                 v1829 = v1826 - v1828 - v1827;
                 v1830 = v1828 ^ v1827;
@@ -5675,10 +5675,10 @@ LABEL_192:
                 v1836 = v1834 ^ v1835;
                 v1837 = v1833 - __ROR4__(v1834, 1);
                 v1838 = (v1834 ^ v1835) - (v1835 ^ (1357619746 * v1837));
-                v1839 = v1837 - (detail::kPlayIntentKey[(unsigned __int8)v1838 + 496] + v1836) - 1553743850;
+                v1839 = v1837 - (detail::kPlayIntentKey[(std::uint8_t)v1838 + 496] + v1836) - 1553743850;
                 v1840 = v1839 + v1837 + v1838 - 1553743850;
                 v1841 = v1839 ^ v1840;
-                v1842 = detail::kPlayIntentKey[(unsigned __int8)v1839 + 203] + v1837 - 1553743850;
+                v1842 = detail::kPlayIntentKey[(std::uint8_t)v1839 + 203] + v1837 - 1553743850;
                 v1843 = v1840 + ((__ROL4__(v1842, 10) + 6169) ^ ((v1839 ^ v1840) + 6784));
                 v1844 = v1842 - (__ROL4__(v1841, 12) + __ROL4__(v1843, 3));
                 a2 = v1841 + ((__ROL4__(v1843, 6) + 13145) ^ (v1844 + 14540));
@@ -5693,7 +5693,7 @@ LABEL_192:
             v1849 = a4 + v1846;
             v1850 = a2 - (v1849 + a4);
             v1851 = v1847 ^ v1849;
-            v1852 = detail::kPlayIntentKey[(unsigned __int8)v1848 + 131] ^ v1847;
+            v1852 = detail::kPlayIntentKey[(std::uint8_t)v1848 + 131] ^ v1847;
             v1853 = v1848 - (v1850 + 2113929147);
             v1854 = ((__ROL4__(v1851, 28) - 15011) ^ (v1852 - 11433)) + v1850 + 2113929147;
             v1855 = __ROL4__(v1852, 7) + v1851 + __ROL4__(v1853, 8);
@@ -5718,7 +5718,7 @@ LABEL_192:
                 v780 = (v1867 ^ v781) - v1869;
                 v1871 = v780 - v1870;
                 v1866 = v1869 ^ (-148166357 * v1870);
-                v781 = detail::kPlayIntentKey[(unsigned __int8)v1866 + 2] ^ v1871;
+                v781 = detail::kPlayIntentKey[(std::uint8_t)v1866 + 2] ^ v1871;
                 --v1868;
             } while (v1868);
             v153 = v1867 ^ v1866;
@@ -5730,14 +5730,14 @@ LABEL_222:
             do {
                 v1873 = a3 ^ a5;
                 v1874 = a2 - __ROL4__(a4, 1);
-                v1875 = a4 - detail::kPlayIntentKey[(unsigned __int8)v1873 + 332];
+                v1875 = a4 - detail::kPlayIntentKey[(std::uint8_t)v1873 + 332];
                 v1876 = v1874 ^ v1873;
                 v1877 = v1874 - v1875;
                 v1878 = v1876 ^ v1875;
                 v1879 = v1876 - v1878 - v1877;
-                v1880 = v1877 - detail::kPlayIntentKey[(unsigned __int8)v1878 + 247];
+                v1880 = v1877 - detail::kPlayIntentKey[(std::uint8_t)v1878 + 247];
                 a2 = (v1878 ^ (28972875 * v1879)) + v1880;
-                v1881 = v1879 - detail::kPlayIntentKey[(unsigned __int8)v1880 + 373];
+                v1881 = v1879 - detail::kPlayIntentKey[(std::uint8_t)v1880 + 373];
                 a4 = -v1881 - v1880;
                 a5 = a2 ^ v1881;
                 --v1872;
@@ -5745,11 +5745,11 @@ LABEL_222:
             v1882 = (~a2 >> 15) | 0xFFFFFFF8;
             do {
                 v1883 = a2 ^ a5;
-                v1884 = a3 - detail::kPlayIntentKey[(unsigned __int8)a4 + 9];
+                v1884 = a3 - detail::kPlayIntentKey[(std::uint8_t)a4 + 9];
                 v1885 = a4 - v1883 - v1884;
                 v1886 = v1884 ^ v1883;
                 v1887 = v1885 - v1884;
-                v1888 = v1885 - detail::kPlayIntentKey[(unsigned __int8)v1886 + 337];
+                v1888 = v1885 - detail::kPlayIntentKey[(std::uint8_t)v1886 + 337];
                 v1889 = v1886 + v1887 - 656332710;
                 v1890 = v1888 ^ v1889;
                 v1891 = v1886 + __ROL4__(v1888, 8) - 656332710;
@@ -5762,7 +5762,7 @@ LABEL_222:
                 v1898 = v1895 - v1896;
                 a4 = v1898 + v1897 + 2102140195;
                 a3 = a4 ^ v1896;
-                a5 = detail::kPlayIntentKey[(unsigned __int8)a3 + 464] + v1898 + 2102140195;
+                a5 = detail::kPlayIntentKey[(std::uint8_t)a3 + 464] + v1898 + 2102140195;
                 ++v1882;
             } while (v1882);
             v1899 = a4 + a3 + a2;
@@ -5781,10 +5781,10 @@ LABEL_222:
                 v1911 = v1908 ^ v1910;
                 v1912 = v1907 - v1911 - v1909;
                 v1913 = v1911 ^ (v1912 - 12788657);
-                v1914 = detail::kPlayIntentKey[(unsigned __int8)v1911 + 462] + v1909;
+                v1914 = detail::kPlayIntentKey[(std::uint8_t)v1911 + 462] + v1909;
                 v1907 = v1912 - v1914;
                 v1909 = v1914 - v1913;
-                v1910 = detail::kPlayIntentKey[(unsigned __int8)v1907 + 279] + v1913;
+                v1910 = detail::kPlayIntentKey[(std::uint8_t)v1907 + 279] + v1913;
             }
             v529 = v1910 ^ v1909;
             v1091 = v1908 ^ v1907;
@@ -5794,7 +5794,7 @@ LABEL_222:
             v1916 = a3 - a4 - a5;
             v1917 = a5 ^ a4;
             v1918 = v1915 ^ v1916;
-            v1919 = a5 - detail::kPlayIntentKey[(unsigned __int8)v1915 + 177];
+            v1919 = a5 - detail::kPlayIntentKey[(std::uint8_t)v1915 + 177];
             v1920 = v1916 - __ROL4__(v1917, 14);
             v1921 = v1918 ^ v1920;
             v1922 = v1919 ^ (__ROL4__(v1918, 27) + 15024) ^ (v1920 + 17549);
@@ -5808,36 +5808,36 @@ LABEL_222:
             v1929 = 1512900229 * v1925 + v1923;
             v1930 = v1926 + ((__ROL4__(v1927, 12) - 5234) ^ (v1929 + 25));
             v1931 = v1927 - v1929;
-            v1932 = detail::kPlayIntentKey[(unsigned __int8)v1930 + 259];
-            v1933 = v1930 - detail::kPlayIntentKey[(unsigned __int8)v1931 + 383];
-            v1934 = detail::kPlayIntentKey[(unsigned __int8)(v1929 - v1919) + 362] ^ v1931;
+            v1932 = detail::kPlayIntentKey[(std::uint8_t)v1930 + 259];
+            v1933 = v1930 - detail::kPlayIntentKey[(std::uint8_t)v1931 + 383];
+            v1934 = detail::kPlayIntentKey[(std::uint8_t)(v1929 - v1919) + 362] ^ v1931;
             v1935 = v1933 + v1932 + v1928 + 720527419;
             v1936 = v1932 + v1929 + v1934 + v1933;
-            v1937 = detail::kPlayIntentKey[(unsigned __int8)v1935 + 178];
+            v1937 = detail::kPlayIntentKey[(std::uint8_t)v1935 + 178];
             v1938 = v1932 + v1929 - v1937;
             v1939 = v1936 ^ v1935;
             v1940 = v1936 + 217325442 * (v1934 - (v1932 + v1929));
             v1941 = v1934 - v1937;
             v1942 = v1939 + v1938;
-            v1943 = detail::kPlayIntentKey[(unsigned __int8)v1940 + 62] ^ v1939;
+            v1943 = detail::kPlayIntentKey[(std::uint8_t)v1940 + 62] ^ v1939;
             v1944 = v1940 - v1941;
             v1945 = v1941 + ((__ROL4__(v1942, 7) + 31376) ^ (v1943 + 25775));
             v1946 = __ROL4__(v1943, 18) + v1942 + __ROL4__(v1944, 26);
             v1947 = v1945 + __ROL4__(v1946, 9);
             v1948 = v1944 ^ (__ROL4__(v1945, 26) + __ROL4__(v1946, 17));
             v1949 = v1943 - __ROL4__(v1944, 28);
-            v1950 = v1946 - detail::kPlayIntentKey[(unsigned __int8)v1949 + 489];
+            v1950 = v1946 - detail::kPlayIntentKey[(std::uint8_t)v1949 + 489];
             v1951 = v1948 + v1947 + v1949;
-            v1952 = detail::kPlayIntentKey[(unsigned __int8)v1947 + 433] + v1948;
+            v1952 = detail::kPlayIntentKey[(std::uint8_t)v1947 + 433] + v1948;
             v1953 = v1951 + v1950 + v1947;
             v1954 = v1950 - v1951;
-            v1955 = detail::kPlayIntentKey[(unsigned __int8)v1952 + 264] + v1951;
+            v1955 = detail::kPlayIntentKey[(std::uint8_t)v1952 + 264] + v1951;
             v1956 = ((unsigned int)~v1953 >> 26) | 0xFFFFFFF8;
             do {
                 v1957 = v1953 ^ v1955;
-                v1958 = v1952 - detail::kPlayIntentKey[(unsigned __int8)v1954 + 438];
+                v1958 = v1952 - detail::kPlayIntentKey[(std::uint8_t)v1954 + 438];
                 v1959 = v1954 - v1957;
-                v1960 = detail::kPlayIntentKey[(unsigned __int8)v1958 + 144] + v1957;
+                v1960 = detail::kPlayIntentKey[(std::uint8_t)v1958 + 144] + v1957;
                 v1961 = v1959 + v1958;
                 v1962 = v1959 ^ __ROL4__(v1960, 15);
                 v1963 = __ROR4__(v1962, 1) + v1960 + __ROL4__(v1961, 4);
@@ -5848,7 +5848,7 @@ LABEL_222:
                 v1968 = v1966 + v1965;
                 v1969 = v1966 ^ (1030662682 * v1967);
                 v1970 = v1967 - v1968;
-                v1954 = detail::kPlayIntentKey[(unsigned __int8)v1969 + 12] + v1968;
+                v1954 = detail::kPlayIntentKey[(std::uint8_t)v1969 + 12] + v1968;
                 v1952 = v1970 - 1226786786;
                 v1955 = v1954 + v1969 + v1970 - 1226786786;
                 ++v1956;
@@ -5875,23 +5875,23 @@ LABEL_222:
                 v1986 = v1983 ^ v1981;
                 v1987 = v1985 ^ v1983;
                 v1988 = v1987 + v1986 + v1985;
-                v1989 = v1986 - detail::kPlayIntentKey[(unsigned __int8)v1987 + 147];
+                v1989 = v1986 - detail::kPlayIntentKey[(std::uint8_t)v1987 + 147];
                 v1990 = __ROL4__(v1989, 12);
                 v1991 = (v1988 + v1987) ^ v1989;
-                v1992 = detail::kPlayIntentKey[(unsigned __int8)((v1990 - 67) ^ v1988 ^ (v1987 + v1988 - 31)) + 269] + v1988 + v1987;
+                v1992 = detail::kPlayIntentKey[(std::uint8_t)((v1990 - 67) ^ v1988 ^ (v1987 + v1988 - 31)) + 269] + v1988 + v1987;
                 v1993 = ((v1990 - 9027) ^ v1988 ^ (v1987 + v1988 + 7905)) - v1991;
                 v1994 = v1991 - v1992 - v1993;
                 v1995 = v1993 ^ v1992;
-                v1996 = v1993 - detail::kPlayIntentKey[(unsigned __int8)v1994 + 360];
+                v1996 = v1993 - detail::kPlayIntentKey[(std::uint8_t)v1994 + 360];
                 v1997 = v1996 + v1995 + v1994;
                 v1998 = v1995 - v1996;
-                v1999 = detail::kPlayIntentKey[(unsigned __int8)v1997 + 310] + v1996;
+                v1999 = detail::kPlayIntentKey[(std::uint8_t)v1997 + 310] + v1996;
                 v2000 = v1998 ^ v1997;
                 v1982 = v1999 ^ (885552489 * v2000);
-                v1983 = v1998 - detail::kPlayIntentKey[(unsigned __int8)v1999 + 274];
+                v1983 = v1998 - detail::kPlayIntentKey[(std::uint8_t)v1999 + 274];
                 v1981 = v2000;
             }
-            v2001 = v1984 - detail::kPlayIntentKey[(unsigned __int8)v1981 + 154];
+            v2001 = v1984 - detail::kPlayIntentKey[(std::uint8_t)v1981 + 154];
             v2002 = v1981 - 837547791 * v1983;
             v2003 = v1982 + v1983;
             v2004 = v1982 ^ __ROL4__(v2001, 20);
@@ -5900,17 +5900,17 @@ LABEL_222:
             v2007 = v2003 ^ __ROL4__(v2004, 16);
             v2008 = v2004 - v2005 - v2006;
             v2009 = __ROL4__(v2006, 2);
-            v2010 = v2006 - detail::kPlayIntentKey[(unsigned __int8)v2007 + 324];
+            v2010 = v2006 - detail::kPlayIntentKey[(std::uint8_t)v2007 + 324];
             v2011 = v2005 ^ v2009;
             v2012 = v2008 ^ v2007;
             v2013 = v2011 ^ v2008;
             v2014 = v2011 - v2010;
-            v2015 = detail::kPlayIntentKey[(unsigned __int8)v2012 + 274] + v2010;
+            v2015 = detail::kPlayIntentKey[(std::uint8_t)v2012 + 274] + v2010;
             v2016 = v2012 - v2013 - v2014;
             v2017 = v2014 ^ v2013;
             v2018 = v2015 ^ v2016;
-            v2019 = v2016 - detail::kPlayIntentKey[(unsigned __int8)v2017 + 365];
-            v2020 = v2018 + v2014 - detail::kPlayIntentKey[(unsigned __int8)v2015 + 238];
+            v2019 = v2016 - detail::kPlayIntentKey[(std::uint8_t)v2017 + 365];
+            v2020 = v2018 + v2014 - detail::kPlayIntentKey[(std::uint8_t)v2015 + 238];
             v2021 = v2017 - v2020;
             v1570 = (__ROL4__(v2019, 17) + __ROL4__(v2021, 28)) ^ v2020 ^ v2018;
             v1571 = (v2019 + __ROL4__(v2021, 27)) ^ v2021 ^ __ROL4__(v2020, 15);
@@ -5948,16 +5948,16 @@ LABEL_222:
             v2045 = v2041 ^ v2042;
             v2046 = v2043 ^ (v2044 + 449077942);
             v2047 = v2045 + v2044;
-            v2048 = detail::kPlayIntentKey[(unsigned __int8)v2043 + 54] + v2046 + v2041;
+            v2048 = detail::kPlayIntentKey[(std::uint8_t)v2043 + 54] + v2046 + v2041;
             v2049 = v2045 - v2048;
             v2050 = v2047 + v2046;
-            v2051 = detail::kPlayIntentKey[(unsigned __int8)v2049 + 384] ^ v2047;
+            v2051 = detail::kPlayIntentKey[(std::uint8_t)v2049 + 384] ^ v2047;
             v2052 = v2049 - v2048;
             v2053 = v2050 ^ v2051;
-            v2054 = v2048 - detail::kPlayIntentKey[(unsigned __int8)v2050 + 369];
+            v2054 = v2048 - detail::kPlayIntentKey[(std::uint8_t)v2050 + 369];
             v2052 -= 1157502464;
             v2055 = __ROL4__(v2052, 29);
-            v2056 = v2052 - detail::kPlayIntentKey[(unsigned __int8)v2054 + 201];
+            v2056 = v2052 - detail::kPlayIntentKey[(std::uint8_t)v2054 + 201];
             v2057 = v2051 - v2055;
             v2058 = v2053 + v2054 - 474643547;
             v2059 = v2053 - v2056 - v2057;
@@ -5975,10 +5975,10 @@ LABEL_222:
             v364 = (v2069 + v2068 + v2067) ^ (v2068 - __ROL4__(v2069, 28));
             return (unsigned int)(v363 + v364);
         case 0x29:
-            v2070 = detail::kPlayIntentKey[(unsigned __int8)a3 + 235] ^ a2;
+            v2070 = detail::kPlayIntentKey[(std::uint8_t)a3 + 235] ^ a2;
             v2071 = a3 - 2052416363 * a4;
             v2072 = a5 + a4;
-            v2073 = detail::kPlayIntentKey[(unsigned __int8)v2070 + 66] ^ a5;
+            v2073 = detail::kPlayIntentKey[(std::uint8_t)v2070 + 66] ^ a5;
             v2074 = v2071 ^ v2070;
             v2075 = v2071 - v2072;
             v2076 = v2072 + __ROL4__(v2073, 1);
@@ -5993,10 +5993,10 @@ LABEL_222:
                 v2084 = v2081 - ((__ROL4__(v2082, 27) + 24430) ^ (v2083 + 27054));
                 v2085 = v2084 + (v2082 ^ v2083) - 798373169;
                 v2086 = v2083 - v2084 - (v2082 ^ v2083);
-                v2087 = detail::kPlayIntentKey[(unsigned __int8)v2086 + 249] ^ v2082 ^ v2083;
+                v2087 = detail::kPlayIntentKey[(std::uint8_t)v2086 + 249] ^ v2082 ^ v2083;
                 v2074 = v2085 ^ v2086;
                 v2076 = v2085 - v2074 - v2087;
-                v2077 = v2087 - detail::kPlayIntentKey[(unsigned __int8)v2074 + 452];
+                v2077 = v2087 - detail::kPlayIntentKey[(std::uint8_t)v2074 + 452];
                 ++v2078;
             } while (v2078);
             if ((v2074 & 0x800000) != 0) {
@@ -6006,9 +6006,9 @@ LABEL_222:
                 v2091 = v2088 - v2089;
                 v2092 = v2090 + v2089;
                 v2093 = v2091 + v2092 - 171078870;
-                v2094 = detail::kPlayIntentKey[(unsigned __int8)v2091 + 213] ^ v2090;
+                v2094 = detail::kPlayIntentKey[(std::uint8_t)v2091 + 213] ^ v2090;
                 v2095 = v2092 - v2094;
-                v2096 = v2094 - detail::kPlayIntentKey[(unsigned __int8)v2093 + 416];
+                v2096 = v2094 - detail::kPlayIntentKey[(std::uint8_t)v2093 + 416];
                 v2097 = v2093 ^ (__ROL4__(v2095, 1) - 1143) ^ (v2096 + 28966);
                 v2075 = v2095 - v2096 - v2097;
                 v2077 = v2097 ^ v2075;
@@ -6016,9 +6016,9 @@ LABEL_222:
             }
             v2098 = v2075 + v2074;
             v2099 = v2076 + v2075;
-            v2100 = detail::kPlayIntentKey[(unsigned __int8)v2077 + 301] ^ v2076;
+            v2100 = detail::kPlayIntentKey[(std::uint8_t)v2077 + 301] ^ v2076;
             v2101 = v2098 ^ v2077;
-            v2102 = detail::kPlayIntentKey[(unsigned __int8)v2099 + 399] ^ v2098;
+            v2102 = detail::kPlayIntentKey[(std::uint8_t)v2099 + 399] ^ v2098;
             v2103 = v2099 - 1794683919 * v2100;
             v2104 = v2103 + v2102;
             v2105 = v2101 + v2100;
@@ -6051,7 +6051,7 @@ LABEL_246:
                 v2118 = v2114 ^ (__ROL4__(v2115, 26) + __ROR4__(v2116, 1));
                 v2119 = v2116 ^ __ROL4__(v2118, 17);
                 v2120 = v2117 + v2118;
-                v2121 = v2117 - detail::kPlayIntentKey[(unsigned __int8)v2119 + 455];
+                v2121 = v2117 - detail::kPlayIntentKey[(std::uint8_t)v2119 + 455];
                 v2122 = v2119 ^ (v2121 + v2120);
                 a3 = v2122 + v2121 - 2127020040;
                 a5 = v2122 + v2120 - 2127020040;
@@ -6060,7 +6060,7 @@ LABEL_246:
             v2123 = (a4 - 7817) ^ a2 ^ (a3 - 17816);
             v2124 = a4 ^ a5;
             v2125 = a5 + a4;
-            v2126 = detail::kPlayIntentKey[(unsigned __int8)v2123 + 364] + a5;
+            v2126 = detail::kPlayIntentKey[(std::uint8_t)v2123 + 364] + a5;
             v2127 = v2124 + a3 - v2125;
             v2128 = v2127 ^ v2123;
             v2129 = v2124 ^ (v2128 + v2126);
@@ -6077,13 +6077,13 @@ LABEL_246:
             v2140 = v2137 - v2136;
             v2141 = v2138 ^ __ROL4__(v2139, 11);
             v2142 = __ROL4__(v2139, 28);
-            v2143 = detail::kPlayIntentKey[(unsigned __int8)v2140 + 313] + v2139;
+            v2143 = detail::kPlayIntentKey[(std::uint8_t)v2140 + 313] + v2139;
             v2144 = v2136 - (__ROL4__(v2138, 1) + v2142);
             v2145 = v2140 - v2144;
             v2146 = v2143 + v2141;
             v2147 = v2141 + v2143 + 1940420713;
-            v2148 = detail::kPlayIntentKey[(unsigned __int8)v2141 + 20] ^ v2144;
-            v2149 = detail::kPlayIntentKey[(unsigned __int8)(v2145 + 114) + 5] ^ v2143;
+            v2148 = detail::kPlayIntentKey[(std::uint8_t)v2141 + 20] ^ v2144;
+            v2149 = detail::kPlayIntentKey[(std::uint8_t)(v2145 + 114) + 5] ^ v2143;
             v2150 = -2000594596 * v2148 + v2145 + 400275058;
             v2151 = v2149 + v2146 + 1940420713;
             v2152 = v2148 ^ (__ROL4__(v2147, 7) + __ROL4__(v2149, 13));
@@ -6092,7 +6092,7 @@ LABEL_246:
             v2155 = v2149 ^ (__ROL4__(v2150, 25) + __ROL4__(v2152, 4));
             v2156 = (v2155 - 4993) ^ v2153;
             v2157 = v2151 ^ (__ROL4__(v2155, 16) + __ROL4__(v2154, 10));
-            v2158 = v2157 + detail::kPlayIntentKey[(unsigned __int8)(v2155 ^ (5 * v2154)) + 455];
+            v2158 = v2157 + detail::kPlayIntentKey[(std::uint8_t)(v2155 ^ (5 * v2154)) + 455];
             v2159 = v2155 ^ (-1097208315 * v2154) ^ (v2154 - v2156);
             v2160 = v2158 ^ v2156 ^ v2157;
             return (unsigned int)(v2159 + v2160);
@@ -6101,32 +6101,32 @@ LABEL_246:
             v2162 = a4 ^ a3;
             v2163 = a4 - __ROL4__(a5, 15);
             v2164 = v2162 + v2161;
-            v2165 = detail::kPlayIntentKey[(unsigned __int8)v2163 + 291] ^ v2162;
+            v2165 = detail::kPlayIntentKey[(std::uint8_t)v2163 + 291] ^ v2162;
             v2166 = v2164 + a5;
             v2167 = v2166 + v2163;
             v2168 = v2166 + v2163 - 1770918534;
             v2169 = v2166 ^ (v2165 + v2164);
             v2170 = v2164 - (__ROL4__(v2165, 9) + __ROL4__(v2168, 18));
-            v2171 = detail::kPlayIntentKey[(unsigned __int8)v2168 + 300] + v2165;
+            v2171 = detail::kPlayIntentKey[(std::uint8_t)v2168 + 300] + v2165;
             v2172 = v2169 + v2167 - 1770918534;
             v2173 = __ROL4__(v2171, 18);
             v2174 = v2171 - v2172;
             v2175 = v2170 ^ v2169;
             v2176 = v2172 + __ROL4__(v2175, 18);
             v2177 = v2170 ^ (v2173 + __ROL4__(v2172, 2));
-            v2178 = v2174 ^ detail::kPlayIntentKey[(unsigned __int8)v2176 + 296];
-            v2179 = detail::kPlayIntentKey[(unsigned __int8)v2177 + 311] ^ v2175;
+            v2178 = v2174 ^ detail::kPlayIntentKey[(std::uint8_t)v2176 + 296];
+            v2179 = detail::kPlayIntentKey[(std::uint8_t)v2177 + 311] ^ v2175;
             v2180 = v2176 - 1823455363 * v2179;
             v2181 = v2180 + v2178;
             v2182 = v2178 + v2179;
             v2183 = v2182 ^ v2180;
             v2184 = v2181 + v2178 + v2177 + v2174;
-            v2185 = detail::kPlayIntentKey[(unsigned __int8)v2183 + 58] ^ v2181;
+            v2185 = detail::kPlayIntentKey[(std::uint8_t)v2183 + 58] ^ v2181;
             v2186 = v2184 + v2182;
             v2187 = v2186 ^ v2183;
             v2188 = v2187 + v2185;
             v2189 = (v2187 + v2185) ^ v2184;
-            v2190 = detail::kPlayIntentKey[(unsigned __int8)(v2189 - (v2187 + v2185 + 89)) + 373] + v2186 - v2189;
+            v2190 = detail::kPlayIntentKey[(std::uint8_t)(v2189 - (v2187 + v2185 + 89)) + 373] + v2186 - v2189;
             v2191 = v2188 + v2186 - v2189 - 1460848807;
             v2192 = v2186 - v2187;
             v2193 = v2189 + v2192;
@@ -6137,7 +6137,7 @@ LABEL_246:
             v2198 = v2195 + v2194;
             v2199 = v2197 ^ __ROL4__(v2196, 17);
             v2200 = (__ROL4__(v2197, 6) + 16317) ^ v2195 ^ (v2196 + 26388);
-            v2201 = detail::kPlayIntentKey[(unsigned __int8)v2198 + 149] ^ v2196;
+            v2201 = detail::kPlayIntentKey[(std::uint8_t)v2198 + 149] ^ v2196;
             v2202 = v2200 + v2198 + 702939882;
             v2203 = v2200 - v2199;
             v2204 = ((v2201 >> 11) & 7) + 1;
@@ -6149,7 +6149,7 @@ LABEL_246:
                 v2209 = v2208 + v2206;
                 v2210 = v2209 ^ (v2208 + v2207 + 1998580206);
                 v2211 = (v2207 - v2209) ^ (v2208 + v2207);
-                v2212 = v2207 - v2209 - detail::kPlayIntentKey[(unsigned __int8)(v2209 ^ (v2208 + v2207 - 18)) + 238];
+                v2212 = v2207 - v2209 - detail::kPlayIntentKey[(std::uint8_t)(v2209 ^ (v2208 + v2207 - 18)) + 238];
                 v2213 = v2210 ^ __ROR4__(v2211, 1);
                 v2214 = v2213 + v2212;
                 v2215 = v2211 ^ v2214;
@@ -6179,7 +6179,7 @@ LABEL_246:
             v2225 = v2224 + a3;
             v2226 = a4 ^ (v2225 + a5);
             v2227 = a5 - v2225;
-            v2228 = detail::kPlayIntentKey[(unsigned __int8)v2224 + 86] ^ v2225;
+            v2228 = detail::kPlayIntentKey[(std::uint8_t)v2224 + 86] ^ v2225;
             v2229 = v2226 + v2227 + v2224 - 535417570;
             v2230 = v2226 - (v2227 - 535417570);
             v2231 = v2227 + v2228 - 535417570;
@@ -6201,11 +6201,11 @@ LABEL_246:
             v2245 = v2242 - v692 + 228580076;
             if ((v691 & 0x200000) != 0) {
                 v2246 = v691 ^ v2245;
-                v2247 = detail::kPlayIntentKey[(unsigned __int8)v2244 + 285] + v692;
-                v2248 = detail::kPlayIntentKey[(unsigned __int8)v2247 + 411];
-                v692 = detail::kPlayIntentKey[(unsigned __int8)(v2244 - v2246) + 397] + v2247;
+                v2247 = detail::kPlayIntentKey[(std::uint8_t)v2244 + 285] + v692;
+                v2248 = detail::kPlayIntentKey[(std::uint8_t)v2247 + 411];
+                v692 = detail::kPlayIntentKey[(std::uint8_t)(v2244 - v2246) + 397] + v2247;
                 v2244 += v2248;
-                v2245 = detail::kPlayIntentKey[(unsigned __int8)v692 + 103] ^ (v2248 + v2246);
+                v2245 = detail::kPlayIntentKey[(std::uint8_t)v692 + 103] ^ (v2248 + v2246);
             }
             if ((v692 & 2) != 0) {
                 v2249 = v692 ^ v2245;
@@ -6234,8 +6234,8 @@ LABEL_262:
                 v2262 = v2261 + v2259;
                 v2263 = v2259 - v2260;
                 v2264 = v2261 - __ROR4__(v2263, 1);
-                v2265 = v2263 - detail::kPlayIntentKey[(unsigned __int8)v2262 + 363];
-                v2266 = detail::kPlayIntentKey[(unsigned __int8)v2264 + 348] + v2262;
+                v2265 = v2263 - detail::kPlayIntentKey[(std::uint8_t)v2262 + 363];
+                v2266 = detail::kPlayIntentKey[(std::uint8_t)v2264 + 348] + v2262;
                 v2267 = v2264 - v2265;
                 v2268 = v2266 + v2265;
                 v2269 = v2267 + v2266 - 125619635;
@@ -6246,13 +6246,13 @@ LABEL_262:
                 a5 = (__ROL4__(a2, 7) - 31400) ^ (v2271 + v2268) ^ (v2271 + v2267 - 125623847);
                 --v2258;
             } while (v2258);
-            v2272 = a3 - detail::kPlayIntentKey[(unsigned __int8)a2 + 110];
+            v2272 = a3 - detail::kPlayIntentKey[(std::uint8_t)a2 + 110];
             v2273 = a2 - a4;
             v2274 = a4 - a5;
-            v2275 = detail::kPlayIntentKey[(unsigned __int8)v2272 + 453] + a5;
+            v2275 = detail::kPlayIntentKey[(std::uint8_t)v2272 + 453] + a5;
             v2273 += 515909437;
             v2276 = __ROL4__(v2273, 11);
-            v2277 = detail::kPlayIntentKey[(unsigned __int8)v2274 + 439] + v2273;
+            v2277 = detail::kPlayIntentKey[(std::uint8_t)v2274 + 439] + v2273;
             v2278 = v2272 + v2276;
             v2279 = v2274 ^ (__ROL4__(v2275, 14) + __ROL4__(v2278, 12));
             v2280 = v2279 + v2277 + v2278;
@@ -6266,18 +6266,18 @@ LABEL_262:
             v2288 = v2283 - v2286;
             v2289 = v2287 + v2285 + v2286;
             v2290 = v2285 - v2287;
-            v2291 = detail::kPlayIntentKey[(unsigned __int8)v2288 + 321];
+            v2291 = detail::kPlayIntentKey[(std::uint8_t)v2288 + 321];
             v2292 = v2287 + v2291;
             v2293 = v2288 - v2289 - 1834419606;
             v2294 = v2289 ^ (v2291 + v2285);
             v2295 = v2290 ^ (v2291 + v2287 + 6486499);
             v2296 = v2293 ^ (v2294 + 271174242);
-            v2297 = v2292 - detail::kPlayIntentKey[(unsigned __int8)v2293 + 13];
+            v2297 = v2292 - detail::kPlayIntentKey[(std::uint8_t)v2293 + 13];
             v2298 = v2295 ^ (-1753959428 * v2297);
             v2299 = v2294 + __ROL4__(v2295, 19);
             v2300 = v2296 ^ v2297;
             v2301 = v2296 - __ROL4__(v2299, 29);
-            v2302 = detail::kPlayIntentKey[(unsigned __int8)v2298 + 115] + v2299;
+            v2302 = detail::kPlayIntentKey[(std::uint8_t)v2298 + 115] + v2299;
             v2303 = -977696968 * v2300;
             v2304 = -977696968 * v2300 + v2298;
             v2305 = v2300 - v2301;
@@ -6293,7 +6293,7 @@ LABEL_262:
         case 0x2E:
             v2312 = a3 ^ a2;
             v2313 = __ROL4__(a4, 7);
-            v2314 = detail::kPlayIntentKey[(unsigned __int8)a5 + 492] + a4;
+            v2314 = detail::kPlayIntentKey[(std::uint8_t)a5 + 492] + a4;
             v2315 = a3 - v2313;
             v2316 = v2315 + v2312 + a5;
             v2317 = v2314 + v2315;
@@ -6319,7 +6319,7 @@ LABEL_262:
             do {
                 v2337 = v2333 ^ v2335;
                 v2338 = v2334 + v2331;
-                v2339 = detail::kPlayIntentKey[(unsigned __int8)v2337 + 463];
+                v2339 = detail::kPlayIntentKey[(std::uint8_t)v2337 + 463];
                 v2340 = v2338 ^ v2337;
                 v2341 = v2334 - v2339 - v2340;
                 v2342 = v2338 ^ (v2334 - v2339 - 103576552);
@@ -6331,7 +6331,7 @@ LABEL_262:
                 v2348 = v2346 + 1646524690 * v2347;
                 v2349 = v2347 - (((__ROL4__(v2346, 12) - 8111) ^ (v2347 + 26453)) + v2348 + v2345);
                 v2350 = v2349 + 44960888;
-                v2331 = detail::kPlayIntentKey[(unsigned __int8)v2347 + 23] ^ v2349;
+                v2331 = detail::kPlayIntentKey[(std::uint8_t)v2347 + 23] ^ v2349;
                 v2335 = v2331 + (v2348 ^ v2350);
                 v2334 = v2347 - v2335;
                 ++v2336;
@@ -6355,7 +6355,7 @@ LABEL_262:
             v2357 = a3 + 941102669 * a4;
             v2358 = a5 + a4;
             v2359 = a5 - 818332336 * v2356;
-            v2360 = detail::kPlayIntentKey[(unsigned __int8)v2357 + 194] + v2356;
+            v2360 = detail::kPlayIntentKey[(std::uint8_t)v2357 + 194] + v2356;
             v2361 = v2357 - v2358;
             v2362 = v2361 + 622142695;
             v2363 = v2358 - v2359;
@@ -6369,18 +6369,18 @@ LABEL_262:
             v2371 = v2367 + __ROL4__(v2368, 3);
             v2372 = v2368 - v2369;
             v2373 = v2370 + v2369;
-            v2374 = v2370 - detail::kPlayIntentKey[(unsigned __int8)v2371 + 373];
+            v2374 = v2370 - detail::kPlayIntentKey[(std::uint8_t)v2371 + 373];
             v2375 = v2372 ^ v2371;
             v2376 = v2372 - __ROL4__(v2373, 30);
-            v2377 = detail::kPlayIntentKey[(unsigned __int8)v2374 + 278] + v2373;
+            v2377 = detail::kPlayIntentKey[(std::uint8_t)v2374 + 278] + v2373;
             v2378 = v2374 - v2375;
             v2379 = v2376 ^ (v2378 + v2377);
-            v2380 = detail::kPlayIntentKey[(unsigned __int8)v2376 + 404] ^ v2375;
+            v2380 = detail::kPlayIntentKey[(std::uint8_t)v2376 + 404] ^ v2375;
             v2381 = v2377 - v2378;
             v2382 = v2378 - v2380;
             v2383 = v2380 ^ (199988125 * v2379);
             v2384 = -2019308153 * v2381;
-            v2385 = v2381 - detail::kPlayIntentKey[(unsigned __int8)v2382 + 249];
+            v2385 = v2381 - detail::kPlayIntentKey[(std::uint8_t)v2382 + 249];
             v2386 = v2384 + v2379;
             v2387 = v2382 - ((__ROL4__(v2383, 6) - 8678) ^ (v2379 + v2384 + 14547));
             v2388 = (v2384 + v2379) ^ v2383;
@@ -6394,7 +6394,7 @@ LABEL_262:
             v2396 = v2395 + v2394;
             v2397 = v2396 + v2392;
             v2398 = v2397 ^ v2395;
-            v2399 = v2396 + v2393 - detail::kPlayIntentKey[(unsigned __int8)v2396 + 390];
+            v2399 = v2396 + v2393 - detail::kPlayIntentKey[(std::uint8_t)v2396 + 390];
             v2400 = v2398 + v2396;
             v2401 = v2397 + v2398;
             v2402 = v2397 + 563943985 * v2399;
@@ -6408,11 +6408,11 @@ LABEL_262:
             v2410 = v2405 ^ __ROL4__(v2408, 22);
             v2411 = v2407 + v2408;
             v2412 = v2407 - v2409;
-            v2413 = v2409 - detail::kPlayIntentKey[(unsigned __int8)v2410 + 172];
+            v2413 = v2409 - detail::kPlayIntentKey[(std::uint8_t)v2410 + 172];
             v2414 = v2410 - v2411 - 1644165889;
             v2415 = v2412 + __ROL4__(v2413, 12);
-            v2416 = detail::kPlayIntentKey[(unsigned __int8)v2412 + 298] + v2411;
-            v2417 = detail::kPlayIntentKey[(unsigned __int8)v2414 + 375] ^ v2413;
+            v2416 = detail::kPlayIntentKey[(std::uint8_t)v2412 + 298] + v2411;
+            v2417 = detail::kPlayIntentKey[(std::uint8_t)v2414 + 375] ^ v2413;
             v2418 = v2414 - v2416 - v2415;
             v2419 = v2415 ^ (v2418 + v2417);
             v2420 = v2417 - v2418;
@@ -6427,17 +6427,17 @@ LABEL_262:
             if ((a3 & 0x4000) != 0) {
                 v2427 = a3 ^ a5;
                 v2428 = a4 ^ (v2427 + 1672702145);
-                v2429 = a2 - detail::kPlayIntentKey[(unsigned __int8)a4 + 108];
+                v2429 = a2 - detail::kPlayIntentKey[(std::uint8_t)a4 + 108];
                 v2430 = v2429 + v2427;
                 v2431 = v2429 ^ (1883365883 * v2428);
                 v2432 = v2430 ^ (-2146913670 * v2431);
-                v2433 = v2428 - detail::kPlayIntentKey[(unsigned __int8)v2430 + 37];
+                v2433 = v2428 - detail::kPlayIntentKey[(std::uint8_t)v2430 + 37];
                 v2434 = v2431 ^ (-1755953045 * v2433);
                 v2435 = v2433 - v2432;
                 v2436 = v2434 ^ v2432;
                 v2437 = v2434 - __ROL4__(v2435, 15);
                 v2438 = __ROL4__(v2437, 8) + v2435 + __ROL4__(v2436, 4);
-                v2439 = detail::kPlayIntentKey[(unsigned __int8)(v2436 - v2437) + 194];
+                v2439 = detail::kPlayIntentKey[(std::uint8_t)(v2436 - v2437) + 194];
                 v2440 = v2439 + v2436;
                 a2 = v2437 - (v2438 + v2439 + v2438);
                 a4 = v2438 + v2439 - ((__ROL4__(v2440, 12) - 11151) ^ (a2 + 31951));
@@ -6447,7 +6447,7 @@ LABEL_262:
                 v2441 = a2 ^ a5;
                 v2442 = a3 - a4 - v2441;
                 v2443 = v2441 ^ a4;
-                v2444 = v2441 - detail::kPlayIntentKey[(unsigned __int8)v2442 + 125];
+                v2444 = v2441 - detail::kPlayIntentKey[(std::uint8_t)v2442 + 125];
                 v2445 = v2442 - v2443;
                 v2446 = v2443 ^ __ROL4__(v2444, 28);
                 v2447 = v2444 - v2445 - v2446;
@@ -6455,7 +6455,7 @@ LABEL_262:
                 v2449 = v2446 - __ROL4__(v2447, 8);
                 v2450 = __ROL4__(v2449, 9) + v2447 + __ROR4__(v2448, 1);
                 a3 = v2448 ^ (__ROL4__(v2449, 17) + __ROL4__(v2450, 1));
-                a4 = v2449 - detail::kPlayIntentKey[(unsigned __int8)v2450 + 393];
+                a4 = v2449 - detail::kPlayIntentKey[(std::uint8_t)v2450 + 393];
                 a5 = a3 ^ v2450;
             }
             v2451 = ((a3 >> 17) & 7) + 1;
@@ -6470,9 +6470,9 @@ LABEL_262:
                 v2459 = v2457 - v2456 - v2458;
                 v2460 = v2458 ^ v2456;
                 v2461 = v2459 ^ (v2460 + 770442200);
-                v2462 = v2458 - detail::kPlayIntentKey[(unsigned __int8)v2459 + 13];
+                v2462 = v2458 - detail::kPlayIntentKey[(std::uint8_t)v2459 + 13];
                 v2463 = v2462 + v2460;
-                v2464 = detail::kPlayIntentKey[(unsigned __int8)v2461 + 217] + v2462;
+                v2464 = detail::kPlayIntentKey[(std::uint8_t)v2461 + 217] + v2462;
                 v2465 = v2461 - v2463;
                 v2466 = v2463 + ((__ROL4__(v2464, 1) - 227) ^ (v2465 - 18022));
                 v2467 = __ROL4__(v2466, 8) + v2464 + __ROL4__(v2465, 12);
@@ -6483,7 +6483,7 @@ LABEL_262:
             } while (v2451);
             return (a3 ^ a2) + (a4 ^ a5);
         case 0x31:
-            v2468 = a2 - detail::kPlayIntentKey[(unsigned __int8)a3 + 336];
+            v2468 = a2 - detail::kPlayIntentKey[(std::uint8_t)a3 + 336];
             v2469 = a3 + a5 + a4;
             v2470 = a4 ^ (-2108036736 * a5);
             v2471 = a5 - __ROL4__(v2468, 10);
@@ -6492,7 +6492,7 @@ LABEL_262:
             v2474 = v2470 ^ __ROL4__(v2471, 6);
             v2475 = v2471 - (__ROL4__(v2472, 27) + __ROL4__(v2473, 7));
             if ((v2473 & 0x4000000) != 0) {
-                v2476 = detail::kPlayIntentKey[(unsigned __int8)v2474 + 138] ^ v2472;
+                v2476 = detail::kPlayIntentKey[(std::uint8_t)v2474 + 138] ^ v2472;
                 v2477 = v2473 ^ v2475;
                 v2478 = v2474 + 1918857438 * v2477;
                 v2479 = v2476 + v2477;
@@ -6523,7 +6523,7 @@ LABEL_262:
                 v2499 = v2496 - __ROL4__(v2497, 15);
                 v2473 = v2497 - __ROL4__(v2498, 1);
                 v2474 = v2498 - v2499;
-                v2475 = detail::kPlayIntentKey[(unsigned __int8)v2473 + 400] + v2499;
+                v2475 = detail::kPlayIntentKey[(std::uint8_t)v2473 + 400] + v2499;
             }
             if ((v2473 & 0x10000000) != 0) {
                 v2500 = v2473 ^ v2475;
@@ -6534,10 +6534,10 @@ LABEL_262:
                 v2505 = v2503 + v2502 + 150285388;
                 v2506 = v2504 + v2503;
                 v2507 = v2504 - v2505;
-                v2508 = detail::kPlayIntentKey[(unsigned __int8)v2506 + 276] + v2505;
+                v2508 = detail::kPlayIntentKey[(std::uint8_t)v2506 + 276] + v2505;
                 v2509 = v2506 ^ (-126968940 * v2507);
                 v2510 = v2507 - __ROL4__(v2508, 19);
-                v2511 = v2508 - detail::kPlayIntentKey[(unsigned __int8)v2509 + 158];
+                v2511 = v2508 - detail::kPlayIntentKey[(std::uint8_t)v2509 + 158];
                 v2512 = v2510 ^ v2509;
                 v2472 = v2510 + __ROR4__(v2511, 1);
                 v2474 = __ROL4__(v2472, 12) + v2511 + __ROR4__(v2512, 1);
@@ -6563,10 +6563,10 @@ LABEL_262:
             v2523 = v2519 - (v2520 + v2522);
             v2524 = v2520 ^ __ROL4__(v2522, 25);
             v2525 = v2521 ^ (v2523 - 2139207024);
-            v2526 = v2522 - detail::kPlayIntentKey[(unsigned __int8)v2521 + 59];
-            v2527 = v2523 - detail::kPlayIntentKey[(unsigned __int8)v2524 + 45];
+            v2526 = v2522 - detail::kPlayIntentKey[(std::uint8_t)v2521 + 59];
+            v2527 = v2523 - detail::kPlayIntentKey[(std::uint8_t)v2524 + 45];
             v2528 = v2525 + v2526;
-            v2529 = detail::kPlayIntentKey[(unsigned __int8)v2526 + 23] ^ v2524;
+            v2529 = detail::kPlayIntentKey[(std::uint8_t)v2526 + 23] ^ v2524;
             v2530 = v2527 + v2525;
             v2531 = v2527 ^ (v2529 + 718450782);
             v2532 = v2529 - v2528;
@@ -6590,35 +6590,35 @@ LABEL_262:
             v2550 = v2545 - v2547 - v2548;
             v2551 = v2547 ^ (1821096562 * v2548);
             v2552 = v2548 - __ROL4__(v2549, 27);
-            v2553 = detail::kPlayIntentKey[(unsigned __int8)v2550 + 401] + v2549;
+            v2553 = detail::kPlayIntentKey[(std::uint8_t)v2550 + 401] + v2549;
             v2554 = v2550 - v2551;
             v2555 = v2551 - __ROL4__(v2552, 6);
-            v2556 = detail::kPlayIntentKey[(unsigned __int8)v2553 + 232] + v2552;
-            v2557 = v2553 - detail::kPlayIntentKey[(unsigned __int8)v2554 + 410];
+            v2556 = detail::kPlayIntentKey[(std::uint8_t)v2553 + 232] + v2552;
+            v2557 = v2553 - detail::kPlayIntentKey[(std::uint8_t)v2554 + 410];
             v2558 = v2556 + v2555 + v2554;
             v2559 = v2555 - v2556;
-            v2560 = v2556 - detail::kPlayIntentKey[(unsigned __int8)v2557 + 241];
-            v2561 = detail::kPlayIntentKey[(unsigned __int8)v2558 + 415] ^ v2557;
-            v2562 = v2558 - detail::kPlayIntentKey[(unsigned __int8)v2559 + 334];
+            v2560 = v2556 - detail::kPlayIntentKey[(std::uint8_t)v2557 + 241];
+            v2561 = detail::kPlayIntentKey[(std::uint8_t)v2558 + 415] ^ v2557;
+            v2562 = v2558 - detail::kPlayIntentKey[(std::uint8_t)v2559 + 334];
             v2563 = v2560 ^ v2559;
-            v2564 = v2560 - detail::kPlayIntentKey[(unsigned __int8)v2561 + 461];
+            v2564 = v2560 - detail::kPlayIntentKey[(std::uint8_t)v2561 + 461];
             v2565 = v2561 - v2562;
             v2566 = v2564 + v2563 + v2562;
             v2567 = v2563 + 1374485587 * v2564;
             v2568 = v2565 ^ v2564;
             v2569 = v2565 - v2566 - v2567;
             v2570 = v2567 ^ v2566;
-            v2571 = v2568 - detail::kPlayIntentKey[(unsigned __int8)v2569 + 35];
+            v2571 = v2568 - detail::kPlayIntentKey[(std::uint8_t)v2569 + 35];
             v2572 = v2567 - __ROL4__(v2568, 24);
             v2573 = v2569 - v2570;
             v2574 = v2570 + ((__ROL4__(v2572, 11) + 3279) ^ (v2571 + 26877));
             v2575 = v2571 + v2572;
             v2576 = v2573 ^ v2574;
-            v2577 = detail::kPlayIntentKey[(unsigned __int8)v2573 + 44] ^ v2571;
+            v2577 = detail::kPlayIntentKey[(std::uint8_t)v2573 + 44] ^ v2571;
             v2578 = v2574 - v2575;
             v2579 = v2577 ^ v2575;
             v2580 = v2576 ^ v2577;
-            v2581 = detail::kPlayIntentKey[(unsigned __int8)v2578 + 406] + v2576;
+            v2581 = detail::kPlayIntentKey[(std::uint8_t)v2578 + 406] + v2576;
             v201 = v2581 ^ (v2579 + v2578 + 1189603307);
             v741 = v2581 ^ v2580 ^ (v2580 + v2579);
             return (unsigned int)(v201 + v741);
@@ -6637,17 +6637,17 @@ LABEL_262:
                 v2592 = v2586 + v2587;
                 v2593 = v2591 + v2586;
                 v2594 = v2591 + __ROL4__(v2592, 3);
-                v2595 = detail::kPlayIntentKey[(unsigned __int8)v2593 + 69] ^ v2592;
+                v2595 = detail::kPlayIntentKey[(std::uint8_t)v2593 + 69] ^ v2592;
                 v2596 = v2594 + v2593 - 1449554276;
                 v2597 = v2595 + v2594;
                 v2587 = v2595 - v2596;
-                v2598 = detail::kPlayIntentKey[(unsigned __int8)v2597 + 398];
+                v2598 = detail::kPlayIntentKey[(std::uint8_t)v2597 + 398];
                 v2586 = v2596 - v2598;
                 v2588 = v2597 + v2595 - v2598;
                 --v2590;
             } while (v2590);
             v2599 = v2587 + v2589;
-            v2600 = detail::kPlayIntentKey[(unsigned __int8)v2586 + 160] ^ v2587;
+            v2600 = detail::kPlayIntentKey[(std::uint8_t)v2586 + 160] ^ v2587;
             v2601 = v2599 + v2588;
             v2602 = v2601 ^ v2586;
             v2603 = v2600 + v2602 + v2599;
@@ -6672,7 +6672,7 @@ LABEL_262:
                 v2621 = v2619 ^ (-1139419013 * v2620);
                 v2622 = __ROL4__(v2619, 5);
                 v2623 = (v2622 + 11242) ^ v2618 ^ (v2620 - 16220);
-                v2624 = detail::kPlayIntentKey[(unsigned __int8)((v2622 - 22) ^ v2618 ^ (v2620 - 92)) + 165];
+                v2624 = detail::kPlayIntentKey[(std::uint8_t)((v2622 - 22) ^ v2618 ^ (v2620 - 92)) + 165];
                 v2625 = v2621 ^ __ROL4__(v2620 - v2624, 1);
                 v2626 = v2623 - ((__ROL4__(v2621, 16) + 29437) ^ (v2620 - v2624 + 9007));
                 v2627 = v2620 - v2624 - v2626 - v2625;
@@ -6682,7 +6682,7 @@ LABEL_262:
                 v2631 = v2628 ^ (v2629 - 746556592);
                 v2613 = v2629 - v2631 - v2630;
                 v2616 = v2631 + v2630 + 1720075052;
-                v2615 = detail::kPlayIntentKey[(unsigned __int8)v2613 + 342] ^ v2631;
+                v2615 = detail::kPlayIntentKey[(std::uint8_t)v2613 + 342] ^ v2631;
                 ++v2617;
             } while (v2617);
             v1678 = v2614 ^ v2613;
@@ -6691,7 +6691,7 @@ LABEL_262:
         case 0x34:
             v2632 = ((a3 >> 10) & 7) + 1;
             do {
-                v2633 = detail::kPlayIntentKey[(unsigned __int8)a4 + 440] ^ a2;
+                v2633 = detail::kPlayIntentKey[(std::uint8_t)a4 + 440] ^ a2;
                 v2634 = a4 - (__ROL4__(a3 ^ a5, 26) + __ROL4__(v2633, 8));
                 v2635 = (a3 ^ a5) - v2633;
                 a2 = v2633 ^ (__ROL4__(v2634, 23) + __ROL4__(v2635, 8));
@@ -6699,12 +6699,12 @@ LABEL_262:
                 a5 = v2635 ^ (__ROL4__(a2, 21) + __ROL4__(a4, 10));
                 --v2632;
             } while (v2632);
-            v2636 = detail::kPlayIntentKey[(unsigned __int8)a2 + 495] + a3;
+            v2636 = detail::kPlayIntentKey[(std::uint8_t)a2 + 495] + a3;
             v2637 = a2 - a4;
             v2638 = a5 + a4;
             v2639 = v2636 + a5;
             v2640 = v2637 ^ v2636;
-            v2641 = detail::kPlayIntentKey[(unsigned __int8)v2638 + 424] + v2637;
+            v2641 = detail::kPlayIntentKey[(std::uint8_t)v2638 + 424] + v2637;
             v2642 = v2638 - 1320642045 * v2639;
             v2643 = v2640 + v2639;
             v2644 = ((unsigned int)~v2641 >> 12) | 0xFFFFFFF8;
@@ -6712,7 +6712,7 @@ LABEL_262:
                 v2645 = v2641 ^ v2643;
                 v2646 = v2640 - v2642 + 1678750463;
                 v2647 = v2642 - v2645;
-                v2648 = detail::kPlayIntentKey[(unsigned __int8)v2646 + 1] + v2645;
+                v2648 = detail::kPlayIntentKey[(std::uint8_t)v2646 + 1] + v2645;
                 v2649 = v2647 ^ v2646;
                 v2650 = v2647 - v2649 - v2648;
                 v2651 = v2649 ^ v2648;
@@ -6740,7 +6740,7 @@ LABEL_262:
             v2668 = v2664 ^ v2665;
             v2669 = v2664 - v2666 - 708016667;
             v2666 -= 1563310900;
-            v2670 = v2667 - detail::kPlayIntentKey[(unsigned __int8)v2668 + 36];
+            v2670 = v2667 - detail::kPlayIntentKey[(std::uint8_t)v2668 + 36];
             v2671 = v2668 - v2669 + 2075137927;
             v2672 = 354419544 * v2671;
             v2673 = v2669 ^ (__ROL4__(v2666, 16) + __ROL4__(v2670, 22));
@@ -6751,14 +6751,14 @@ LABEL_262:
             return (unsigned int)(v905 + v906);
         case 0x35:
             v2675 = a3 + a2;
-            v2676 = detail::kPlayIntentKey[(unsigned __int8)a4 + 240] ^ a3;
+            v2676 = detail::kPlayIntentKey[(std::uint8_t)a4 + 240] ^ a3;
             v2677 = a4 ^ (v2675 + a5);
             v2678 = __ROL4__(v2675, 5);
-            v2679 = detail::kPlayIntentKey[(unsigned __int8)v2676 + 204] + v2675;
+            v2679 = detail::kPlayIntentKey[(std::uint8_t)v2676 + 204] + v2675;
             v2680 = v2676 - v2677;
             v2681 = a5 + v2678 - v2679;
             v2682 = v2677 - v2679;
-            v2683 = detail::kPlayIntentKey[(unsigned __int8)v2680 + 408] ^ v2679;
+            v2683 = detail::kPlayIntentKey[(std::uint8_t)v2680 + 408] ^ v2679;
             v2684 = v2682 ^ v2680;
             v2685 = v2681 ^ (v2684 + v2683);
             v2686 = 635299124 * v2684;
@@ -6768,26 +6768,26 @@ LABEL_262:
             v2690 = v2687 + v2685;
             v2691 = v2688 ^ v2687;
             v2692 = v2688 - 912553451 * v2689;
-            v2693 = detail::kPlayIntentKey[(unsigned __int8)v2690 + 367] ^ v2689;
+            v2693 = detail::kPlayIntentKey[(std::uint8_t)v2690 + 367] ^ v2689;
             v2694 = v2690 - v2691 - v2692;
             v2695 = v2691 - v2692;
-            v2696 = detail::kPlayIntentKey[(unsigned __int8)v2693 + 332] ^ v2692;
+            v2696 = detail::kPlayIntentKey[(std::uint8_t)v2693 + 332] ^ v2692;
             v2697 = v2693 - v2695 - v2694;
             v2698 = v2694 ^ __ROL4__(v2695, 24);
             v2699 = ((v2696 >> 9) & 7) + 1;
             do {
                 v2695 -= v2697;
-                v2697 -= detail::kPlayIntentKey[(unsigned __int8)(v2696 ^ v2698) + 336];
+                v2697 -= detail::kPlayIntentKey[(std::uint8_t)(v2696 ^ v2698) + 336];
                 v2698 = (v2696 ^ v2698) + __ROR4__(v2695, 1);
                 --v2699;
             } while (v2699);
-            v2700 = v2696 - detail::kPlayIntentKey[(unsigned __int8)v2695 + 207];
+            v2700 = v2696 - detail::kPlayIntentKey[(std::uint8_t)v2695 + 207];
             v2701 = v2695 ^ (1091445858 * v2697);
             v2702 = v2698 ^ v2697;
             v2703 = v2698 - __ROL4__(v2700, 4);
             v2704 = v2701 + v2700;
-            v2705 = detail::kPlayIntentKey[(unsigned __int8)v2702 + 298] ^ v2701;
-            v2706 = detail::kPlayIntentKey[(unsigned __int8)v2703 + 216] ^ v2702;
+            v2705 = detail::kPlayIntentKey[(std::uint8_t)v2702 + 298] ^ v2701;
+            v2706 = detail::kPlayIntentKey[(std::uint8_t)v2703 + 216] ^ v2702;
             v2707 = v2705 ^ v2706;
             v2708 = v2704 + v2703;
             v2709 = (__ROL4__(v2705, 28) + 6775) ^ v2704 ^ (v2706 - 13233);
@@ -6802,14 +6802,14 @@ LABEL_262:
             v2718 = v2716 + v2714;
             LOBYTE(v2714) = v2716 + v2714 - 76;
             v2719 = v2717 + v2715 - 208327886;
-            v2720 = detail::kPlayIntentKey[(unsigned __int8)v2717 + 221] ^ v2716;
+            v2720 = detail::kPlayIntentKey[(std::uint8_t)v2717 + 221] ^ v2716;
             v2721 = v2715 + v2717;
-            v2722 = detail::kPlayIntentKey[(unsigned __int8)v2714 + 61] ^ v2715;
+            v2722 = detail::kPlayIntentKey[(std::uint8_t)v2714 + 61] ^ v2715;
             v2723 = v2720 + v2718 - 473015628;
             v2724 = v2721 + v2720 - 208327886;
-            v2725 = detail::kPlayIntentKey[(unsigned __int8)v2722 + 404] ^ v2719;
+            v2725 = detail::kPlayIntentKey[(std::uint8_t)v2722 + 404] ^ v2719;
             v2726 = v2723 ^ v2722;
-            v2727 = v2723 - detail::kPlayIntentKey[(unsigned __int8)v2724 + 390];
+            v2727 = v2723 - detail::kPlayIntentKey[(std::uint8_t)v2724 + 390];
             v2728 = v2725 ^ v2724;
             v2729 = v2726 ^ v2725;
             v2730 = v2726 - ((__ROL4__(v2727, 14) - 2112) ^ (v2728 - 3176));
@@ -6819,7 +6819,7 @@ LABEL_262:
         case 0x36:
             v2731 = a2 ^ (a4 + a3);
             v2732 = a3 - a4;
-            v2733 = detail::kPlayIntentKey[(unsigned __int8)a5 + 81] + a4;
+            v2733 = detail::kPlayIntentKey[(std::uint8_t)a5 + 81] + a4;
             v2734 = v2731 + v2732 + a5;
             v2735 = v2731 + __ROL4__(v2732, 16);
             v2736 = -(v2731 + a5) - v2733;
@@ -6841,10 +6841,10 @@ LABEL_262:
             v2752 = v2748 + v2749;
             v2753 = v2750 ^ v2748;
             v2754 = v2751 ^ v2750;
-            v2755 = detail::kPlayIntentKey[(unsigned __int8)v2752 + 132] ^ v2751;
+            v2755 = detail::kPlayIntentKey[(std::uint8_t)v2752 + 132] ^ v2751;
             v2756 = v2752 - v2753;
             v2757 = v2753 - __ROL4__(v2754, 9);
-            v2758 = detail::kPlayIntentKey[(unsigned __int8)v2755 + 11] + v2754;
+            v2758 = detail::kPlayIntentKey[(std::uint8_t)v2755 + 11] + v2754;
             v2759 = v2757 + v2756 + v2755 + 220998908;
             v2760 = v2756 + 220998908 - v2757;
             v2761 = v2758 + v2759 + v2757;
@@ -6857,8 +6857,8 @@ LABEL_262:
                 v2767 = v2766 + (v2762 ^ v2763);
                 v2768 = v2767 ^ v2764;
                 v2769 = v2768 + v2767 + v2766;
-                v2770 = detail::kPlayIntentKey[(unsigned __int8)v2769 + 447];
-                v2761 = detail::kPlayIntentKey[(unsigned __int8)(v2768 - v2767) + 432] ^ v2769;
+                v2770 = detail::kPlayIntentKey[(std::uint8_t)v2769 + 447];
+                v2761 = detail::kPlayIntentKey[(std::uint8_t)(v2768 - v2767) + 432] ^ v2769;
                 v2764 = v2770 + v2768;
                 v2763 = (v2770 + v2767) ^ __ROL4__(v2761, 26);
                 ++v2765;
@@ -6875,14 +6875,14 @@ LABEL_262:
             v2775 = __ROL4__(v2762, 23);
             v2776 = v2761 + ((v2775 - 25237) ^ (v2764 - 32622));
             v2777 = v2762 - v2764;
-            v2778 = detail::kPlayIntentKey[(unsigned __int8)(v2761 + ((v2775 + 107) ^ (v2764 - 110))) + 337];
+            v2778 = detail::kPlayIntentKey[(std::uint8_t)(v2761 + ((v2775 + 107) ^ (v2764 - 110))) + 337];
             v2779 = v2776 - v2777 + 702211816;
-            v2780 = detail::kPlayIntentKey[(unsigned __int8)(v2764 - v2763) + 414] ^ v2777;
-            v2781 = detail::kPlayIntentKey[(unsigned __int8)v2779 + 28] ^ (v2778 + v2763);
+            v2780 = detail::kPlayIntentKey[(std::uint8_t)(v2764 - v2763) + 414] ^ v2777;
+            v2781 = detail::kPlayIntentKey[(std::uint8_t)v2779 + 28] ^ (v2778 + v2763);
             v2782 = v2764 + v2778;
             v2783 = v2779 - v2780 + 2005707528;
             v2784 = v2780 - v2782;
-            v301 = detail::kPlayIntentKey[(unsigned __int8)v2781 + 505] + v2782;
+            v301 = detail::kPlayIntentKey[(std::uint8_t)v2781 + 505] + v2782;
             v2785 = v2783 ^ __ROL4__(v2784, 13);
             v153 = v2785 ^ (v2784 - ((__ROL4__(v301, 15) - 13411) ^ (v2781 - v2783 - 29641)));
             v300 = __ROL4__(v2785, 4);
@@ -6893,7 +6893,7 @@ LABEL_310:
             v2786 = a2 - a3;
             v2787 = a4 - 508393806;
             v2788 = a5 ^ a4;
-            v2789 = a5 - detail::kPlayIntentKey[(unsigned __int8)v2786 + 434];
+            v2789 = a5 - detail::kPlayIntentKey[(std::uint8_t)v2786 + 434];
             v2790 = a3 ^ v2787;
             v2791 = v2786 - v2790;
             v2792 = 2071704706 - v2788;
@@ -6915,9 +6915,9 @@ LABEL_310:
             LOBYTE(v2804) = v2804 - v2805;
             v2808 = v2806 + v2807;
             v2809 = v2806 + v2807 + v2805;
-            v2810 = detail::kPlayIntentKey[(unsigned __int8)v2804 + 379] ^ v2807;
+            v2810 = detail::kPlayIntentKey[(std::uint8_t)v2804 + 379] ^ v2807;
             v2811 = v2799 + v2806;
-            v2812 = detail::kPlayIntentKey[(unsigned __int8)v2808 + 506] ^ v2809;
+            v2812 = detail::kPlayIntentKey[(std::uint8_t)v2808 + 506] ^ v2809;
             v2813 = v2808 - v2811 - v2810;
             v2814 = __ROL4__(v2812, 15);
             v2815 = v2810 - v2811;
@@ -6938,8 +6938,8 @@ LABEL_310:
             v2830 = v2826 - v2828;
             v2831 = v2828 - __ROL4__(v2827, 20);
             v2832 = v2829 + __ROL4__(v2830, 6);
-            v2833 = detail::kPlayIntentKey[(unsigned __int8)v2831 + 273] + v2830;
-            v2834 = v2832 + v2827 - detail::kPlayIntentKey[(unsigned __int8)v2829 + 288];
+            v2833 = detail::kPlayIntentKey[(std::uint8_t)v2831 + 273] + v2830;
+            v2834 = v2832 + v2827 - detail::kPlayIntentKey[(std::uint8_t)v2829 + 288];
             v2835 = v2834 ^ v2831;
             v2836 = v2833 + v2832;
             v2837 = v2833 - v2835;
@@ -6955,12 +6955,12 @@ LABEL_313:
             return (unsigned int)(v201 + v741);
         case 0x38:
             v2842 = a2 - a3;
-            v2843 = detail::kPlayIntentKey[(unsigned __int8)a4 + 447] ^ a3;
+            v2843 = detail::kPlayIntentKey[(std::uint8_t)a4 + 447] ^ a3;
             v2844 = a4 - 2033164781 * a5;
             v2845 = v2842 ^ a5;
             v2846 = v2842 - v2843;
             v2847 = v2844 ^ (698491615 * v2845);
-            v2848 = v2843 - detail::kPlayIntentKey[(unsigned __int8)v2844 + 138];
+            v2848 = v2843 - detail::kPlayIntentKey[(std::uint8_t)v2844 + 138];
             v2849 = v2846 ^ v2845;
             v2850 = v2846 ^ __ROL4__(v2848, 12);
             v2851 = v2848 + v2847;
@@ -6996,12 +6996,12 @@ LABEL_313:
             v2881 = v2880 + v2875;
             v2882 = v2880 ^ (__ROL4__(v2877, 5) + __ROL4__(v2878, 11));
             v2883 = v2881 ^ v2878;
-            v2884 = detail::kPlayIntentKey[(unsigned __int8)v2882 + 494] + v2881;
+            v2884 = detail::kPlayIntentKey[(std::uint8_t)v2882 + 494] + v2881;
             v2885 = v2882 - v2879;
             v2886 = v2879 - v2883;
             v2887 = v2883 - v2884;
             v2888 = v2885 + v2884;
-            v2889 = detail::kPlayIntentKey[(unsigned __int8)v2886 + 311] + v2885;
+            v2889 = detail::kPlayIntentKey[(std::uint8_t)v2886 + 311] + v2885;
             v2890 = v2886 - (v2887 + 215194057);
             v412 = v2888 + v2887 - 1563310900;
             v413 = v2888 - v2889;
@@ -7023,14 +7023,14 @@ LABEL_316:
             if ((a3 & 0x2000000) != 0) {
                 v2893 = a3 ^ a5;
                 v2894 = a2 ^ (-1798163742 * a4);
-                v2895 = a4 - detail::kPlayIntentKey[(unsigned __int8)v2893 + 268];
+                v2895 = a4 - detail::kPlayIntentKey[(std::uint8_t)v2893 + 268];
                 v2896 = v2894 - v2893;
                 v2897 = v2893 - v2894 - v2895;
                 v2898 = v2894 + v2896;
                 v2899 = v2897 ^ v2895;
                 v2900 = v2897 ^ __ROL4__(v2898, 12);
                 v2901 = v2899 + v2898;
-                v2902 = detail::kPlayIntentKey[(unsigned __int8)v2900 + 354] + v2899;
+                v2902 = detail::kPlayIntentKey[(std::uint8_t)v2900 + 354] + v2899;
                 v2903 = v2900 - v2901;
                 v2904 = v2902 ^ __ROL4__(v2903, 22);
                 v2905 = __ROL4__(v2902, 7) + v2901 + __ROL4__(v2903, 11);
@@ -7039,7 +7039,7 @@ LABEL_316:
                 v2908 = v2904 + 538923679 * v2906;
                 v2909 = v2907 + v2906;
                 a2 = v2907 ^ (1927707965 * v2908);
-                a4 = v2908 - detail::kPlayIntentKey[(unsigned __int8)v2909 + 359];
+                a4 = v2908 - detail::kPlayIntentKey[(std::uint8_t)v2909 + 359];
                 a5 = a4 + a2 + v2909;
             }
             v2910 = a2 ^ a3;
@@ -7055,7 +7055,7 @@ LABEL_316:
             v2920 = v2916 - v2917;
             v2921 = v2917 - v2918;
             v2922 = v2916 - v2918;
-            v2923 = detail::kPlayIntentKey[(unsigned __int8)v2919 + 371] + v2918;
+            v2923 = detail::kPlayIntentKey[(std::uint8_t)v2919 + 371] + v2918;
             v2924 = v2919 + v2920;
             v2925 = v2921 - v2923 - v2924;
             v2926 = v2924 ^ v2923;
@@ -7075,11 +7075,11 @@ LABEL_316:
             }
             if ((v203 & 0x40) != 0) {
                 v2934 = v203 ^ v2932;
-                v2935 = detail::kPlayIntentKey[(unsigned __int8)v2931 + 83] + v202;
+                v2935 = detail::kPlayIntentKey[(std::uint8_t)v2931 + 83] + v202;
                 v2936 = v2931 - v2934;
                 v2937 = v2934 - v2935;
                 v202 = v2936 ^ v2935;
-                v2931 = v2936 - detail::kPlayIntentKey[(unsigned __int8)v2937 + 174];
+                v2931 = v2936 - detail::kPlayIntentKey[(std::uint8_t)v2937 + 174];
                 v2932 = v2937 - 13220050 * v202;
             }
             v201 = v2932 ^ v2931;
@@ -7092,7 +7092,7 @@ LABEL_325:
                 v2939 = a2 - v2938 - a4;
                 v2940 = a4 + 972032579 * v2938;
                 v2941 = v2938 - v2939 - v2940;
-                v2942 = detail::kPlayIntentKey[(unsigned __int8)v2940 + 186] + v2939;
+                v2942 = detail::kPlayIntentKey[(std::uint8_t)v2940 + 186] + v2939;
                 v2943 = v2941 + v2942;
                 v2944 = v2940 + 2 * v2942;
                 v2945 = v2940 - (v2941 + __ROL4__(v2943, 23));
@@ -7105,12 +7105,12 @@ LABEL_325:
                 v2947 = a2 ^ a5;
                 v2948 = a3 - (a4 + __ROL4__(v2947, 12));
                 v2949 = v2947 + a4;
-                v2950 = detail::kPlayIntentKey[(unsigned __int8)v2948 + 469] ^ v2947;
+                v2950 = detail::kPlayIntentKey[(std::uint8_t)v2948 + 469] ^ v2947;
                 v2951 = v2948 + ((__ROL4__(v2949, 29) - 9474) ^ (v2950 - 13573));
                 v2952 = v2951 + v2950 + v2949;
                 v2953 = __ROL4__(v2952, 18);
                 v2954 = v2950 - v2951;
-                v2955 = detail::kPlayIntentKey[(unsigned __int8)v2954 + 383] ^ v2952;
+                v2955 = detail::kPlayIntentKey[(std::uint8_t)v2954 + 383] ^ v2952;
                 v2956 = v2951 - v2953;
                 v2957 = v2954 ^ (-1159080492 * v2956);
                 v2958 = v2957 + v2955 + v2956;
@@ -7129,12 +7129,12 @@ LABEL_325:
             if ((v2964 & 0x40) != 0) {
                 v2967 = v2964 ^ v2966;
                 v2968 = v2963 - v2965;
-                v2969 = detail::kPlayIntentKey[(unsigned __int8)v2967 + 436];
+                v2969 = detail::kPlayIntentKey[(std::uint8_t)v2967 + 436];
                 v2970 = v2968 ^ v2967;
                 v2971 = v2965 - v2969;
                 v2972 = v2968 ^ (v2965 - v2969 + 221780988);
                 v2973 = v2970 + v2971;
-                v2974 = detail::kPlayIntentKey[(unsigned __int8)v2972 + 15] ^ v2970;
+                v2974 = detail::kPlayIntentKey[(std::uint8_t)v2972 + 15] ^ v2970;
                 v2975 = __ROL4__(v2973, 30);
                 v2976 = v2974 ^ v2973;
                 v2977 = v2972 - v2975;
@@ -7144,9 +7144,9 @@ LABEL_325:
                 v2981 = (__ROL4__(v2979, 17) + 30353) ^ v2976 ^ v2978;
                 v2982 = v2979 - (__ROL4__(v2980, 17) + __ROL4__(v2981, 24));
                 v2983 = v2982 + v2981;
-                v2984 = detail::kPlayIntentKey[(unsigned __int8)v2981 + 304] + v2980;
-                v2985 = detail::kPlayIntentKey[(unsigned __int8)v2984 + 10] ^ v2982;
-                v2963 = detail::kPlayIntentKey[(unsigned __int8)v2983 + 507] ^ v2984;
+                v2984 = detail::kPlayIntentKey[(std::uint8_t)v2981 + 304] + v2980;
+                v2985 = detail::kPlayIntentKey[(std::uint8_t)v2984 + 10] ^ v2982;
+                v2963 = detail::kPlayIntentKey[(std::uint8_t)v2983 + 507] ^ v2984;
                 v2965 = v2985 + v2983 - 259958704;
                 v2966 = v2985 - v2963;
             }
@@ -7164,9 +7164,9 @@ LABEL_325:
             v2993 = v2989 - v2990 - 1663587122;
             v2994 = v2992 + v2991;
             v2995 = v2992 + v2991 + 2054613284;
-            v2996 = v2990 - detail::kPlayIntentKey[(unsigned __int8)v2991 + 163];
+            v2996 = v2990 - detail::kPlayIntentKey[(std::uint8_t)v2991 + 163];
             v2997 = v2993 ^ v2992;
-            v2998 = v2993 - detail::kPlayIntentKey[(unsigned __int8)v2996 + 507];
+            v2998 = v2993 - detail::kPlayIntentKey[(std::uint8_t)v2996 + 507];
             v2999 = v2996 + v2997 + v2994 + 2054613284;
             v3000 = v2995 ^ (v2997 + 491302384);
             v3001 = v2997 - v2998;
@@ -7178,22 +7178,22 @@ LABEL_325:
                 v3006 = v3001 - v3004;
                 v3007 = v3005 ^ v3006;
                 v3008 = v3004 + __ROL4__(v3005, 11);
-                v3009 = v3006 - detail::kPlayIntentKey[(unsigned __int8)v3008 + 254];
+                v3009 = v3006 - detail::kPlayIntentKey[(std::uint8_t)v3008 + 254];
                 v3010 = v3008 - __ROL4__(v3007, 22);
                 v3011 = v3007 - v3009;
                 v3012 = v3010 ^ v3011;
-                v3013 = detail::kPlayIntentKey[(unsigned __int8)v3010 + 458] + v3009;
+                v3013 = detail::kPlayIntentKey[(std::uint8_t)v3010 + 458] + v3009;
                 v3014 = __ROL4__(v3010 ^ v3011, 20) - 7803;
-                v3015 = v3011 - detail::kPlayIntentKey[(unsigned __int8)v3013 + 169];
+                v3015 = v3011 - detail::kPlayIntentKey[(std::uint8_t)v3013 + 169];
                 v3016 = v3013 - (v3014 ^ (v3015 - 594));
                 v3017 = v3015 ^ v3012;
-                v2999 = detail::kPlayIntentKey[(unsigned __int8)v3016 + 373] + v3015;
+                v2999 = detail::kPlayIntentKey[(std::uint8_t)v3016 + 373] + v3015;
                 v3001 = v2999 + v3017 + v3016;
                 v3002 = v3017 - v2999;
                 --v3003;
             } while (v3003);
             v3018 = v2999 ^ v3000;
-            v3019 = v2999 - detail::kPlayIntentKey[(unsigned __int8)v3001 + 261];
+            v3019 = v2999 - detail::kPlayIntentKey[(std::uint8_t)v3001 + 261];
             v3020 = __ROL4__(v3002, 7) + v3001 + __ROL4__(v3018, 30);
             v3021 = v3018 ^ v3002;
             v3022 = v3019 + v3020 + v3018;
@@ -7201,7 +7201,7 @@ LABEL_325:
             v3024 = v3021 ^ v3020;
             v3025 = v3021 ^ __ROL4__(v3022, 27);
             v3026 = v3023 ^ v3022;
-            v3027 = v3023 - detail::kPlayIntentKey[(unsigned __int8)v3024 + 260];
+            v3027 = v3023 - detail::kPlayIntentKey[(std::uint8_t)v3024 + 260];
             v3028 = v3024 - v3026 - v3025;
             v3029 = v3025 - __ROL4__(v3026, 7);
             v3030 = v3026 - 1025670123 * v3027;
@@ -7209,7 +7209,7 @@ LABEL_325:
             v3032 = v3028 - 760982380 * v3029;
             v3033 = v3030 + v3029;
             v3034 = v3031 + v3032;
-            v3035 = v3031 - detail::kPlayIntentKey[(unsigned __int8)v3032 + 267];
+            v3035 = v3031 - detail::kPlayIntentKey[(std::uint8_t)v3032 + 267];
             v3036 = v3030 - v3034;
             v3037 = v3032 - v3033 - v3036;
             v3038 = v3033 - (__ROL4__(v3036, 13) + __ROL4__(v3035, 25));
@@ -7222,12 +7222,12 @@ LABEL_325:
             v3045 = v3043;
             v3046 = v3043 + v3042 + v3040 + 38667883;
             v3047 = v3043 + v3042 + v3040;
-            v3048 = v3042 ^ detail::kPlayIntentKey[(unsigned __int8)v3043 + 159];
+            v3048 = v3042 ^ detail::kPlayIntentKey[(std::uint8_t)v3043 + 159];
             v3049 = v3044 ^ v3046;
             v3050 = v3047 - v3048;
             v3051 = v3049 + v3045 - (v3039 + v3042);
             v2159 = (v3050 + 238586444 * (v3051 + v3048)) ^ (v3051 + v3051 + v3048);
-            v2160 = v3051 ^ (detail::kPlayIntentKey[(unsigned __int8)v3050 + 349] + v3049);
+            v2160 = v3051 ^ (detail::kPlayIntentKey[(std::uint8_t)v3050 + 349] + v3049);
             return (unsigned int)(v2159 + v2160);
         case 0x3C:
             v3052 = a2 - ((__ROL4__(a3, 21) - 12097) ^ (a4 + 6415));
@@ -7238,21 +7238,21 @@ LABEL_325:
             v3057 = a5 + __ROL4__(v3052, 20);
             v3058 = v3057 ^ (v3054 - 2131625857);
             v3059 = v3054 - v3056;
-            v3060 = v3055 - detail::kPlayIntentKey[(unsigned __int8)v3057 + 40];
+            v3060 = v3055 - detail::kPlayIntentKey[(std::uint8_t)v3057 + 40];
             v3061 = v3056 ^ (v3060 - 1740665231);
             v3062 = v3058 ^ (v3061 + v3059);
             v3063 = v3061 ^ v3059;
             v3064 = v3061 - (v3062 + v3058 + v3060 + 335005788);
             v3065 = (v3058 + v3060 + 335005788) ^ (v3062 - 1228305112);
-            v3066 = v3062 - detail::kPlayIntentKey[(unsigned __int8)v3063 + 337];
+            v3066 = v3062 - detail::kPlayIntentKey[(std::uint8_t)v3063 + 337];
             v3067 = (~v3064 >> 16) | 0xFFFFFFF8;
             do {
                 v3068 = v3064 ^ v3066;
                 v3069 = __ROL4__(v3065, 25);
-                v3070 = v3065 - detail::kPlayIntentKey[(unsigned __int8)v3068 + 4];
+                v3070 = v3065 - detail::kPlayIntentKey[(std::uint8_t)v3068 + 4];
                 v3071 = v3063 - v3069;
                 v3072 = v3071 ^ v3068;
-                v3073 = detail::kPlayIntentKey[(unsigned __int8)v3072 + 14];
+                v3073 = detail::kPlayIntentKey[(std::uint8_t)v3072 + 14];
                 v3074 = v3070 + v3071 + v3072 + 1501726146;
                 v3063 = (v3071 + v3070 + 1630580575) ^ (v3073 + v3070 + 67269675);
                 v3065 = v3074 ^ (v3073 + v3070);
@@ -7284,8 +7284,8 @@ LABEL_325:
                 v3090 = v3087 ^ __ROL4__(v3089, 12);
                 v3091 = v3089 - v3088;
                 v3092 = v3088 + __ROL4__(v3090, 10);
-                v3093 = detail::kPlayIntentKey[(unsigned __int8)v3091 + 461] ^ v3090;
-                v3094 = v3091 - detail::kPlayIntentKey[(unsigned __int8)v3092 + 446];
+                v3093 = detail::kPlayIntentKey[(std::uint8_t)v3091 + 461] ^ v3090;
+                v3094 = v3091 - detail::kPlayIntentKey[(std::uint8_t)v3092 + 446];
                 v3095 = v3093 ^ v3092;
                 v3096 = v3093 - __ROL4__(v3094, 8);
                 v3063 = v3095 + v3094;
@@ -7305,28 +7305,28 @@ LABEL_325:
             v3102 = (__ROL4__(v3098, 18) + 25436) ^ v3097 ^ (a4 - v3099 - 19984);
             v3103 = v3100 + a4 - v3099 - 256459947;
             v3104 = v3100 + a4 - v3099;
-            v3105 = detail::kPlayIntentKey[(unsigned __int8)v3102 + 396] ^ v3100;
+            v3105 = detail::kPlayIntentKey[(std::uint8_t)v3102 + 396] ^ v3100;
             v3106 = v3101 ^ v3102;
             v3107 = v3101 ^ v3103;
             v3108 = v3104 - v3105;
             v3109 = v3105 - v3106;
             v3110 = v3107 + v3106 - 2084795599;
             v3111 = v3108 ^ v3107;
-            v3112 = detail::kPlayIntentKey[(unsigned __int8)v3109 + 52] ^ v3108;
+            v3112 = detail::kPlayIntentKey[(std::uint8_t)v3109 + 52] ^ v3108;
             v3113 = v3109 - (__ROL4__(v3110, 11) + __ROL4__(v3111, 30));
             if ((v3111 & 0x4000) != 0) {
                 v3114 = v3111 ^ v3113;
                 v3115 = v3110 + v3112 + 1669457509;
                 v3116 = v3114 ^ v3112;
                 v3117 = v3115 ^ (v3116 + 106146609);
-                v3118 = v3116 - detail::kPlayIntentKey[(unsigned __int8)(v3114 + v3115 - 28) + 347];
+                v3118 = v3116 - detail::kPlayIntentKey[(std::uint8_t)(v3114 + v3115 - 28) + 347];
                 v3119 = (v3114 + v3115 + 1934145252) ^ (v3118 + v3117);
                 v3110 = v3118 ^ v3117;
                 v3112 = v3118 - (__ROL4__(v3119, 15) + __ROL4__(v3110, 26));
                 v3113 = v3110 + v3119;
             }
             if ((v3110 & 0x2000) != 0) {
-                v3120 = detail::kPlayIntentKey[(unsigned __int8)v3112 + 114] + v3111;
+                v3120 = detail::kPlayIntentKey[(std::uint8_t)v3112 + 114] + v3111;
                 v3121 = v3120 + (v3110 ^ v3113);
                 v3122 = v3120 + (v3112 ^ v3121);
                 v3123 = v3121 - ((__ROL4__(v3122, 20) + 10428) ^ (v3112 + 10642));
@@ -7344,10 +7344,10 @@ LABEL_325:
             v3131 = v3127 - v3130;
             v3132 = v3131 + v3129 + v3128;
             v3133 = v3129 - v3131;
-            v3134 = v3131 - detail::kPlayIntentKey[(unsigned __int8)v3130 + 323];
-            v3135 = detail::kPlayIntentKey[(unsigned __int8)v3132 + 302] + v3130;
+            v3134 = v3131 - detail::kPlayIntentKey[(std::uint8_t)v3130 + 323];
+            v3135 = detail::kPlayIntentKey[(std::uint8_t)v3132 + 302] + v3130;
             v3136 = v3132 ^ __ROL4__(v3133, 20);
-            v3137 = detail::kPlayIntentKey[(unsigned __int8)v3134 + 287] ^ v3133;
+            v3137 = detail::kPlayIntentKey[(std::uint8_t)v3134 + 287] ^ v3133;
             v3138 = v3135 ^ __ROL4__(v3136, 28);
             v3139 = v3134 - __ROL4__(v3135, 14);
             v3140 = v3136 - v3137;
@@ -7364,37 +7364,37 @@ LABEL_325:
             v3147 = a2 - a3;
             v3148 = a3 - a4;
             v3149 = v3147 + a5;
-            v3150 = detail::kPlayIntentKey[(unsigned __int8)a5 + 183] ^ a4;
+            v3150 = detail::kPlayIntentKey[(std::uint8_t)a5 + 183] ^ a4;
             v3151 = __ROL4__(v3148, 22);
-            v3152 = detail::kPlayIntentKey[(unsigned __int8)v3150 + 406] + v3148;
+            v3152 = detail::kPlayIntentKey[(std::uint8_t)v3150 + 406] + v3148;
             v3153 = v3147 ^ v3151;
             v3154 = v3153 + v3149 - 1101399794;
             v3155 = v3154 ^ v3150;
             v3156 = v3152 + v3153;
-            v3157 = detail::kPlayIntentKey[(unsigned __int8)v3155 + 97] ^ v3152;
+            v3157 = detail::kPlayIntentKey[(std::uint8_t)v3155 + 97] ^ v3152;
             v3158 = v3155 - v3154 - v3156;
             v3159 = v3156 ^ v3154;
             v3160 = v3156 - v3157 - v3158;
             v3161 = v3158 ^ v3157;
             v3162 = v3159 + v3158;
-            v3163 = detail::kPlayIntentKey[(unsigned __int8)v3160 + 65] ^ v3159;
+            v3163 = detail::kPlayIntentKey[(std::uint8_t)v3160 + 65] ^ v3159;
             v3164 = v3161 + v3160;
             v3165 = v3163 ^ __ROL4__(v3164, 3);
             v3166 = v3162 ^ v3161;
             v3167 = v3162 - (__ROL4__(v3163, 21) + __ROL4__(v3164, 18));
             v3168 = v3166 ^ v3164;
             v3169 = v3166 - __ROL4__(v3167, 12);
-            v3170 = detail::kPlayIntentKey[(unsigned __int8)v3165 + 233] ^ v3167;
+            v3170 = detail::kPlayIntentKey[(std::uint8_t)v3165 + 233] ^ v3167;
             v3171 = v3165 ^ (v3169 + v3168);
             v3172 = v3168 ^ (v3169 + v3170);
             v3173 = -144686534 * v3170;
-            v3174 = detail::kPlayIntentKey[(unsigned __int8)v3171 + 496] + v3170;
+            v3174 = detail::kPlayIntentKey[(std::uint8_t)v3171 + 496] + v3170;
             v3175 = v3169 + v3173;
             v3176 = v3172 + v3171;
             v3177 = v3172 - v3175 - v3174;
             v3178 = v3175 - 1418624366 * v3174;
             v3179 = v3176 - 1153936623 * v3177;
-            v3180 = detail::kPlayIntentKey[(unsigned __int8)v3176 + 188] ^ v3174;
+            v3180 = detail::kPlayIntentKey[(std::uint8_t)v3176 + 188] ^ v3174;
             v3181 = v3178 ^ v3177;
             v3182 = v3178 ^ (v3179 + v3180);
             v3183 = v3180 + ((__ROL4__(v3179, 24) - 11435) ^ (v3181 + 20999));
@@ -7410,7 +7410,7 @@ LABEL_325:
             v3193 = v3190 + v3189;
             v3194 = v3190 + v3191 - 1790367968;
             v3195 = v3192 + v3191;
-            v3196 = v3192 - detail::kPlayIntentKey[(unsigned __int8)v3193 + 32];
+            v3196 = v3192 - detail::kPlayIntentKey[(std::uint8_t)v3193 + 32];
             v3197 = v3193 + 2031220896 * v3194;
             v3198 = ((unsigned int)~v3195 >> 22) | 0xFFFFFFF8;
             do {
@@ -7437,9 +7437,9 @@ LABEL_325:
                 a5 = v55 + v54;
                 a2 = v55;
             }
-            v56 = detail::kPlayIntentKey[(unsigned __int8)a2 + 191] ^ a3;
+            v56 = detail::kPlayIntentKey[(std::uint8_t)a2 + 191] ^ a3;
             v57 = 644375316 * a4;
-            v58 = detail::kPlayIntentKey[(unsigned __int8)a5 + 213] + a4;
+            v58 = detail::kPlayIntentKey[(std::uint8_t)a5 + 213] + a4;
             v59 = a2 + v57;
             v60 = __ROL4__(v56, 21) + a5 + __ROL4__(v59, 5);
             v61 = v59 + v56;
@@ -7463,15 +7463,15 @@ LABEL_325:
             v3212 = v3209 ^ v3210;
             v3213 = v3208 - (__ROL4__(v3209, 28) + __ROL4__(v3210, 3));
             v3214 = v3211 ^ v3210;
-            v3215 = v3211 - detail::kPlayIntentKey[(unsigned __int8)v3213 + 191];
+            v3215 = v3211 - detail::kPlayIntentKey[(std::uint8_t)v3213 + 191];
             v3216 = v3212 + v3213;
-            v3217 = detail::kPlayIntentKey[(unsigned __int8)v3214 + 133] ^ v3212;
+            v3217 = detail::kPlayIntentKey[(std::uint8_t)v3214 + 133] ^ v3212;
             v3218 = v3215 + v3214 + 1607188188;
             v3219 = v3215 + v3216 + 43877288;
             v3220 = v3216 + v3215;
             v3221 = v3217 ^ v3216;
             v3222 = v3218 ^ v3219;
-            v3223 = v3217 - detail::kPlayIntentKey[(unsigned __int8)v3218 + 339];
+            v3223 = v3217 - detail::kPlayIntentKey[(std::uint8_t)v3218 + 339];
             v3224 = v3220 + __ROL4__(v3221, 30) + __ROL4__(v3223, 2);
             if ((v3223 & 0x4000) != 0) {
                 v3225 = v3223 ^ v3224;
@@ -7479,8 +7479,8 @@ LABEL_325:
                 v3227 = v3222 - v3225;
                 v3228 = v3225 ^ (v3226 - 1588393961);
                 v3229 = v3228 + v3227;
-                v3230 = detail::kPlayIntentKey[(unsigned __int8)v3227 + 97] ^ v3226;
-                v3231 = detail::kPlayIntentKey[(unsigned __int8)v3230 + 223] ^ v3228;
+                v3230 = detail::kPlayIntentKey[(std::uint8_t)v3227 + 97] ^ v3226;
+                v3231 = detail::kPlayIntentKey[(std::uint8_t)v3230 + 223] ^ v3228;
                 v3232 = v3230 - v3229 - v3231;
                 v3233 = v3229 ^ (-1176668028 * v3231);
                 v3234 = v3231 - v3232;
@@ -7520,7 +7520,7 @@ LABEL_325:
         unsigned int v10;
         int v11;
         int v12;
-        unsigned __int64 v13;
+        std::uint64_t v13;
         int v14;
         int v15;
         int v16;
@@ -8413,7 +8413,7 @@ LABEL_325:
         int v903;
         int v904;
         int v905;
-        __int64 v906;
+        std::uint64_t v906;
         unsigned int v907;
         int v908;
         unsigned int v909;
@@ -8444,7 +8444,7 @@ LABEL_325:
         v8 = u8_to_u32(key_basis.data() + 8);
         v9 = u8_to_u32(key_basis.data() + 12);
         v10 = v9 + v7 + v6;
-        v11 = process(v9 + (unsigned __int8)v7 + (unsigned __int8)v6 + 43, v10, v6, v7, -598881966);
+        v11 = process(v9 + (std::uint8_t)v7 + (std::uint8_t)v6 + 43, v10, v6, v7, -598881966);
         v12 = (v8 + v11) ^ v7;
         HIDWORD(v13) = v6;
         LODWORD(v13) = v6 + 668738906 * v12;
@@ -8455,15 +8455,15 @@ LABEL_325:
         v18 = v14 - 768570585 * v17;
         v19 = v18 + v15;
         v20 = v16 - 1572125186 * v19;
-        v21 = v17 - detail::kPlayIntentKey[(unsigned __int8)(v16 - 2 * v19) + 167];
+        v21 = v17 - detail::kPlayIntentKey[(std::uint8_t)(v16 - 2 * v19) + 167];
         v22 = v21 + v18;
-        v23 = v19 - detail::kPlayIntentKey[(unsigned __int8)v22 + 181];
+        v23 = v19 - detail::kPlayIntentKey[(std::uint8_t)v22 + 181];
         v24 = v23 + v20;
         v25 = v21 - v24;
-        v26 = detail::kPlayIntentKey[(unsigned __int8)v25 + 217] ^ v22;
+        v26 = detail::kPlayIntentKey[(std::uint8_t)v25 + 217] ^ v22;
         v27 = v23 ^ v24;
         v28 = v23 - v26;
-        v29 = detail::kPlayIntentKey[(unsigned __int8)v27 + 386] ^ v25;
+        v29 = detail::kPlayIntentKey[(std::uint8_t)v27 + 386] ^ v25;
         if ((v29 & 0x40) != 0) {
             v30 = v26 - v27;
             v31 = (__ROL4__(v30, 5) - 13605) ^ v28 ^ (v27 + 9105);
@@ -8475,8 +8475,8 @@ LABEL_325:
         do {
             v33 = v29 + v26;
             v34 = v28 + v33 - 978874169;
-            v35 = detail::kPlayIntentKey[(unsigned __int8)(v28 + v33 - 57) + 309];
-            v36 = v33 ^ process((unsigned __int8)v29 + (unsigned __int8)v35 + 84, v29 + v35, v34, v27, 849467201);
+            v35 = detail::kPlayIntentKey[(std::uint8_t)(v28 + v33 - 57) + 309];
+            v36 = v33 ^ process((std::uint8_t)v29 + (std::uint8_t)v35 + 84, v29 + v35, v34, v27, 849467201);
             v37 = v36 ^ v34;
             v38 = v29 + v35 - 584773740 - v37;
             v39 = v38 + v36;
@@ -8486,7 +8486,7 @@ LABEL_325:
             v43 = v39 ^ __ROL4__(v42, 22);
             v44 = v43 + v41;
             v45 = v42 - ((__ROL4__(v44, 13) - 9999) ^ (v43 + 28780));
-            v28 = v44 + detail::kPlayIntentKey[(unsigned __int8)(v43 ^ (v45 + 75)) + 247];
+            v28 = v44 + detail::kPlayIntentKey[(std::uint8_t)(v43 ^ (v45 + 75)) + 247];
             v29 = v45 ^ (v28 + 2056853064);
             v26 = v27 ^ v43 ^ (v45 + 297418059);
             --v32;
@@ -8497,28 +8497,28 @@ LABEL_325:
             v48 = v47 + v27;
             v49 = v46 ^ (761278276 * v48);
             v50 = v47 + 1314327206 * v49;
-            v51 = v48 - detail::kPlayIntentKey[(unsigned __int8)(v47 - 90 * (v46 ^ (68 * v48))) + 261];
-            v52 = v49 - process((unsigned __int8)v51 + 24, v51, v50, v29, -772379418);
+            v51 = v48 - detail::kPlayIntentKey[(std::uint8_t)(v47 - 90 * (v46 ^ (68 * v48))) + 261];
+            v52 = v49 - process((std::uint8_t)v51 + 24, v51, v50, v29, -772379418);
             v28 = v50 + v52;
-            v27 = v51 - process((unsigned __int8)v50 + (unsigned __int8)v52 + 78, v50 + v52, v52, v29, -1037067161);
+            v27 = v51 - process((std::uint8_t)v50 + (std::uint8_t)v52 + 78, v50 + v52, v52, v29, -1037067161);
             v26 = v29 ^ v52;
         }
-        v53 = v26 - detail::kPlayIntentKey[(unsigned __int8)v27 + 397];
-        v54 = v28 - detail::kPlayIntentKey[(unsigned __int8)v53 + 479];
-        v55 = v27 - process((unsigned __int8)v29 + (unsigned __int8)v54 + 12, v29 + v54, v54, v53, 1049790262);
+        v53 = v26 - detail::kPlayIntentKey[(std::uint8_t)v27 + 397];
+        v54 = v28 - detail::kPlayIntentKey[(std::uint8_t)v53 + 479];
+        v55 = v27 - process((std::uint8_t)v29 + (std::uint8_t)v54 + 12, v29 + v54, v54, v53, 1049790262);
         v56 = __ROR4__(v55, 1) + 3414;
         v57 = v53 + (v56 ^ (v29 + v54 - 31649));
-        v58 = v54 ^ process(((unsigned __int8)v56 ^ (unsigned __int8)(v29 + v54 + 95)) + v53 - 64, v57, v55, v29 + v54, -1871830101);
+        v58 = v54 ^ process(((std::uint8_t)v56 ^ (std::uint8_t)(v29 + v54 + 95)) + v53 - 64, v57, v55, v29 + v54, -1871830101);
         v59 = v29 + v54 - v58;
         v60 = v55 - 1941687041 * v59;
         v61 = v60 + v57;
         v62 = v58 + 1962319629 * v61;
-        v63 = v59 - detail::kPlayIntentKey[(unsigned __int8)(v58 + 13 * v61) + 185];
+        v63 = v59 - detail::kPlayIntentKey[(std::uint8_t)(v58 + 13 * v61) + 185];
         v64 = v60 - __ROL4__(v63, 11);
         v65 = v61 ^ (v64 - 12651668);
-        v66 = detail::kPlayIntentKey[(unsigned __int8)(v61 ^ (v64 + 108)) + 474] ^ v62;
+        v66 = detail::kPlayIntentKey[(std::uint8_t)(v61 ^ (v64 + 108)) + 474] ^ v62;
         v67 = v66 + v63;
-        v68 = v64 - detail::kPlayIntentKey[(unsigned __int8)v67 + 255];
+        v68 = v64 - detail::kPlayIntentKey[(std::uint8_t)v67 + 255];
         v69 = v68 + v65 - 1112102351;
         v70 = v66 - v69 - v68;
         v71 = v70 + v67;
@@ -8530,7 +8530,7 @@ LABEL_325:
         v77 = v72 ^ (v76 - 1889150212);
         v78 = v77 ^ v73;
         v79 = v75 + 1310193786 * v78;
-        v80 = process(122 * (unsigned __int8)v78 + v75 + 80, v79, v78, v77, -572056358) + v76 - 1889150212;
+        v80 = process(122 * (std::uint8_t)v78 + v75 + 80, v79, v78, v77, -572056358) + v76 - 1889150212;
         if ((v80 & 0x400000) != 0) {
             v81 = v79 + v77;
             v82 = v78 + __ROL4__(v81, 11);
@@ -8545,10 +8545,10 @@ LABEL_325:
         v87 = v86 ^ v83;
         v88 = v87 + v84;
         v89 = v87 + v84 - 2074915223;
-        v90 = v85 - detail::kPlayIntentKey[(unsigned __int8)(v87 + v84 + 105) + 20];
+        v90 = v85 - detail::kPlayIntentKey[(std::uint8_t)(v87 + v84 + 105) + 20];
         v91 = v90 + v86;
         v92 = v87 - v91;
-        v93 = detail::kPlayIntentKey[(unsigned __int8)v92 + 364];
+        v93 = detail::kPlayIntentKey[(std::uint8_t)v92 + 364];
         v94 = v93 + v88 - 2074915223;
         v95 = v90 ^ (v93 + v89 - 1138898622);
         v96 = v95 + v91;
@@ -8567,17 +8567,17 @@ LABEL_325:
             ++v97;
         } while (v97);
         v105 = v95 + v92 + 1005368184;
-        v106 = v94 - detail::kPlayIntentKey[(unsigned __int8)v105 + 291];
+        v106 = v94 - detail::kPlayIntentKey[(std::uint8_t)v105 + 291];
         v107 = v96 - v106;
         v108 = v95 ^ (__ROL4__(v107, 14) + __ROL4__(v106, 1));
         v109 = v108 ^ v105;
         v110 = v109 ^ v106;
-        v111 = detail::kPlayIntentKey[(unsigned __int8)v110 + 474] + v107;
+        v111 = detail::kPlayIntentKey[(std::uint8_t)v110 + 474] + v107;
         v112 = v111 ^ v108;
         v113 = v109 - 1861644473 * v112;
         v114 = v110 - v113;
         v115 = v111 + v114;
-        v116 = v112 + process((unsigned __int8)v111 + (unsigned __int8)v114 + 119, v111 + v114, v114, v113, 1545414177);
+        v116 = v112 + process((std::uint8_t)v111 + (std::uint8_t)v114 + 119, v111 + v114, v114, v113, 1545414177);
         if ((v116 & 0x40000) != 0) {
             v117 = v115 ^ v113;
             v118 = v117 ^ v114;
@@ -8586,19 +8586,19 @@ LABEL_325:
             v121 = v118 + __ROL4__(v120, 18);
             v122 = v119 ^ (-14854072 * v121);
             v123 = v122 ^ v120;
-            v124 = process((unsigned __int8)v123 - 51, v123, v122, v116, 527159253);
+            v124 = process((std::uint8_t)v123 - 51, v123, v122, v116, 527159253);
             v114 = v121 + v124;
-            v125 = v122 - detail::kPlayIntentKey[(unsigned __int8)(v121 + v124) + 277];
+            v125 = v122 - detail::kPlayIntentKey[(std::uint8_t)(v121 + v124) + 277];
             v113 = v116 ^ v123;
             v115 = v125;
         }
         v126 = v113 + ((__ROL4__(v115, 17) - 13405) ^ (v116 + 14152));
         v127 = v126 + v114 - 1260940400;
-        v128 = v116 - detail::kPlayIntentKey[(unsigned __int8)(v126 + v114 - 112) + 313];
+        v128 = v116 - detail::kPlayIntentKey[(std::uint8_t)(v126 + v114 - 112) + 313];
         v129 = v128 + v115;
         v130 = v129 ^ v126;
         v131 = v130 + v129 + v127;
-        v132 = detail::kPlayIntentKey[(unsigned __int8)v131 + 109] + v128;
+        v132 = detail::kPlayIntentKey[(std::uint8_t)v131 + 109] + v128;
         v133 = v132 ^ v129;
         v134 = v130 + v133;
         v135 = v130 + v133 + v131;
@@ -8613,47 +8613,47 @@ LABEL_325:
             --v138;
         } while (v138);
         if ((v136 & 0x800) != 0) {
-            v140 = v134 - process((unsigned __int8)v137 - 42, v137, v135, v136, -1786975319);
+            v140 = v134 - process((std::uint8_t)v137 - 42, v137, v135, v136, -1786975319);
             v141 = v140 + v135;
             v142 = v137 ^ (-1856832259 * v141);
             v143 = v140 - __ROL4__(v142, 21);
             v144 = v141 - v143;
             v145 = v142 ^ (__ROL4__(v144, 19) + __ROL4__(v143, 29));
-            v146 = detail::kPlayIntentKey[(unsigned __int8)v145 + 471] + v143;
+            v146 = detail::kPlayIntentKey[(std::uint8_t)v145 + 471] + v143;
             v147 = v144 + __ROL4__(v146, 12);
             v148 = __ROL4__(v147, 7) + v145 + __ROL4__(v146, 10);
             v149 = v148 ^ v146;
-            v150 = process((unsigned __int8)v149 + 108, v149, v148, v136, -119722466);
-            v151 = detail::kPlayIntentKey[(unsigned __int8)(v147 + v150) + 371] + v148;
-            v152 = detail::kPlayIntentKey[(unsigned __int8)v151 + 386] + v149;
+            v150 = process((std::uint8_t)v149 + 108, v149, v148, v136, -119722466);
+            v151 = detail::kPlayIntentKey[(std::uint8_t)(v147 + v150) + 371] + v148;
+            v152 = detail::kPlayIntentKey[(std::uint8_t)v151 + 386] + v149;
             v135 = v152 ^ (v147 + v150);
-            v137 = v151 + process(((unsigned __int8)v152 ^ (unsigned __int8)(v147 + v150)) - 126, v135, v152, v136, 157597398);
+            v137 = v151 + process(((std::uint8_t)v152 ^ (std::uint8_t)(v147 + v150)) - 126, v135, v152, v136, 157597398);
             v134 = v136 ^ v152;
         }
         v153 = v134 + __ROL4__(v137, 25);
         v154 = v135 - (__ROL4__(v153, 15) + __ROL4__(v137, 1));
         v155 = v136 + __ROL4__(v154, 26);
         v156 = v155 + v137;
-        v157 = detail::kPlayIntentKey[(unsigned __int8)v156 + 507] + v153;
+        v157 = detail::kPlayIntentKey[(std::uint8_t)v156 + 507] + v153;
         v158 = v157 + v156 + v154;
         v159 = v155 ^ __ROL4__(v158, 14);
-        v160 = detail::kPlayIntentKey[(unsigned __int8)v159 + 56] ^ v156;
-        v161 = detail::kPlayIntentKey[(unsigned __int8)(v157 ^ v160) + 112] + v158;
+        v160 = detail::kPlayIntentKey[(std::uint8_t)v159 + 56] ^ v156;
+        v161 = detail::kPlayIntentKey[(std::uint8_t)(v157 ^ v160) + 112] + v158;
         v162 = v161 + v159;
         v163 = 799120751 * v162;
         v164 = (799120751 * v162) ^ v157;
         v165 = v161 - 602996647 * v164;
-        v166 = detail::kPlayIntentKey[(unsigned __int8)(v161 - -89 * v164) + 295] + v162;
+        v166 = detail::kPlayIntentKey[(std::uint8_t)(v161 - -89 * v164) + 295] + v162;
         v167 = (v163 ^ v160) - v166;
-        v168 = detail::kPlayIntentKey[(unsigned __int8)v167 + 197] + v164;
+        v168 = detail::kPlayIntentKey[(std::uint8_t)v167 + 197] + v164;
         v169 = v168 ^ v165;
         v170 = v169 ^ v166;
-        v171 = detail::kPlayIntentKey[(unsigned __int8)v170 + 366] + v167;
-        v172 = v168 - detail::kPlayIntentKey[(unsigned __int8)v171 + 192];
+        v171 = detail::kPlayIntentKey[(std::uint8_t)v170 + 366] + v167;
+        v172 = v168 - detail::kPlayIntentKey[(std::uint8_t)v171 + 192];
         v173 = v172 + v169;
         v174 = v170 - v173 - v172;
         v175 = v171 + __ROR4__(v174, 1);
-        v176 = detail::kPlayIntentKey[(unsigned __int8)v175 + 500] + v172;
+        v176 = detail::kPlayIntentKey[(std::uint8_t)v175 + 500] + v172;
         v177 = v176 ^ v173;
         v178 = v177 + v174;
         v179 = v175 ^ (-105493411 * v178);
@@ -8663,7 +8663,7 @@ LABEL_325:
         v183 = (__ROL4__(v182, 24) - 10057) ^ (v181 + v178 - 32758);
         v184 = v183 ^ v177;
         v185 = (v181 + v178) ^ (v184 - 971805517);
-        v186 = v182 - detail::kPlayIntentKey[(unsigned __int8)v185 + 51];
+        v186 = v182 - detail::kPlayIntentKey[(std::uint8_t)v185 + 51];
         v187 = v186 ^ v180 ^ v183;
         v188 = v187 + v186 + v184;
         v189 = v185 + __ROR4__(v188, 1);
@@ -8671,10 +8671,10 @@ LABEL_325:
         v191 = v187 - v190;
         v192 = v191 + v188 - 890675294;
         v193 = v192 ^ v189;
-        v194 = v190 + process((unsigned __int8)v193 - 99, v193, v192, v191, 1908936246);
+        v194 = v190 + process((std::uint8_t)v193 - 99, v193, v192, v191, 1908936246);
         if ((v194 & 0x400) != 0) {
             v195 = v191 + 1990125977 - v193;
-            v196 = detail::kPlayIntentKey[(unsigned __int8)(v191 + v192 - 103) + 313] ^ v193;
+            v196 = detail::kPlayIntentKey[(std::uint8_t)(v191 + v192 - 103) + 313] ^ v193;
             v197 = v195 + ((__ROL4__(v196, 19) + 15516) ^ (v191 + v192 + 1990156843));
             v198 = (v191 + v192 + 1990125977) ^ __ROL4__(v197, 17);
             v199 = v196 ^ (-1727274494 * v198);
@@ -8685,20 +8685,20 @@ LABEL_325:
         v200 = ((v193 >> 20) & 7) + 1;
         do {
             v201 = -860729091 * v194 + v191;
-            v192 += detail::kPlayIntentKey[(unsigned __int8)v201 + 130];
+            v192 += detail::kPlayIntentKey[(std::uint8_t)v201 + 130];
             v194 ^= v192;
             v191 = v193 ^ v201;
             --v200;
         } while (v200);
         v202 = v191 - v194;
         v203 = v192 ^ __ROL4__(v202, 30);
-        v204 = detail::kPlayIntentKey[(unsigned __int8)v203 + 368] + v193;
+        v204 = detail::kPlayIntentKey[(std::uint8_t)v203 + 368] + v193;
         v205 = v204 + v194;
-        v206 = v202 + process((unsigned __int8)v194 + (unsigned __int8)v204 - 18, v204 + v194, v204, v203, 303291732);
+        v206 = v202 + process((std::uint8_t)v194 + (std::uint8_t)v204 - 18, v204 + v194, v204, v203, 303291732);
         v207 = v206 ^ v203;
         v208 = v204 - 233434792 * v207;
         v209 = v208 ^ v205;
-        v210 = v206 ^ process((unsigned __int8)v209 - 23, v209, v208, v207, 320459398);
+        v210 = v206 ^ process((std::uint8_t)v209 - 23, v209, v208, v207, 320459398);
         v211 = v207 - v210;
         v212 = v211 ^ v208;
         v213 = v209 - v212 - v211;
@@ -8712,12 +8712,12 @@ LABEL_325:
         } while (v214);
         if ((v212 & 0x80000) != 0) {
             v216 = (-1228622447 * v213) ^ v210;
-            v217 = detail::kPlayIntentKey[(unsigned __int8)v216 + 316] + v211;
+            v217 = detail::kPlayIntentKey[(std::uint8_t)v216 + 316] + v211;
             v218 = v213 ^ (-1493310190 * v217);
             v219 = v216 - 334688453 * v218;
             v220 = v219 ^ v217;
             v221 = v218 + __ROL4__(v220, 16);
-            v222 = detail::kPlayIntentKey[(unsigned __int8)v221 + 401] ^ v219;
+            v222 = detail::kPlayIntentKey[(std::uint8_t)v221 + 401] ^ v219;
             v223 = v220 - v222;
             v224 = __ROL4__(v223, 28) + v221 + __ROL4__(v222, 10);
             v225 = v222 ^ (v224 + v223);
@@ -8726,24 +8726,24 @@ LABEL_325:
             v228 = v224 - v226;
             v229 = v225 - v228;
             v211 = -1807104786 * v229 + v227 - 796376932;
-            v213 = v228 ^ process(-18 * (unsigned __int8)v229 + v226 + 106, v211, v229, v212, -1554888561);
+            v213 = v228 ^ process(-18 * (std::uint8_t)v229 + v226 + 106, v211, v229, v212, -1554888561);
             v210 = v212 ^ v229;
         }
         v230 = ((v213 >> 25) & 7) + 1;
         do {
             v1093 = v230;
-            v231 = detail::kPlayIntentKey[(unsigned __int8)v212 + 127] + v210;
+            v231 = detail::kPlayIntentKey[(std::uint8_t)v212 + 127] + v210;
             v232 = v211 + __ROL4__(v231, 20);
             v233 = v232 + v231;
             v234 = v212 - v233;
-            v235 = v212 - v233 - (detail::kPlayIntentKey[(unsigned __int8)v212 + 310] ^ v232);
+            v235 = v212 - v233 - (detail::kPlayIntentKey[(std::uint8_t)v212 + 310] ^ v232);
             v236 = v235 ^ v212;
             v237 = v235 ^ __ROL4__(v236 + v234, 11);
             v238 = (__ROL4__(v237, 12) + 25990) ^ v236 ^ (v236 + v234 - 21160);
             v239 = v236 + v234 - v238;
             v240 = v237 - v239;
             v241 = v240 ^ v238;
-            v211 = v239 + process((unsigned __int8)v241 + 25, v241, v240, v213, -1286815439);
+            v211 = v239 + process((std::uint8_t)v241 + 25, v241, v240, v213, -1286815439);
             v212 = v211 ^ v240;
             v210 = v213 ^ v241;
             v230 = v1093 - 1;
@@ -8753,7 +8753,7 @@ LABEL_325:
             v243 = v210 ^ __ROL4__(v213, 8);
             v244 = v211 - v243;
             v245 = v244 + 1803445453;
-            v246 = v213 - detail::kPlayIntentKey[(unsigned __int8)(v244 - 51) + 325];
+            v246 = v213 - detail::kPlayIntentKey[(std::uint8_t)(v244 - 51) + 325];
             v247 = v243 + ((__ROL4__(v246, 17) + 17505) ^ (v244 + 1803464991));
             v248 = v247 ^ v245;
             v249 = v246 - v248;
@@ -8762,7 +8762,7 @@ LABEL_325:
             v252 = v249 - v251;
             v253 = v252 ^ v250;
             v254 = v251 - v253;
-            v255 = detail::kPlayIntentKey[(unsigned __int8)v254 + 421] ^ v252;
+            v255 = detail::kPlayIntentKey[(std::uint8_t)v254 + 421] ^ v252;
             v256 = v253 - v255 - v254;
             v211 = v254 - v256;
             v213 = v254 - v256 + v255;
@@ -8777,19 +8777,19 @@ LABEL_325:
         v258 -= 592420896;
         v262 = (v258 - v261) ^ v259;
         v263 = v262 ^ v260;
-        v264 = process((unsigned __int8)v263 + 123, v263, v262, v258 - v261, 1134368685);
+        v264 = process((std::uint8_t)v263 + 123, v263, v262, v258 - v261, 1134368685);
         v265 = v261 - v264;
         v266 = v258 - v264;
-        v267 = v262 - process((unsigned __int8)v266 - 79, v266, v265, v263, 869680942);
-        v268 = v263 - detail::kPlayIntentKey[(unsigned __int8)v267 + 325];
+        v267 = v262 - process((std::uint8_t)v266 - 79, v266, v265, v263, 869680942);
+        v268 = v263 - detail::kPlayIntentKey[(std::uint8_t)v267 + 325];
         v269 = v265 - v268;
-        v270 = v266 ^ process((unsigned __int8)v269 - 23, v269, v268, v267, -1596950702);
+        v270 = v266 ^ process((std::uint8_t)v269 - 23, v269, v268, v267, -1596950702);
         v271 = (__ROL4__(v270, 4) + 4358) ^ v267 ^ (v269 + 28476);
         v272 = v268 ^ (__ROL4__(v271, 21) + __ROL4__(v270, 21));
-        v273 = v269 + process((unsigned __int8)v272 - 29, v272, v271, v270, 34983538);
+        v273 = v269 + process((std::uint8_t)v272 - 29, v272, v271, v270, 34983538);
         v274 = v273 ^ v270;
         v275 = v271 - v274 + 34873402;
-        v276 = v272 - detail::kPlayIntentKey[(unsigned __int8)v275 + 369];
+        v276 = v272 - detail::kPlayIntentKey[(std::uint8_t)v275 + 369];
         v277 = v273 + v276 - 425899564;
         v278 = v274 - v277;
         v279 = v275 ^ (v278 - 1793396713);
@@ -8804,12 +8804,12 @@ LABEL_325:
         v288 = __ROL4__(v287, 21) + v280 - v284 + __ROL4__(v286, 20);
         v289 = v285 ^ __ROL4__(v288, 27);
         v290 = __ROL4__(v289, 17) + v286 + __ROL4__(v288, 24);
-        v291 = detail::kPlayIntentKey[(unsigned __int8)v290 + 399] ^ v287;
+        v291 = detail::kPlayIntentKey[(std::uint8_t)v290 + 399] ^ v287;
         v292 = v288 - v291;
         v293 = v289 - 1870011792 * v292;
         v294 = v290 - v293;
-        v295 = v291 - process((unsigned __int8)v294 - 121, v294, v293, v292, -1656714303);
-        v296 = v292 - detail::kPlayIntentKey[(unsigned __int8)v295 + 278];
+        v295 = v291 - process((std::uint8_t)v294 - 121, v294, v293, v292, -1656714303);
+        v296 = v292 - detail::kPlayIntentKey[(std::uint8_t)v295 + 278];
         v297 = v293 - v296;
         v298 = v294 - v297;
         v299 = v295 ^ (66651731 * v298);
@@ -8817,22 +8817,22 @@ LABEL_325:
         v301 = v300 ^ v297;
         v302 = v298 - v301;
         v303 = v299 - v302;
-        v304 = detail::kPlayIntentKey[(unsigned __int8)v303 + 48] ^ v300;
+        v304 = detail::kPlayIntentKey[(std::uint8_t)v303 + 48] ^ v300;
         v305 = v301 - v304;
         v306 = v302 ^ (__ROL4__(v305, 18) + __ROL4__(v304, 24));
-        v307 = detail::kPlayIntentKey[(unsigned __int8)v306 + 84] + v303;
+        v307 = detail::kPlayIntentKey[(std::uint8_t)v306 + 84] + v303;
         v308 = v307 ^ v304;
-        v309 = detail::kPlayIntentKey[(unsigned __int8)v308 + 140] ^ v305;
-        v310 = detail::kPlayIntentKey[(unsigned __int8)v309 + 222] ^ v306;
+        v309 = detail::kPlayIntentKey[(std::uint8_t)v308 + 140] ^ v305;
+        v310 = detail::kPlayIntentKey[(std::uint8_t)v309 + 222] ^ v306;
         v311 = v307 - v310;
         v312 = v308 - 1993785310 * v311;
         v313 = v312 + v309;
-        v314 = v310 - detail::kPlayIntentKey[(unsigned __int8)v313 + 18];
+        v314 = v310 - detail::kPlayIntentKey[(std::uint8_t)v313 + 18];
         v315 = v314 ^ v311;
-        v316 = v312 + process((unsigned __int8)v315 - 99, v315, v314, v313, -1192517077);
-        v317 = detail::kPlayIntentKey[(unsigned __int8)v316 + 54] ^ v313;
+        v316 = v312 + process((std::uint8_t)v315 - 99, v315, v314, v313, -1192517077);
+        v317 = detail::kPlayIntentKey[(std::uint8_t)v316 + 54] ^ v313;
         v318 = (v315 ^ (v314 + 2 * v317)) + __ROL4__(v314 - 168101584, 25);
-        v319 = v316 - detail::kPlayIntentKey[(unsigned __int8)(v315 ^ (v314 + 2 * v317)) + 478];
+        v319 = v316 - detail::kPlayIntentKey[(std::uint8_t)(v315 ^ (v314 + 2 * v317)) + 478];
         v320 = v317 - v319;
         v321 = v318 + v319;
         v322 = v320 + v321 + 168101584;
@@ -8853,11 +8853,11 @@ LABEL_325:
         v337 = v336 + v333;
         v338 = v337 ^ v334;
         v339 = v338 + v337 + v335;
-        v340 = v336 - detail::kPlayIntentKey[(unsigned __int8)v339 + 255];
+        v340 = v336 - detail::kPlayIntentKey[(std::uint8_t)v339 + 255];
         v341 = v340 + v337;
-        v342 = v338 - detail::kPlayIntentKey[(unsigned __int8)v341 + 128];
-        v343 = detail::kPlayIntentKey[(unsigned __int8)v342 + 149] ^ v339;
-        v344 = v340 - detail::kPlayIntentKey[(unsigned __int8)v343 + 289];
+        v342 = v338 - detail::kPlayIntentKey[(std::uint8_t)v341 + 128];
+        v343 = detail::kPlayIntentKey[(std::uint8_t)v342 + 149] ^ v339;
+        v344 = v340 - detail::kPlayIntentKey[(std::uint8_t)v343 + 289];
         v345 = v341 - v344;
         v346 = v345 + v342 - 1307821538;
         v347 = v343 - __ROL4__(v346, 20);
@@ -8866,9 +8866,9 @@ LABEL_325:
         v350 = v346 - __ROL4__(v349, 10);
         v351 = v350 ^ v347;
         v352 = v348 ^ (v351 + v350);
-        v353 = v349 - detail::kPlayIntentKey[(unsigned __int8)(v348 ^ (v351 + v350)) + 164];
+        v353 = v349 - detail::kPlayIntentKey[(std::uint8_t)(v348 ^ (v351 + v350)) + 164];
         v354 = v353 ^ v350;
-        v355 = detail::kPlayIntentKey[(unsigned __int8)v354 + 142] ^ v351;
+        v355 = detail::kPlayIntentKey[(std::uint8_t)v354 + 142] ^ v351;
         v356 = v352 + 1691570971 * v355;
         v357 = v353 ^ (__ROL4__(v356, 13) + __ROL4__(v355, 21));
         v358 = v354 - __ROL4__(v357, 24);
@@ -8882,11 +8882,11 @@ LABEL_325:
         v366 = v362 ^ (__ROL4__(v365, 6) + __ROL4__(v364, 1));
         v367 = v363 + v366 - 480138643;
         v368 = v364 - 516538903 * v367;
-        v369 = detail::kPlayIntentKey[(unsigned __int8)(v364 - 23 * (v363 + v366 + 109)) + 361] ^ v365;
+        v369 = detail::kPlayIntentKey[(std::uint8_t)(v364 - 23 * (v363 + v366 + 109)) + 361] ^ v365;
         v370 = v366 - v369;
-        v371 = v367 ^ process((unsigned __int8)v370 - 47, v370, v369, v368, -43089217);
+        v371 = v367 ^ process((std::uint8_t)v370 - 47, v370, v369, v368, -43089217);
         v372 = v371 ^ v368;
-        v373 = detail::kPlayIntentKey[(unsigned __int8)v372 + 395] ^ v369;
+        v373 = detail::kPlayIntentKey[(std::uint8_t)v372 + 395] ^ v369;
         v374 = v371 + v373 - v370;
         v375 = v372 - __ROL4__(v374, 21);
         v376 = v373 - v375;
@@ -8897,34 +8897,34 @@ LABEL_325:
         v381 = v377 ^ __ROL4__((v380 + 30350) ^ v376 ^ (v378 - 22678), 1);
         v382 = v379 + v381 - v378;
         v383 = v382 + ((v380 + 30350) ^ v376 ^ (v378 - 22678));
-        v384 = detail::kPlayIntentKey[(unsigned __int8)(v382 + ((v380 - 114) ^ v376 ^ (v378 + 106))) + 275];
+        v384 = detail::kPlayIntentKey[(std::uint8_t)(v382 + ((v380 - 114) ^ v376 ^ (v378 + 106))) + 275];
         v385 = v381 - v384;
         v386 = v378 - v384;
-        v387 = process((unsigned __int8)v386 - 120, v386, v385, v383, -1233765642);
+        v387 = process((std::uint8_t)v386 - 120, v386, v385, v383, -1233765642);
         v388 = v382 + v387;
-        v389 = detail::kPlayIntentKey[(unsigned __int8)(v382 + v387) + 311] ^ v383;
+        v389 = detail::kPlayIntentKey[(std::uint8_t)(v382 + v387) + 311] ^ v383;
         v390 = v389 + v385;
-        v391 = v386 - process((unsigned __int8)v389 + (unsigned __int8)v385 - 120, v389 + v385, v389, v388, 720842893);
+        v391 = v386 - process((std::uint8_t)v389 + (std::uint8_t)v385 - 120, v389 + v385, v389, v388, 720842893);
         v392 = v388 ^ __ROL4__(v391, 30);
         v393 = v392 ^ v389;
         v394 = v390 ^ __ROL4__(v393, 26);
         v395 = v391 - v394;
-        v396 = v392 - process((unsigned __int8)v395 - 102, v395, v394, v393, -2138314268);
+        v396 = v392 - process((std::uint8_t)v395 - 102, v395, v394, v393, -2138314268);
         v397 = v393 - v396;
         v398 = v394 ^ (1891894031 * v397);
         v399 = v395 + 183711452 * v398;
         v400 = v399 + v396;
         v401 = v397 - 574737613 * v400;
-        v402 = v398 - detail::kPlayIntentKey[(unsigned __int8)(v397 - -51 * v400) + 222];
+        v402 = v398 - detail::kPlayIntentKey[(std::uint8_t)(v397 - -51 * v400) + 222];
         v403 = v402 + v399;
-        v404 = detail::kPlayIntentKey[(unsigned __int8)v403 + 398] + v400;
+        v404 = detail::kPlayIntentKey[(std::uint8_t)v403 + 398] + v400;
         v405 = v404 ^ v401;
-        v406 = detail::kPlayIntentKey[(unsigned __int8)v405 + 272] + v402;
+        v406 = detail::kPlayIntentKey[(std::uint8_t)v405 + 272] + v402;
         v407 = v403 ^ __ROL4__(v406, 16);
-        v408 = ((unsigned __int8)v407 >> 5) + 1;
+        v408 = ((std::uint8_t)v407 >> 5) + 1;
         do {
             v409 = v406 + v404;
-            v405 -= detail::kPlayIntentKey[(unsigned __int8)v409 + 217];
+            v405 -= detail::kPlayIntentKey[(std::uint8_t)v409 + 217];
             v406 -= __ROL4__(v405, 13);
             v404 = v407 ^ v409;
             --v408;
@@ -8943,7 +8943,7 @@ LABEL_325:
         }
         if ((v407 & 0x10) != 0) {
             v417 = v404 - v406;
-            v418 = v405 ^ process((unsigned __int8)v417 + 92, v417, v406, v407, 371709336);
+            v418 = v405 ^ process((std::uint8_t)v417 + 92, v417, v406, v407, 371709336);
             v419 = v406 - __ROL4__(v418, 22);
             v420 = v419 + v418 + v417;
             v421 = v420 ^ v418;
@@ -8951,8 +8951,8 @@ LABEL_325:
             v404 = v407 ^ v420;
             v405 = v421;
         }
-        v422 = v404 - process((unsigned __int8)v406 - 7, v406, v407, v405, 119772783);
-        v423 = detail::kPlayIntentKey[(unsigned __int8)v422 + 175] ^ v405;
+        v422 = v404 - process((std::uint8_t)v406 - 7, v406, v407, v405, 119772783);
+        v423 = detail::kPlayIntentKey[(std::uint8_t)v422 + 175] ^ v405;
         v424 = v407 - v423;
         v425 = v406 - v424 - 2074375599;
         v426 = v422 - v425;
@@ -8965,22 +8965,22 @@ LABEL_325:
         v433 = v432 + v430;
         v434 = __ROL4__(v433, 19);
         v435 = v428 - v434;
-        v436 = detail::kPlayIntentKey[(unsigned __int8)(v432 + v435 + 16) + 72] + v433;
+        v436 = detail::kPlayIntentKey[(std::uint8_t)(v432 + v435 + 16) + 72] + v433;
         v437 = (v431 - v434) ^ __ROL4__(v436, 9);
         v438 = v437 + v435 - 944299468;
-        v439 = v432 + v435 + 1522397712 - detail::kPlayIntentKey[(unsigned __int8)(v437 + v435 + 52) + 479];
-        v440 = v436 + process((unsigned __int8)v439 - 17, v439, v438, v437, 883704893);
+        v439 = v432 + v435 + 1522397712 - detail::kPlayIntentKey[(std::uint8_t)(v437 + v435 + 52) + 479];
+        v440 = v436 + process((std::uint8_t)v439 - 17, v439, v438, v437, 883704893);
         v441 = v440 + v437;
         v442 = v438 ^ (v437 + v440 + 619011432);
-        v443 = detail::kPlayIntentKey[(unsigned __int8)(v438 ^ (v437 + v440 + 104)) + 275] + v439;
+        v443 = detail::kPlayIntentKey[(std::uint8_t)(v438 ^ (v437 + v440 + 104)) + 275] + v439;
         if (v443 < 0) {
             v444 = v442 + v440;
             v445 = v441 - v442 - v444;
-            v446 = detail::kPlayIntentKey[(unsigned __int8)v445 + 479] + v442;
+            v446 = detail::kPlayIntentKey[(std::uint8_t)v445 + 479] + v442;
             v447 = v444 ^ (v446 + v445);
             v448 = v445 ^ (-285602730 * v447);
-            v449 = v446 - process(((unsigned __int8)v445 ^ (unsigned __int8)(86 * (v444 ^ (v446 + v445)))) + 61, v448, v447, v443, 452534699);
-            v450 = v447 - process((unsigned __int8)v449 - 84, v449, v448, v443, 61574073);
+            v449 = v446 - process(((std::uint8_t)v445 ^ (std::uint8_t)(86 * (v444 ^ (v446 + v445)))) + 61, v448, v447, v443, 452534699);
+            v450 = v447 - process((std::uint8_t)v449 - 84, v449, v448, v443, 61574073);
             v451 = ((__ROL4__(v450, 20) - 3784) ^ (v449 + 8437)) + v448;
             v452 = v451 ^ v449;
             v453 = v450 - ((__ROL4__(v452, 24) - 9735) ^ (v451 + 681));
@@ -8991,11 +8991,11 @@ LABEL_325:
         if ((v442 & 0x400000) != 0) {
             v454 = v440 - v443;
             v455 = v441 + 1801320228 * v454;
-            v456 = detail::kPlayIntentKey[(unsigned __int8)(v441 + 36 * v454) + 164] ^ v443;
-            v457 = detail::kPlayIntentKey[(unsigned __int8)v456 + 220] + v454;
-            v458 = detail::kPlayIntentKey[(unsigned __int8)v457 + 200] ^ v455;
-            v459 = v457 - process((unsigned __int8)v456 - (unsigned __int8)v458 - 3, v456 - v458, v458, v442, -843040089);
-            v460 = detail::kPlayIntentKey[(unsigned __int8)v459 + 508];
+            v456 = detail::kPlayIntentKey[(std::uint8_t)(v441 + 36 * v454) + 164] ^ v443;
+            v457 = detail::kPlayIntentKey[(std::uint8_t)v456 + 220] + v454;
+            v458 = detail::kPlayIntentKey[(std::uint8_t)v457 + 200] ^ v455;
+            v459 = v457 - process((std::uint8_t)v456 - (std::uint8_t)v458 - 3, v456 - v458, v458, v442, -843040089);
+            v460 = detail::kPlayIntentKey[(std::uint8_t)v459 + 508];
             v461 = v458 - v460;
             v462 = v456 - v460 - 1107733550;
             v463 = v459 + __ROL4__(v462, 6);
@@ -9005,16 +9005,16 @@ LABEL_325:
             v467 = v464 - __ROL4__(v466, 11);
             v468 = v467 ^ v465;
             v469 = v468 ^ v466;
-            v441 = v467 + process((unsigned __int8)v469 + 39, v469, v468, v442, 1084093489);
+            v441 = v467 + process((std::uint8_t)v469 + 39, v469, v468, v442, 1084093489);
             v440 = v442 ^ v469;
-            v443 = v468 - detail::kPlayIntentKey[(unsigned __int8)v441 + 114];
+            v443 = v468 - detail::kPlayIntentKey[(std::uint8_t)v441 + 114];
         }
         v470 = v440 ^ (v443 - 83312339);
         v471 = v441 + v470 + 2135983938;
         v472 = v442 - __ROL4__(v471, 25);
         v473 = v470 - __ROL4__(v443 - v472, 7);
         v474 = v473 ^ v471;
-        v475 = detail::kPlayIntentKey[(unsigned __int8)v474 + 502];
+        v475 = detail::kPlayIntentKey[(std::uint8_t)v474 + 502];
         v476 = v472 - v475;
         v477 = v443 - v475;
         v478 = v473 + __ROL4__(v477, 1) + __ROL4__(v476, 28);
@@ -9023,22 +9023,22 @@ LABEL_325:
         v481 = v477 + 1743121518 * v480;
         v482 = v481 ^ v478;
         v483 = v482 ^ v479;
-        v484 = v480 + process((unsigned __int8)v483 + 6, v483, v482, v481, -2009897990);
+        v484 = v480 + process((std::uint8_t)v483 + 6, v483, v482, v481, -2009897990);
         v485 = v484 ^ v481;
         v486 = v482 + ((__ROL4__(v485, 23) - 5645) ^ (v484 + 7403));
         v487 = v483 + __ROL4__(v486, 12);
         v488 = v487 ^ v484;
-        v489 = detail::kPlayIntentKey[(unsigned __int8)v488 + 111] ^ v485;
+        v489 = detail::kPlayIntentKey[(std::uint8_t)v488 + 111] ^ v485;
         v490 = v486 ^ (v489 - 418830912);
         v491 = v490 + v489 + v487;
         v492 = __ROL4__(v491, 30);
         v493 = v489 ^ (v492 + v488 + 249449577);
-        v494 = detail::kPlayIntentKey[(unsigned __int8)(v489 ^ (v492 + v488 + 105)) + 399];
+        v494 = detail::kPlayIntentKey[(std::uint8_t)(v489 ^ (v492 + v488 + 105)) + 399];
         v495 = v491 ^ (v490 + v494 - 1046125211);
         v496 = v488 + v492 - v495 - (v494 + v490);
-        v497 = detail::kPlayIntentKey[(unsigned __int8)v496 + 56] + v493;
+        v497 = detail::kPlayIntentKey[(std::uint8_t)v496 + 56] + v493;
         v498 = v497 + v496 + v494 + v490;
-        v499 = detail::kPlayIntentKey[(unsigned __int8)(v497 + v496 + v494 + v490) + 70] + v495;
+        v499 = detail::kPlayIntentKey[(std::uint8_t)(v497 + v496 + v494 + v490) + 70] + v495;
         v500 = v496 - __ROL4__(v499, 6);
         v501 = v500 + v497;
         v502 = ((__ROL4__(v501, 10) - 13323) ^ (v500 + 9562)) + v498;
@@ -9050,12 +9050,12 @@ LABEL_325:
         v508 = v504 - v507;
         v509 = v508 ^ v505;
         v510 = v506 ^ (678125655 * v509);
-        v511 = v507 + detail::kPlayIntentKey[(unsigned __int8)(v506 ^ (87 * v509)) + 2];
-        v512 = v508 + process((unsigned __int8)v507 + LOBYTE(detail::kPlayIntentKey[(unsigned __int8)(v506 ^ (87 * v509)) + 2]) - 105, v511, v510, v509,
-                              -1857400918);
-        v513 = detail::kPlayIntentKey[(unsigned __int8)v512 + 490] ^ v509;
+        v511 = v507 + detail::kPlayIntentKey[(std::uint8_t)(v506 ^ (87 * v509)) + 2];
+        v512 = v508 +
+               process((std::uint8_t)v507 + LOBYTE(detail::kPlayIntentKey[(std::uint8_t)(v506 ^ (87 * v509)) + 2]) - 105, v511, v510, v509, -1857400918);
+        v513 = detail::kPlayIntentKey[(std::uint8_t)v512 + 490] ^ v509;
         v514 = v513 + v510;
-        v515 = v511 - detail::kPlayIntentKey[(unsigned __int8)v514 + 505];
+        v515 = v511 - detail::kPlayIntentKey[(std::uint8_t)v514 + 505];
         v516 = v515 + v512;
         v517 = v513 ^ (-98922206 * v516);
         v518 = v517 + v514;
@@ -9070,13 +9070,13 @@ LABEL_325:
         v527 = v523 + ((__ROL4__(v526, 6) - 29660) ^ (v521 - v525 + 27085));
         v528 = v524 ^ __ROL4__(v527, 4);
         v529 = v521 - v525 - v528;
-        v530 = v526 + process((unsigned __int8)v521 - (unsigned __int8)v525 - (unsigned __int8)v528 + 85, v529, v528, v527, 1247226962);
+        v530 = v526 + process((std::uint8_t)v521 - (std::uint8_t)v525 - (std::uint8_t)v528 + 85, v529, v528, v527, 1247226962);
         v531 = v530 ^ v527;
         v532 = v531 ^ v528;
-        v533 = v529 + process((unsigned __int8)v532 + 123, v532, v531, v530, 1915507451);
+        v533 = v529 + process((std::uint8_t)v532 + 123, v532, v531, v530, 1915507451);
         v534 = v533 + v530;
         v535 = v534 + v531;
-        v536 = v532 - process((unsigned __int8)v534 + (unsigned __int8)v531 + 118, v534 + v531, v534, v533, -656359565);
+        v536 = v532 - process((std::uint8_t)v534 + (std::uint8_t)v531 + 118, v534 + v531, v534, v533, -656359565);
         v537 = v533 - v536;
         v538 = v534 - (__ROR4__(v537, 1) + __ROL4__(v536, 25));
         v539 = v535 ^ (__ROL4__(v538, 20) + __ROL4__(v537, 18));
@@ -9088,9 +9088,9 @@ LABEL_325:
         v545 = v544 ^ v541;
         v546 = v543 - v545;
         v547 = v536 - v542 - v546;
-        v548 = v544 - process((unsigned __int8)v547 + 99, v547, v546, v545, 816056768);
+        v548 = v544 - process((std::uint8_t)v547 + 99, v547, v546, v545, 816056768);
         v549 = v548 ^ v545;
-        v550 = v546 + process((unsigned __int8)v549 - 68, v549, v548, v547, 619932664);
+        v550 = v546 + process((std::uint8_t)v549 - 68, v549, v548, v547, 619932664);
         v551 = v550 ^ v547;
         v552 = v548 + 1720768825 * v551;
         v553 = v549 - v552;
@@ -9104,21 +9104,21 @@ LABEL_325:
             v560 = v557 - 1278623683 * v559;
             v561 = v558 ^ __ROL4__(v560, 14);
             v562 = v561 ^ v559;
-            v563 = detail::kPlayIntentKey[(unsigned __int8)v562 + 144] + v560;
+            v563 = detail::kPlayIntentKey[(std::uint8_t)v562 + 144] + v560;
             v564 = v561 + __ROL4__(v563, 4);
             v565 = v562 - (__ROL4__(v564, 27) + __ROL4__(v563, 6));
             v566 = v563 - v565 - 867300295;
-            v554 = detail::kPlayIntentKey[(unsigned __int8)v566 + 327] + v564;
+            v554 = detail::kPlayIntentKey[(std::uint8_t)v566 + 327] + v564;
             v567 = __ROL4__(v554, 15) + v565 + __ROL4__(v566, 19);
             v553 = v556 ^ v566;
             v555 = v567;
         }
         if ((v555 & 1) != 0) {
             v568 = v554 + v556 + v553;
-            v569 = detail::kPlayIntentKey[(unsigned __int8)v568 + 361] ^ v554;
-            v570 = v556 - process((unsigned __int8)v569 + 121, v569, v568, v555, -1710338477);
+            v569 = detail::kPlayIntentKey[(std::uint8_t)v568 + 361] ^ v554;
+            v570 = v556 - process((std::uint8_t)v569 + 121, v569, v568, v555, -1710338477);
             v571 = v568 + ((__ROL4__(v570, 10) + 30402) ^ (v569 + 19001));
-            v554 = detail::kPlayIntentKey[(unsigned __int8)v571 + 479] + v569;
+            v554 = detail::kPlayIntentKey[(std::uint8_t)v571 + 479] + v569;
             v556 = v554 ^ v570;
             v553 = v555 ^ v571;
         }
@@ -9143,12 +9143,12 @@ LABEL_325:
         v585 = v555 + 1614979199 * v584;
         v586 = v585 + v582;
         v587 = v583 ^ (v585 + v582 + 1536421663);
-        v588 = detail::kPlayIntentKey[(unsigned __int8)(v583 ^ (v585 + v582 + 31)) + 202] ^ v584;
+        v588 = detail::kPlayIntentKey[(std::uint8_t)(v583 ^ (v585 + v582 + 31)) + 202] ^ v584;
         v589 = v588 ^ v585;
-        v590 = v586 ^ process((unsigned __int8)v589 - 30, v589, v588, v587, 2078369451);
+        v590 = v586 ^ process((std::uint8_t)v589 - 30, v589, v588, v587, 2078369451);
         v591 = v587 - v590;
         v592 = v588 - v591 - 1813675990;
-        v593 = detail::kPlayIntentKey[(unsigned __int8)v592 + 385] ^ v589;
+        v593 = detail::kPlayIntentKey[(std::uint8_t)v592 + 385] ^ v589;
         v594 = v593 ^ v590;
         v595 = v591 ^ (v594 - 758191026);
         v596 = v592 ^ (__ROL4__(v595, 14) + __ROL4__(v594, 22));
@@ -9160,19 +9160,19 @@ LABEL_325:
         v602 = v598 ^ __ROL4__(v601, 7);
         v603 = __ROL4__(v602, 29) + v599 + __ROL4__(v601, 1);
         v604 = v600 ^ (891894162 * v603);
-        v605 = detail::kPlayIntentKey[(unsigned __int8)(v600 ^ (-110 * v603)) + 315];
+        v605 = detail::kPlayIntentKey[(std::uint8_t)(v600 ^ (-110 * v603)) + 315];
         v606 = v601 + v605;
-        v607 = v602 + process((unsigned __int8)v601 + (unsigned __int8)v605 - 118, v601 + v605, v604, v603, 978918768);
+        v607 = v602 + process((std::uint8_t)v601 + (std::uint8_t)v605 - 118, v601 + v605, v604, v603, 978918768);
         v608 = v607 ^ v603;
         v609 = v604 - 909061828 * v608;
-        v610 = detail::kPlayIntentKey[(unsigned __int8)(v604 - -60 * v608) + 111] ^ v606;
+        v610 = detail::kPlayIntentKey[(std::uint8_t)(v604 - -60 * v608) + 111] ^ v606;
         v611 = v607 - 518101203 * v610;
-        v612 = detail::kPlayIntentKey[(unsigned __int8)(v607 - -45 * v610) + 126] ^ v608;
+        v612 = detail::kPlayIntentKey[(std::uint8_t)(v607 - -45 * v610) + 126] ^ v608;
         v613 = v612 ^ v609;
         v614 = v610 + __ROL4__(v613, 5);
         v615 = v611 + ((__ROR4__(v614, 1) + 16038) ^ (v613 + 3816));
         v616 = v612 + __ROL4__(v615, 20);
-        v617 = detail::kPlayIntentKey[(unsigned __int8)v616 + 197] ^ v613;
+        v617 = detail::kPlayIntentKey[(std::uint8_t)v616 + 197] ^ v613;
         v618 = v614 ^ __ROL4__(v617, 25);
         v619 = ((v618 >> 8) & 7) + 1;
         do {
@@ -9181,24 +9181,24 @@ LABEL_325:
             v622 = v617 + ((__ROL4__(v616 - v620, 1) + 11017) ^ (v620 - 7178));
             v623 = v620 - (v616 - v620) - v622;
             v616 = v621 ^ (-729886921 * v623);
-            v617 = detail::kPlayIntentKey[(unsigned __int8)(v621 ^ (55 * v623)) + 224] + v622;
+            v617 = detail::kPlayIntentKey[(std::uint8_t)(v621 ^ (55 * v623)) + 224] + v622;
             v615 = v618 ^ v623;
             --v619;
         } while (v619);
         if ((v617 & 0x10000) != 0) {
-            v624 = v615 - process((unsigned __int8)v618 + 88, v618, v616, v617, -747826214);
-            v625 = detail::kPlayIntentKey[(unsigned __int8)v624 + 344] + v616;
+            v624 = v615 - process((std::uint8_t)v618 + 88, v618, v616, v617, -747826214);
+            v625 = detail::kPlayIntentKey[(std::uint8_t)v624 + 344] + v616;
             v626 = v625 ^ v618;
             v627 = v626 ^ v624;
             v628 = v625 - 1465304208 * v627;
             v629 = v626 - v627 - v628;
             v630 = v629 ^ v627;
-            v631 = detail::kPlayIntentKey[(unsigned __int8)v630 + 348] + v628;
+            v631 = detail::kPlayIntentKey[(std::uint8_t)v630 + 348] + v628;
             v632 = v631 + v630 + v629;
             v633 = v630 - v632;
             v634 = v631 ^ __ROL4__(v633 - 598992101, 27);
             v635 = v634 ^ v632;
-            v636 = process((unsigned __int8)v635 - 92, v635, v634, v617, -1092487759) + v633 - 598992101;
+            v636 = process((std::uint8_t)v635 - 92, v635, v634, v617, -1092487759) + v633 - 598992101;
             v637 = v636 ^ v634;
             v638 = v635 + 1357246756 * v637;
             v639 = v636 - __ROL4__(v638, 17);
@@ -9216,7 +9216,7 @@ LABEL_325:
             v646 = v643 - 1089510643 * v645;
             v647 = v644 - 1129785634 * v646;
             v648 = v647 ^ v645;
-            v649 = detail::kPlayIntentKey[(unsigned __int8)v648 + 473] ^ v646;
+            v649 = detail::kPlayIntentKey[(std::uint8_t)v648 + 473] ^ v646;
             v616 = v647 - v649;
             v615 = v618 ^ v649;
             v617 = v648 - v616;
@@ -9232,11 +9232,11 @@ LABEL_325:
         v658 = v657 + v656 + v654;
         v659 = v658 ^ v655;
         v660 = v659 ^ v656;
-        v661 = detail::kPlayIntentKey[(unsigned __int8)v660 + 509] ^ v657;
+        v661 = detail::kPlayIntentKey[(std::uint8_t)v660 + 509] ^ v657;
         v662 = v658 - v661;
-        v663 = detail::kPlayIntentKey[(unsigned __int8)v662 + 383] ^ v659;
+        v663 = detail::kPlayIntentKey[(std::uint8_t)v662 + 383] ^ v659;
         v664 = v660 ^ __ROL4__(v663, 19);
-        v665 = v661 - detail::kPlayIntentKey[(unsigned __int8)v664 + 305];
+        v665 = v661 - detail::kPlayIntentKey[(std::uint8_t)v664 + 305];
         v666 = v665 ^ v662;
         v667 = v666 + v665 + v663;
         v668 = (__ROL4__(v667, 5) + 4519) ^ v664 ^ (v666 - 15262);
@@ -9253,30 +9253,30 @@ LABEL_325:
             v667 = v674 - __ROL4__(v666, 14);
         }
         if ((v667 & 0x2000000) != 0) {
-            v676 = v665 - detail::kPlayIntentKey[(unsigned __int8)v668 + 415];
+            v676 = v665 - detail::kPlayIntentKey[(std::uint8_t)v668 + 415];
             v677 = v676 ^ v666;
             v678 = v668 - v677;
             v679 = -831778200 * v678 + v676;
-            v666 = v677 - process(104 * (unsigned __int8)v678 + v676 - 127, v679, v678, v667, 101195750);
+            v666 = v677 - process(104 * (std::uint8_t)v678 + v676 - 127, v679, v678, v667, 101195750);
             v668 = v678 - v666;
             v665 = v667 ^ v679;
         }
-        v680 = v665 - detail::kPlayIntentKey[(unsigned __int8)v668 + 451];
+        v680 = v665 - detail::kPlayIntentKey[(std::uint8_t)v668 + 451];
         v681 = v680 ^ v666;
         v682 = v667 - v681;
         v683 = v668 - v682;
         v684 = v680 - 1194384756 * v683;
-        v685 = v681 - detail::kPlayIntentKey[(unsigned __int8)(v680 - 116 * v683) + 56];
-        v686 = v683 ^ process(14 * (unsigned __int8)v685 + v682 - 67, v682 - 1459072498 * v685, v685, v684, -720935070);
+        v685 = v681 - detail::kPlayIntentKey[(std::uint8_t)(v680 - 116 * v683) + 56];
+        v686 = v683 ^ process(14 * (std::uint8_t)v685 + v682 - 67, v682 - 1459072498 * v685, v685, v684, -720935070);
         v687 = v686 + v684;
         v688 = v685 - 369263153 * v687;
-        v689 = detail::kPlayIntentKey[(unsigned __int8)(v685 - 49 * v687) + 477] ^ (v682 - 1459072498 * v685);
+        v689 = detail::kPlayIntentKey[(std::uint8_t)(v685 - 49 * v687) + 477] ^ (v682 - 1459072498 * v685);
         v690 = v689 ^ v686;
         v691 = (v690 & 7) + 1;
         do {
-            v692 = detail::kPlayIntentKey[(unsigned __int8)v689 + 254] ^ v687;
+            v692 = detail::kPlayIntentKey[(std::uint8_t)v689 + 254] ^ v687;
             v693 = v692 - v688 + v689;
-            v694 = detail::kPlayIntentKey[(unsigned __int8)v693 + 50];
+            v694 = detail::kPlayIntentKey[(std::uint8_t)v693 + 50];
             v695 = v692 - v694;
             v688 -= v694;
             v689 = v695 + v688 + v693;
@@ -9285,13 +9285,13 @@ LABEL_325:
         } while (v691);
         v696 = ((unsigned int)~v689 >> 11) | 0xFFFFFFF8;
         do {
-            v697 = detail::kPlayIntentKey[(unsigned __int8)v690 + 283] + v687;
-            v698 = detail::kPlayIntentKey[(unsigned __int8)v697 + 365] + v688;
+            v697 = detail::kPlayIntentKey[(std::uint8_t)v690 + 283] + v687;
+            v698 = detail::kPlayIntentKey[(std::uint8_t)v697 + 365] + v688;
             v699 = v698 ^ v690;
             v700 = v697 - v699;
             v701 = v698 ^ __ROL4__(v700, 2);
             v702 = v699 - v701;
-            v703 = detail::kPlayIntentKey[(unsigned __int8)v702 + 197] + v700;
+            v703 = detail::kPlayIntentKey[(std::uint8_t)v702 + 197] + v700;
             v704 = v703 ^ v701;
             v705 = v702 - v704;
             v706 = v703 - (v705 - 1353474796) - 962514170;
@@ -9310,8 +9310,8 @@ LABEL_325:
         v714 = v689 ^ (__ROL4__(v713, 12) + __ROL4__(v712, 17));
         v715 = __ROL4__(v714, 21);
         v716 = v690 - v715;
-        v717 = v712 ^ process((unsigned __int8)v690 - (unsigned __int8)v715 - 32, v690 - v715, v714, v713, 1063773550);
-        v718 = detail::kPlayIntentKey[(unsigned __int8)v717 + 194] ^ v713;
+        v717 = v712 ^ process((std::uint8_t)v690 - (std::uint8_t)v715 - 32, v690 - v715, v714, v713, 1063773550);
+        v718 = detail::kPlayIntentKey[(std::uint8_t)v717 + 194] ^ v713;
         v719 = v718 ^ v714;
         v720 = v716 ^ (v719 - 1276590930);
         v721 = v717 - v720;
@@ -9325,27 +9325,27 @@ LABEL_325:
         v729 = (__ROL4__(v728, 14) + 4162) ^ v724 ^ (v727 - 14671);
         v730 = v725 - v729;
         v731 = v727 ^ (__ROL4__(v730, 16) + __ROL4__(v729, 18));
-        v732 = v728 - detail::kPlayIntentKey[(unsigned __int8)v731 + 312];
+        v732 = v728 - detail::kPlayIntentKey[(std::uint8_t)v731 + 312];
         v733 = v732 + v729;
-        v734 = v730 - detail::kPlayIntentKey[(unsigned __int8)v733 + 327];
+        v734 = v730 - detail::kPlayIntentKey[(std::uint8_t)v733 + 327];
         v735 = v731 + v734 + 11;
         v736 = v734 + v731;
         v737 = v732 - process(v735, v736, v734, v733, -1286621029);
-        v1095 = detail::kPlayIntentKey[(unsigned __int8)v737 + 221] ^ v733;
+        v1095 = detail::kPlayIntentKey[(std::uint8_t)v737 + 221] ^ v733;
         v738 = ((v1095 >> 10) & 7) + 1;
         do {
             v1094 = v738;
-            v739 = detail::kPlayIntentKey[(unsigned __int8)v737 + 427] ^ v734;
+            v739 = detail::kPlayIntentKey[(std::uint8_t)v737 + 427] ^ v734;
             v740 = v739 ^ v736;
             v741 = v737 - v740;
             v742 = v739 - v741;
             v743 = v740 - 645097675 * v742;
-            v744 = v741 - detail::kPlayIntentKey[(unsigned __int8)(v740 - -53 * v742) + 222];
-            v745 = v742 - detail::kPlayIntentKey[(unsigned __int8)v744 + 236];
-            v746 = detail::kPlayIntentKey[(unsigned __int8)v745 + 257] ^ v743;
-            v747 = process((unsigned __int8)v746 + 100, v746, v745, v1095, 1396535465);
+            v744 = v741 - detail::kPlayIntentKey[(std::uint8_t)(v740 - -53 * v742) + 222];
+            v745 = v742 - detail::kPlayIntentKey[(std::uint8_t)v744 + 236];
+            v746 = detail::kPlayIntentKey[(std::uint8_t)v745 + 257] ^ v743;
+            v747 = process((std::uint8_t)v746 + 100, v746, v745, v1095, 1396535465);
             v748 = v744 ^ v747;
-            v749 = process(((unsigned __int8)v744 ^ (unsigned __int8)v747) - 45, v744 ^ v747, v746, v1095, 1005574840) ^ v745;
+            v749 = process(((std::uint8_t)v744 ^ (std::uint8_t)v747) - 45, v744 ^ v747, v746, v1095, 1005574840) ^ v745;
             v736 = v746 - ((__ROL4__(v749, 19) + 628) ^ (v748 - 16937));
             v737 = v736 + v748;
             v734 = v1095 ^ v749;
@@ -9362,7 +9362,7 @@ LABEL_325:
         v758 = v757 + v754;
         v759 = v755 + __ROL4__(v758, 19);
         v760 = v756 ^ (732448214 * v759);
-        v761 = v757 + process(((unsigned __int8)v756 ^ (unsigned __int8)(-42 * v759)) + 63, v760, v759, v758, 1665422164);
+        v761 = v757 + process(((std::uint8_t)v756 ^ (std::uint8_t)(-42 * v759)) + 63, v760, v759, v758, 1665422164);
         v762 = v761 ^ v758;
         v763 = v759 - 1607910548 * v762;
         v764 = v761 - __ROL4__(1933489567 * v763 + v760, 10);
@@ -9371,7 +9371,7 @@ LABEL_325:
         v767 = v760 + 1933489567 * v763 - 962213562;
         v768 = v767 ^ v764;
         v769 = v767 - v766;
-        v770 = detail::kPlayIntentKey[(unsigned __int8)v768 + 396] ^ v765;
+        v770 = detail::kPlayIntentKey[(std::uint8_t)v768 + 396] ^ v765;
         v771 = v766 - v770;
         v772 = __ROL4__(v771, 19) + v769;
         v773 = v772 ^ v768;
@@ -9384,7 +9384,7 @@ LABEL_325:
         v780 = v779 + v777;
         v781 = v779 + v774;
         v782 = v778 ^ (v779 + v774 + 548651370);
-        v783 = v779 - detail::kPlayIntentKey[(unsigned __int8)(v778 ^ (v779 + v774 + 106)) + 141];
+        v783 = v779 - detail::kPlayIntentKey[(std::uint8_t)(v778 ^ (v779 + v774 + 106)) + 141];
         v784 = v780 ^ v781;
         v785 = v782 - v784;
         v786 = v783 + ((__ROL4__(v785, 8) - 9935) ^ (v784 - 15813));
@@ -9393,7 +9393,7 @@ LABEL_325:
         v789 = v785 - v788;
         v790 = ((unsigned int)~v789 >> 12) | 0xFFFFFFF8;
         do {
-            v791 = detail::kPlayIntentKey[(unsigned __int8)v788 + 248] ^ v786;
+            v791 = detail::kPlayIntentKey[(std::uint8_t)v788 + 248] ^ v786;
             v792 = v791 ^ v787;
             v793 = v788 - v792;
             v794 = v791 + __ROL4__(v793, 11);
@@ -9407,16 +9407,16 @@ LABEL_325:
             v786 = v789 ^ (v797 - v799);
             ++v790;
         } while (v790);
-        v800 = ((unsigned __int16)v788 >> 13) + 1;
+        v800 = ((std::uint16_t)v788 >> 13) + 1;
         do {
-            v801 = detail::kPlayIntentKey[(unsigned __int8)v789 + 166] + v786;
+            v801 = detail::kPlayIntentKey[(std::uint8_t)v789 + 166] + v786;
             v802 = v801 ^ v787;
-            v803 = process((unsigned __int8)v802 + 74, v802, v801, v788, 1760057534) ^ v789;
+            v803 = process((std::uint8_t)v802 + 74, v802, v801, v788, 1760057534) ^ v789;
             v804 = 1563927712 * v803 + v801;
-            v805 = detail::kPlayIntentKey[(unsigned __int8)v804 + 75];
+            v805 = detail::kPlayIntentKey[(std::uint8_t)v804 + 75];
             v806 = v802;
             v787 = v802 - v805;
-            v789 = v803 - process(v806 - (unsigned __int8)v805 - 79, v787, v804, v788, -971598861);
+            v789 = v803 - process(v806 - (std::uint8_t)v805 - 79, v787, v804, v788, -971598861);
             v786 = v788 ^ v804;
             --v800;
         } while (v800);
@@ -9425,14 +9425,14 @@ LABEL_325:
             v808 = v788 - v807;
             v809 = v786 - v807;
             v810 = v807 - v808 - v809;
-            v811 = v808 - process((unsigned __int8)v810 - 126, v810, v809, v789, -430884673);
+            v811 = v808 - process((std::uint8_t)v810 - 126, v810, v809, v789, -430884673);
             v812 = v809 ^ (919128738 * v811);
-            v813 = process(((unsigned __int8)v809 ^ (unsigned __int8)(-94 * v811)) - 5, v812, v811, v789, 1397450978);
+            v813 = process(((std::uint8_t)v809 ^ (std::uint8_t)(-94 * v811)) - 5, v812, v811, v789, 1397450978);
             v814 = v810 ^ v813;
             v815 = v812 ^ (-2072342846 * (v811 - (v810 ^ v813)));
-            v816 = process(((unsigned __int8)v812 ^ (unsigned __int8)(-62 * (v811 - (v810 ^ v813)))) + 34, v815, v811 - (v810 ^ v813), v789, -1334205417);
+            v816 = process(((std::uint8_t)v812 ^ (std::uint8_t)(-62 * (v811 - (v810 ^ v813)))) + 34, v815, v811 - (v810 ^ v813), v789, -1334205417);
             v817 = v811 - v816;
-            v818 = detail::kPlayIntentKey[(unsigned __int8)v817 + 160] + v815;
+            v818 = detail::kPlayIntentKey[(std::uint8_t)v817 + 160] + v815;
             v819 = v814 - v816 - __ROL4__(v818, 3);
             v788 = v819 + v817;
             v786 = v789 ^ v818;
@@ -9461,24 +9461,24 @@ LABEL_325:
         v834 = v830 + __ROL4__(v833, 9);
         v835 = v831 - (__ROR4__(v834, 1) + __ROL4__(v833, 25));
         v836 = v832 - v835;
-        v837 = v833 ^ process((unsigned __int8)v836 - 47, v836, v835, v834, 1194034566);
+        v837 = v833 ^ process((std::uint8_t)v836 - 47, v836, v835, v834, 1194034566);
         v838 = v834 - v836 - v837;
         v839 = v838 + v835;
         v840 = v838 ^ (v837 - v836);
         v841 = v839 - v840;
         v842 = v839 + __ROL4__(v839 - v840, 10);
         v843 = v837 - v842;
-        v844 = v840 - detail::kPlayIntentKey[(unsigned __int8)v843 + 446];
+        v844 = v840 - detail::kPlayIntentKey[(std::uint8_t)v843 + 446];
         v845 = v841 - __ROL4__(v844, 19);
         v846 = (v836 - v842) ^ (-746007905 * v845);
-        v847 = v843 - process(((unsigned __int8)(v836 - v842) ^ (unsigned __int8)(-97 * v845)) + 3, v846, v845, v844, -7870476);
+        v847 = v843 - process(((std::uint8_t)(v836 - v842) ^ (std::uint8_t)(-97 * v845)) + 3, v846, v845, v844, -7870476);
         v848 = v844 - v847;
-        v849 = v845 ^ process((unsigned __int8)v848 + 63, v848, v847, v846, 1491749340);
+        v849 = v845 ^ process((std::uint8_t)v848 + 63, v848, v847, v846, 1491749340);
         v850 = v849 + v846;
         v851 = v847 ^ (-1258368023 * v850);
         v852 = v851 + v848;
         v853 = v852 + v849;
-        v854 = detail::kPlayIntentKey[(unsigned __int8)v853 + 416] ^ v850;
+        v854 = detail::kPlayIntentKey[(std::uint8_t)v853 + 416] ^ v850;
         v855 = v851 - v854;
         v856 = v852 - v855;
         v857 = v853 ^ (v856 + __ROL4__(v855, 23));
@@ -9488,30 +9488,30 @@ LABEL_325:
         v861 = __ROL4__(v860, 20) + v857 + __ROL4__(v859, 4);
         v862 = v858 ^ __ROL4__(v861, 15);
         v863 = v859 + 1937148590 * v862;
-        v864 = v860 - detail::kPlayIntentKey[(unsigned __int8)(v859 - 82 * v862) + 87];
-        v865 = v862 + process((unsigned __int8)v861 + (unsigned __int8)v864 + 53, v864 + v861, v864, v863, -1815870918);
+        v864 = v860 - detail::kPlayIntentKey[(std::uint8_t)(v859 - 82 * v862) + 87];
+        v865 = v862 + process((std::uint8_t)v861 + (std::uint8_t)v864 + 53, v864 + v861, v864, v863, -1815870918);
         v866 = v865 ^ v863;
         v867 = v864 ^ (-2080564379 * v866);
-        v868 = detail::kPlayIntentKey[(unsigned __int8)(v864 ^ (101 * v866)) + 270] + v864 + v861;
+        v868 = detail::kPlayIntentKey[(std::uint8_t)(v864 ^ (101 * v866)) + 270] + v864 + v861;
         v869 = v866 - v865;
         v870 = v865 - v868;
-        v871 = detail::kPlayIntentKey[(unsigned __int8)v869 + 90] + v867;
+        v871 = detail::kPlayIntentKey[(std::uint8_t)v869 + 90] + v867;
         v872 = v871 + v868;
         v873 = v872 ^ v870;
         v874 = v869 - v873 - 1542927331;
-        v875 = detail::kPlayIntentKey[(unsigned __int8)v874 + 399] ^ v871;
+        v875 = detail::kPlayIntentKey[(std::uint8_t)v874 + 399] ^ v871;
         v876 = v875 ^ v872;
-        v877 = detail::kPlayIntentKey[(unsigned __int8)v876 + 413] ^ v873;
-        v878 = detail::kPlayIntentKey[(unsigned __int8)v877 + 495] ^ v874;
-        v879 = detail::kPlayIntentKey[(unsigned __int8)v878 + 5] + v875;
+        v877 = detail::kPlayIntentKey[(std::uint8_t)v876 + 413] ^ v873;
+        v878 = detail::kPlayIntentKey[(std::uint8_t)v877 + 495] ^ v874;
+        v879 = detail::kPlayIntentKey[(std::uint8_t)v878 + 5] + v875;
         v880 = v876 ^ (-413245989 * v879);
         v881 = v880 + v879 + v877;
         v882 = v881 ^ v878;
         v883 = v882 ^ v879;
-        v884 = v880 + process((unsigned __int8)v883 + 80, v883, v882, v881, 1495948296);
+        v884 = v880 + process((std::uint8_t)v883 + 80, v883, v882, v881, 1495948296);
         v885 = v881 + __ROL4__(v884, 1);
         v886 = v885 ^ v882;
-        v887 = v883 - process((unsigned __int8)v886 + 72, v886, v885, v884, -970683348);
+        v887 = v883 - process((std::uint8_t)v886 + 72, v886, v885, v884, -970683348);
         v888 = v884 + __ROL4__(v887, 10);
         v889 = v885 ^ __ROL4__(v888, 21);
         v890 = __ROL4__(v889, 11);
@@ -9529,9 +9529,9 @@ LABEL_325:
         v897 = v889 - v894;
         v898 = v893 + v897;
         v899 = v895 ^ (v893 + v897 - 1627929878);
-        v900 = v894 - detail::kPlayIntentKey[(unsigned __int8)(v895 ^ (v893 + v897 - 22)) + 105];
+        v900 = v894 - detail::kPlayIntentKey[(std::uint8_t)(v895 ^ (v893 + v897 - 22)) + 105];
         v901 = v897 - v900;
-        v902 = detail::kPlayIntentKey[(unsigned __int8)(v901 + 8) + 163] ^ v898;
+        v902 = detail::kPlayIntentKey[(std::uint8_t)(v901 + 8) + 163] ^ v898;
         v903 = v899 - v902;
         v904 = v900 - v903;
         v905 = -455645140 * (v904 + 1350675551);
@@ -9540,8 +9540,8 @@ LABEL_325:
         v908 = __ROL4__(v907, 10) + 19515;
         v909 = v908 ^ v903 ^ (v905 + v901 + 2018945381);
         v910 = v909 + v904 + 1350675551;
-        if (((((unsigned __int8)v908 ^ (unsigned __int8)(v903 ^ (44 * (v904 + 95) + v901 + 101))) + (std::uint8_t)v904 + 95) & 1) != 0) {
-            v911 = detail::kPlayIntentKey[(unsigned __int8)v909 + 158] ^ v906;
+        if (((((std::uint8_t)v908 ^ (std::uint8_t)(v903 ^ (44 * (v904 + 95) + v901 + 101))) + (std::uint8_t)v904 + 95) & 1) != 0) {
+            v911 = detail::kPlayIntentKey[(std::uint8_t)v909 + 158] ^ v906;
             v907 ^= __ROL4__(v911, 19);
             v912 = __ROL4__(v907, 9) + v909 + __ROL4__(v911, 7);
             v906 = v910 ^ v911;
@@ -9549,20 +9549,20 @@ LABEL_325:
         }
         if ((v909 & 2) != 0) {
             v913 = (549266274 * v910) ^ v906;
-            v914 = v907 + process((unsigned __int8)v913 - 47, v913, v910, v909, 1482240224);
+            v914 = v907 + process((std::uint8_t)v913 - 47, v913, v910, v909, 1482240224);
             v915 = v914 ^ v910;
             v916 = v913 - v915;
             v917 = v916 + v914;
-            v918 = detail::kPlayIntentKey[(unsigned __int8)v917 + 340] + v915;
+            v918 = detail::kPlayIntentKey[(std::uint8_t)v917 + 340] + v915;
             v919 = __ROL4__(v918, 21) + v916 + __ROL4__(v917, 4);
             v920 = v917 ^ __ROL4__(v919, 1);
             v921 = v920 ^ v918;
             v922 = v919 - v921;
-            v923 = v921 - process(((unsigned __int8)v920 ^ (unsigned __int8)v922) - 67, v920 ^ v922, v922, v909, -1340245203);
-            v924 = detail::kPlayIntentKey[(unsigned __int8)v923 + 310];
+            v923 = v921 - process(((std::uint8_t)v920 ^ (std::uint8_t)v922) - 67, v920 ^ v922, v922, v909, -1340245203);
+            v924 = detail::kPlayIntentKey[(std::uint8_t)v923 + 310];
             v925 = v924 ^ v922;
             v907 = v924 ^ v920;
-            v910 = process((unsigned __int8)v907 - 27, v907, v925, v909, 223065697) + v923;
+            v910 = process((std::uint8_t)v907 - 27, v907, v925, v909, 223065697) + v923;
             v906 = v909 ^ v925;
         }
         if ((v910 & 0x40000000) != 0) {
