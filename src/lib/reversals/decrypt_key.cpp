@@ -8,6 +8,11 @@ constexpr static unsigned int u8_to_u32(const unsigned char* p) {
             ((unsigned int)(p[3] & 0xff) << 24));
 }
 
+/// smh clang's optimization is too good for this UB abusing code
+#if defined(__clang__)
+    #pragma clang optimize off
+#endif
+
 namespace unplayplay {
     static std::uint32_t process(char a1, std::uint32_t a2, std::uint32_t a3, std::uint32_t a4, std::uint32_t a5) {
         int v5 = 0x0;
@@ -9760,3 +9765,7 @@ LABEL_365:
         return dst;
     }
 } // namespace unplayplay
+
+#if defined(__clang__)
+    #pragma clang optimize on
+#endif
