@@ -8959,7 +8959,7 @@ LABEL_379:
         std::uint64_t v1086;
         int v1087;
         std::uint64_t v1088;
-        char *retaddr;
+        std::uint64_t retaddr;
         int v1092;
         int v1093;
         int v1094;
@@ -9904,7 +9904,7 @@ LABEL_379:
         v733 = (((unsigned int)v717 >> 1) & 7) + 1;
         do
         {
-            retaddr = (char *)v718;
+            retaddr = (std::uint64_t)v718;
             v734 = process((unsigned int)(v718 + 1676158492), (unsigned int)v718, v716, (unsigned int)v717, 2809264942LL);
             v735 = v717;
             v736 = v715 ^ v734;
